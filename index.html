@@ -1,0 +1,1003 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ООО «НСК» — Официальный представитель Yongsen | Сита для вибросит</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --dark-green: #1a3c34;
+            --darker-green: #0f2a24;
+            --gold: #c9a227;
+            --gold-light: #e8c547;
+            --dark: #1a1a1a;
+            --gray: #4a4a4a;
+            --light-gray: #f5f5f5;
+            --white: #fff;
+        }
+
+        body {
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+            line-height: 1.65;
+            color: var(--dark);
+            background: var(--white);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 5%;
+        }
+
+        /* ========== HEADER ========== */
+        .header {
+            background: var(--dark-green);
+            color: #fff;
+            padding: 0.9rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.18);
+        }
+
+        .header-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 1.5rem;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            text-decoration: none;
+            color: #fff;
+        }
+
+        .logo-img {
+            height: 48px;
+            width: auto;
+            display: block;
+            object-fit: contain;
+        }
+
+        .logo-text {
+            font-size: 1.5rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+
+        .nav {
+            display: flex;
+            gap: 1.8rem;
+            align-items: center;
+        }
+
+        .nav a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.92rem;
+            letter-spacing: 0.3px;
+            transition: color 0.25s;
+            text-transform: uppercase;
+        }
+
+        .nav a:hover {
+            color: var(--gold-light);
+        }
+
+        .lang-switch {
+            display: flex;
+            align-items: center;
+            gap: 0.4rem;
+            background: transparent;
+            border: 1.5px solid var(--gold);
+            color: var(--gold-light);
+            padding: 0.45rem 0.9rem;
+            border-radius: 6px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.25s;
+        }
+
+        .lang-switch:hover {
+            background: var(--gold);
+            color: var(--dark);
+        }
+
+        .burger {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 5px;
+        }
+
+        .burger span {
+            display: block;
+            width: 26px;
+            height: 2px;
+            background: #fff;
+            transition: 0.3s;
+        }
+
+        .burger.active span:nth-child(1) {
+            transform: translateY(7px) rotate(45deg);
+        }
+
+        .burger.active span:nth-child(2) {
+            opacity: 0;
+        }
+
+        .burger.active span:nth-child(3) {
+            transform: translateY(-7px) rotate(-45deg);
+        }
+
+        /* ========== BUTTONS ========== */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.75rem 1.6rem;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.95rem;
+            transition: all 0.25s;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn-primary {
+            background: var(--gold);
+            color: var(--dark);
+        }
+
+        .btn-primary:hover {
+            background: var(--gold-light);
+            transform: translateY(-2px);
+        }
+
+        .btn-outline {
+            background: transparent;
+            border: 2px solid var(--gold);
+            color: var(--gold-light);
+        }
+
+        .btn-outline:hover {
+            background: var(--gold);
+            color: var(--dark);
+        }
+
+        .btn span {
+            font-size: 1.15rem;
+            transition: transform 0.25s;
+        }
+
+        .btn:hover span {
+            transform: translateX(4px);
+        }
+html, body {
+	overflow: hidden;
+	}
+
+        /* ========== HERO ========== */
+        .hero {
+            position: relative;
+            background: linear-gradient(135deg, #0f2a24 0%, #1a3c34 50%, #0d231e 100%);
+            color: #fff;
+            padding: 0;
+            min-height: 680px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .hero-inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex: 1;
+            padding: 5.5rem 0 4rem;
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero-content {
+            max-width: 620px;
+        }
+
+        .hero h1 {
+            font-size: clamp(2.8rem, 6vw, 3.8rem);
+            font-weight: 700;
+            line-height: 1.15;
+            margin-bottom: 0.8rem;
+            letter-spacing: -0.5px;
+        }
+
+        .hero-subtitle {
+            font-size: 1.15rem;
+            color: var(--gold-light);
+            font-weight: 500;
+            margin-bottom: 1.4rem;
+        }
+
+        .hero-line {
+            width: 60px;
+            height: 3px;
+            background: var(--gold);
+            margin-bottom: 1.6rem;
+        }
+
+        .hero-desc {
+            font-size: 1.08rem;
+            line-height: 1.7;
+            opacity: 0.92;
+            margin-bottom: 2.4rem;
+            max-width: 540px;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        /* Правая визуальная часть */
+        .hero-visual {
+            position: absolute;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 48%;
+            max-width: 560px;
+            height: 520px;
+            background: url('./images/oil-rig.png') no-repeat center right;
+            background-size: contain;
+            opacity: 0.95;
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        /* Нижняя полоса преимуществ */
+        .hero-features {
+            background: rgba(0, 0, 0, 0.25);
+            border-top: 1px solid rgba(255, 255, 255, 0.08);
+            padding: 1.6rem 0;
+            margin-top: auto;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+        }
+
+        .feature-item {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .feature-icon {
+            flex-shrink: 0;
+            width: 48px;
+            height: 48px;
+            border-radius: 10px;
+            background: rgba(201, 162, 39, 0.12);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--gold-light);
+        }
+
+        .feature-text {
+            display: flex;
+            flex-direction: column;
+            gap: 0.15rem;
+        }
+
+        .feature-text strong {
+            font-size: 1.05rem;
+            font-weight: 600;
+            color: #fff;
+        }
+
+        .feature-text span {
+            font-size: 0.9rem;
+            opacity: 0.75;
+            line-height: 1.35;
+        }
+
+        /* ========== SECTIONS ========== */
+        section {
+            padding: 4.5rem 0;
+        }
+
+        h2 {
+            font-size: 2rem;
+            color: var(--dark-green);
+            margin-bottom: 1.3rem;
+            text-align: center;
+            position: relative;
+        }
+
+        h2::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 3px;
+            background: var(--gold);
+            margin: 0.7rem auto 0;
+        }
+
+        .section-intro {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto 2.8rem;
+            color: var(--gray);
+            font-size: 1.08rem;
+        }
+
+        /* About */
+        .about {
+            background: var(--light-gray);
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1.45fr 1fr;
+            gap: 3rem;
+            align-items: start;
+        }
+
+        .about-text p {
+            margin-bottom: 1.1rem;
+            color: var(--gray);
+        }
+
+        .about-text strong {
+            color: var(--dark-green);
+        }
+
+        .about-badge {
+            background: var(--dark-green);
+            color: #fff;
+            padding: 2rem;
+            border-radius: 12px;
+            text-align: center;
+        }
+
+        .about-badge h3 {
+            color: var(--gold-light);
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+        }
+
+        .about-badge p {
+            margin-bottom: 0.7rem;
+        }
+
+        .about-badge a {
+            color: var(--gold-light);
+            text-decoration: none;
+            font-weight: 600;
+            display: inline-block;
+            margin-top: 0.8rem;
+        }
+
+        /* Products */
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.8rem;
+        }
+
+        .product-card {
+            background: #fff;
+            border: 1px solid #e5e5e5;
+            border-radius: 12px;
+            overflow: hidden;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .product-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 14px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .product-img {
+            height: 180px;
+            background: #1a3c34;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--gold);
+            font-weight: 600;
+            font-size: 1.1rem;
+            text-align: center;
+            padding: 1rem;
+        }
+
+        .product-body {
+            padding: 1.5rem;
+        }
+
+        .product-body h3 {
+            color: var(--dark-green);
+            margin-bottom: 0.6rem;
+            font-size: 1.15rem;
+        }
+
+        .product-body p {
+            color: var(--gray);
+            font-size: 0.95rem;
+        }
+
+        /* Advantages */
+        .advantages {
+            background: var(--dark-green);
+            color: #fff;
+        }
+
+        .advantages h2 {
+            color: #fff;
+        }
+
+        .advantages h2::after {
+            background: var(--gold);
+        }
+
+        .advantages-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .adv-card {
+            background: rgba(255, 255, 255, 0.07);
+            padding: 1.6rem;
+            border-radius: 10px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .adv-card h3 {
+            color: var(--gold-light);
+            margin-bottom: 0.6rem;
+            font-size: 1.12rem;
+        }
+
+        .adv-card p {
+            opacity: 0.92;
+            font-size: 0.95rem;
+        }
+
+        /* Partner */
+        .partner {
+            background: var(--light-gray);
+        }
+
+        .partner-box {
+            background: #fff;
+            max-width: 860px;
+            margin: 0 auto;
+            padding: 2.5rem;
+            border-radius: 12px;
+            box-shadow: 0 5px 22px rgba(0, 0, 0, 0.06);
+        }
+
+        .partner-box h3 {
+            color: var(--dark-green);
+            margin-bottom: 1.2rem;
+            text-align: center;
+        }
+
+        .partner-box p {
+            color: var(--gray);
+            margin-bottom: 0.9rem;
+        }
+
+        .partner-link {
+            text-align: center;
+            margin-top: 1.5rem !important;
+        }
+
+        .partner-box a {
+            color: var(--gold);
+            font-weight: 600;
+            text-decoration: none;
+        }
+
+        /* Contacts */
+        .contacts-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+        }
+
+        .contact-info h3 {
+            color: var(--dark-green);
+            margin-bottom: 1.1rem;
+        }
+
+        .contact-info p {
+            margin-bottom: 0.65rem;
+            color: var(--gray);
+        }
+
+        .contact-info strong {
+            color: var(--dark);
+        }
+
+        .contact-info a {
+            color: var(--dark-green);
+            text-decoration: none;
+        }
+
+        .mt {
+            margin-top: 1.4rem !important;
+        }
+
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+            gap: 0.9rem;
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            padding: 0.85rem 1.1rem;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            font-size: 1rem;
+            font-family: inherit;
+        }
+
+        .contact-form input:focus,
+        .contact-form textarea:focus {
+            outline: none;
+            border-color: var(--dark-green);
+        }
+
+        .contact-form textarea {
+            min-height: 120px;
+            resize: vertical;
+        }
+
+        /* Footer */
+        .footer {
+            background: var(--dark);
+            color: #ccc;
+            padding: 3rem 0 2rem;
+            text-align: center;
+        }
+
+        .footer-logo {
+            font-size: 1.35rem;
+            font-weight: 700;
+            color: #fff;
+            margin-bottom: 0.7rem;
+        }
+
+        .footer p {
+            margin-bottom: 0.45rem;
+            font-size: 0.95rem;
+        }
+
+        .footer a {
+            color: var(--gold-light);
+            text-decoration: none;
+        }
+
+        .copyright {
+            margin-top: 2rem;
+            padding-top: 1.4rem;
+            border-top: 1px solid #333;
+            font-size: 0.85rem;
+            opacity: 0.7;
+        }
+
+        /* ========== RESPONSIVE ========== */
+        @media (max-width: 1100px) {
+            .hero-visual {
+                width: 42%;
+                opacity: 0.7;
+            }
+        }
+
+        @media (max-width: 900px) {
+            .logo-img {
+                height: 40px;
+            }
+
+            .nav {
+                position: fixed;
+                top: 0;
+                right: -100%;
+                width: 280px;
+                height: 100vh;
+                background: var(--dark-green);
+                flex-direction: column;
+                padding: 80px 2rem 2rem;
+                gap: 1.5rem;
+                transition: right 0.3s ease;
+                box-shadow: -5px 0 20px rgba(0, 0, 0, 0.2);
+            }
+
+            .nav.active {
+                right: 0;
+            }
+
+            .burger {
+                display: flex;
+            }
+
+            .lang-switch {
+                display: none;
+            }
+
+            .hero-inner {
+                flex-direction: column;
+                text-align: center;
+                padding: 4.5rem 0 3.5rem;
+            }
+
+            .hero-content {
+                max-width: 100%;
+            }
+
+            .hero-desc {
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .hero-buttons {
+                justify-content: center;
+            }
+
+            .hero-line {
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .hero-visual {
+                position: relative;
+                width: 100%;
+                max-width: 420px;
+                height: 320px;
+                margin: 2.5rem auto 0;
+                transform: none;
+                top: auto;
+                right: auto;
+                opacity: 0.85;
+            }
+
+            .features-grid {
+                grid-template-columns: 1fr;
+                gap: 1.4rem;
+            }
+
+            .feature-item {
+                justify-content: center;
+            }
+
+            .about-grid,
+            .contacts-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .hero {
+                min-height: auto;
+            }
+
+            .hero-buttons .btn {
+                width: 100%;
+                justify-content: center;
+            }
+
+            .hero-visual {
+                height: 260px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<!-- ========== HEADER ========== -->
+<header class="header">
+    <div class="container header-inner">
+        <a href="#" class="logo">
+            <img src="/images/logo.png" alt="ООО «НСК»" class="logo-img">
+            <!-- Если логотип только текст, можно использовать: -->
+            <!-- <span class="logo-text">НСК</span> -->
+        </a>
+
+        <nav class="nav" id="nav">
+            <a href="#about">О компании</a>
+            <a href="#products">Продукция</a>
+            <a href="#advantages">Сертификация</a>
+            <a href="#partner">Производитель</a>
+            <a href="#contacts">Контакты</a>
+        </nav>
+
+        <button class="lang-switch">
+            RU <span style="font-size: 0.75rem;">▼</span>
+        </button>
+
+        <button class="burger" id="burger" aria-label="Меню">
+            <span></span><span></span><span></span>
+        </button>
+    </div>
+</header>
+
+<!-- ========== HERO ========== -->
+<section class="hero">
+    <div class="container hero-inner">
+        <div class="hero-content">
+            <h1>ООО «НСК»</h1>
+            <p class="hero-subtitle">Официальный представитель Shenzhou Yongsen Hardware Products Co., Ltd.</p>
+            
+            <div class="hero-line"></div>
+            
+            <p class="hero-desc">
+                Поставка высококачественных сеток для вибросит (Shale Shaker Screens) 
+                и других продуктов для буровых растворов. Официальная API сертификация 
+                гарантирует соответствие международным стандартам качества.
+            </p>
+            
+            <div class="hero-buttons">
+                <a href="#products" class="btn btn-primary">
+                    Наша продукция <span>→</span>
+                </a>
+                <a href="#about" class="btn btn-outline">
+                    О компании <span>→</span>
+                </a>
+            </div>
+        </div>
+
+        <!-- Правая декоративная часть (вышка) -->
+        <div class="hero-visual"></div>
+    </div>
+
+    <!-- Нижняя полоса с преимуществами -->
+    <div class="hero-features">
+        <div class="container">
+            <div class="features-grid">
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                            <path d="M9 12l2 2 4-4"/>
+                        </svg>
+                    </div>
+                    <div class="feature-text">
+                        <strong>API сертификация</strong>
+                        <span>Соответствие стандарту API RP 13C</span>
+                    </div>
+                </div>
+
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                            <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/>
+                            <polyline points="3.27 6.96 12 12.01 20.73 6.96"/>
+                            <line x1="12" y1="22.08" x2="12" y2="12"/>
+                        </svg>
+                    </div>
+                    <div class="feature-text">
+                        <strong>Высокое качество</strong>
+                        <span>Прочные и надежные решения для бурения</span>
+                    </div>
+                </div>
+
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                            <circle cx="9" cy="7" r="4"/>
+                            <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+                            <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                        </svg>
+                    </div>
+                    <div class="feature-text">
+                        <strong>Официальный представитель</strong>
+                        <span>Прямые поставки от производителя</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ========== О КОМПАНИИ ========== -->
+<section class="about" id="about">
+    <div class="container">
+        <h2>О компании</h2>
+        <div class="about-grid">
+            <div class="about-text">
+                <p><strong>ООО «НСК»</strong> — официальный представитель китайского производителя <strong>Shenzhou Yongsen Hardware Products Co., Ltd.</strong> на территории России.</p>
+                <p>Компания Yongsen специализируется на производстве сит для вибросит (Shale Shaker Screens) и является <strong>первым отечественным предприятием Китая</strong>, прошедшим сертификацию американской системы управления <strong>API</strong>.</p>
+                <p>Мы поставляем высококачественные ситовые полотна и готовые экраны для буровых установок, систем очистки бурового раствора и промышленного грохочения.</p>
+                <p>Более 70 % продукции завода идёт на экспорт и поставляется на крупнейшие нефтяные месторождения Китая, а также в более чем 30 стран мира.</p>
+            </div>
+            <div class="about-badge">
+                <h3>Официальный статус</h3>
+                <p>Прямые поставки от завода Yongsen</p>
+                <p>Сертификация API</p>
+                <p>Фокус на Shale Shaker Screens</p>
+                <a href="http://www.yongsenwiremesh.com/" target="_blank" rel="noopener">www.yongsenwiremesh.com</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ========== ПРОДУКЦИЯ ========== -->
+<section class="products" id="products">
+    <div class="container">
+        <h2>Продукция</h2>
+        <p class="section-intro">Основные виды сит и ситовых полотен производства Yongsen</p>
+        <div class="products-grid">
+            <div class="product-card">
+                <div class="product-img">Composite Frame Screen</div>
+                <div class="product-body">
+                    <h3>Composite Frame Screen</h3>
+                    <p>Композитная (полиуретановая) рама + 2 или 3 слоя нержавеющей сетки 304 / 316.</p>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-img">Hook Strip Flat Screen</div>
+                <div class="product-body">
+                    <h3>Hook Strip Flat Screen</h3>
+                    <p>Самый распространённый тип плоского экрана с крючковыми краями.</p>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-img">Steel Frame Screen</div>
+                <div class="product-body">
+                    <h3>Steel Frame Screen</h3>
+                    <p>Стальная рама + 2–3 слоя сетки 304 / 316. Максимальная прочность.</p>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-img">Wave® Screen</div>
+                <div class="product-body">
+                    <h3>Wave® Screen</h3>
+                    <p>Экран с уникальной волнообразной формой поверхности.</p>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-img">Hook Strip Soft Screen</div>
+                <div class="product-body">
+                    <h3>Hook Strip Soft Screen</h3>
+                    <p>Мягкий экран из нержавеющей сетки с крючковыми краями.</p>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-img">Wire Cloth</div>
+                <div class="product-body">
+                    <h3>Ситовые полотна (Wire Cloth)</h3>
+                    <p>Нержавеющие плетёные сетки 304 и 316 различных ячеек.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ========== ПРЕИМУЩЕСТВА ========== -->
+<section class="advantages" id="advantages">
+    <div class="container">
+        <h2>Почему выбирают нас</h2>
+        <div class="advantages-grid">
+            <div class="adv-card">
+                <h3>Сертификация API</h3>
+                <p>Завод Yongsen — первое китайское предприятие по виброситам с сертификацией API.</p>
+            </div>
+            <div class="adv-card">
+                <h3>Официальный представитель</h3>
+                <p>Прямые поставки от производителя без посредников.</p>
+            </div>
+            <div class="adv-card">
+                <h3>Специализация на Shale Shaker</h3>
+                <p>Фокус на ситах и полотнах для вибросит нефтяной отрасли.</p>
+            </div>
+            <div class="adv-card">
+                <h3>Экспортный опыт</h3>
+                <p>Более 70 % продукции экспортируется. Поставки в 30+ стран.</p>
+            </div>
+            <div class="adv-card">
+                <h3>Полный цикл</h3>
+                <p>Собственные исследования, разработка, производство и контроль качества.</p>
+            </div>
+            <div class="adv-card">
+                <h3>Индивидуальные решения</h3>
+                <p>Изготовление экранов и полотен под конкретное оборудование.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ========== ПРОИЗВОДИТЕЛЬ ========== -->
+<section class="partner" id="partner">
+    <div class="container">
+        <h2>Производитель</h2>
+        <div class="partner-box">
+            <h3>Shenzhou Yongsen Hardware Products Co., Ltd.</h3>
+            <p>Компания специализируется на производстве сит для вибросит. Штаб-квартира: деревня Сидатан, посёлок Танфэн, город Шэньчжоу, провинция Хэбэй, Китай.</p>
+            <p>Более 20 лет опыта. Первый китайский производитель вибросит с сертификацией API. Более 70 % продукции идёт на экспорт.</p>
+            <p><strong>Адрес:</strong> North of Xidatan Village, Tangfeng Town, Shenzhou City, Hengshui City, Hebei Province, China</p>
+            <p><strong>Телефон:</strong> +86-0318-3558777<br>
+               <strong>Email:</strong> happymrzhang2018@163.com</p>
+            <p class="partner-link">Сайт: <a href="http://www.yongsenwiremesh.com/" target="_blank" rel="noopener">http://www.yongsenwiremesh.com/</a></p>
+        </div>
+    </div>
+</section>
+
+<!-- ========== КОНТАКТЫ ========== -->
+<section class="contacts" id="contacts">
+    <div class="container">
+        <h2>Контакты</h2>
+        <p class="section-intro">Оставьте заявку — подберём сита под ваше оборудование</p>
+        <div class="contacts-grid">
+            <div class="contact-info">
+                <h3>ООО «НСК»</h3>
+                <p><strong>Статус:</strong> Официальный представитель Shenzhou Yongsen</p>
+                <p><strong>Сайт производителя:</strong><br>
+                   <a href="http://www.yongsenwiremesh.com/" target="_blank" rel="noopener">www.yongsenwiremesh.com</a></p>
+                <p class="mt"><strong>Телефон:</strong> +7 (___) ___-__-__</p>
+                <p><strong>Email:</strong> info@nsk-example.ru</p>
+                <p><strong>Режим работы:</strong> Пн–Пт, 9:00–18:00</p>
+            </div>
+            <form class="contact-form" action="https://formsubmit.co/ВАШ@EMAIL.RU" method="POST">
+                <input type="hidden" name="_subject" value="Заявка с сайта ООО НСК">
+                <input type="hidden" name="_captcha" value="false">
+                <input type="text" name="name" placeholder="Ваше имя / Компания" required>
+                <input type="tel" name="phone" placeholder="Телефон" required>
+                <input type="email" name="email" placeholder="Email">
+                <textarea name="message" placeholder="Какие сита интересуют"></textarea>
+                <button type="submit" class="btn btn-primary">Отправить заявку</button>
+            </form>
+        </div>
+    </div>
+</section>
+
+<!-- ========== FOOTER ========== -->
+<footer class="footer">
+    <div class="container">
+        <div class="footer-logo">ООО «НСК»</div>
+        <p>Официальный представитель Shenzhou Yongsen Hardware Products Co., Ltd.</p>
+        <p>Сайт производителя: <a href="http://www.yongsenwiremesh.com/" target="_blank" rel="noopener">www.yongsenwiremesh.com</a></p>
+        <div class="copyright">© 2026 ООО «НСК». Все права защищены.</div>
+    </div>
+</footer>
+
+<script>
+    const burger = document.getElementById('burger');
+    const nav = document.getElementById('nav');
+
+    burger.addEventListener('click', () => {
+        burger.classList.toggle('active');
+        nav.classList.toggle('active');
+    });
+
+    document.querySelectorAll('.nav a').forEach(link => {
+        link.addEventListener('click', () => {
+            burger.classList.remove('active');
+            nav.classList.remove('active');
+        });
+    });
+</script>
+
+</body>
+</html>
