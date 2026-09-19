@@ -10,6 +10,9 @@
             padding: 0;
             box-sizing: border-box;
         }
+html, body {
+	overflow-x: hidden;
+	}
 
         :root {
             --dark-green: #1a3c34;
@@ -188,9 +191,6 @@
         .btn:hover span {
             transform: translateX(4px);
         }
-html, body {
-	overflow: hidden;
-	}
 
         /* ========== HERO ========== */
         .hero {
@@ -719,9 +719,9 @@ html, body {
 <header class="header">
     <div class="container header-inner">
         <a href="#" class="logo">
-            <img src="/images/logo.png" alt="ООО «НСК»" class="logo-img">
+            <img src="./images/logo.png" alt="ООО «НСК»" class="logo-img">
             <!-- Если логотип только текст, можно использовать: -->
-            <!-- <span class="logo-text">НСК</span> -->
+            <!--span class="logo-text">НСК</span-->
         </a>
 
         <nav class="nav" id="nav">
