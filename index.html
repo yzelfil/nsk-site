@@ -1,0 +1,3426 @@
+<!DOCTYPE html>
+
+<html lang="ru">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>ООО «НСК» — Официальный представитель Yongsen | Сита для вибросит</title>
+
+    <style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --green:#03261d;
+  --green-2:#06382b;
+  --green-3:#0a4434;
+  --gold:#e0b642;
+  --gold-2:#f0c957;
+  --text:#fff;
+  --muted:#b9c7c2;
+}
+html{scroll-behavior:smooth}
+body{font-family:"Segoe UI",system-ui,-apple-system,BlinkMacSystemFont,sans-serif;line-height:1.55;color:#1b2522;background:#fff}
+a{color:inherit}
+.container{width:min(1200px,calc(100% - 124px));margin:0 auto}
+
+/* HEADER */
+.header{
+  height:84px;background:#03261d;color:#fff;border-bottom:1px solid rgba(224,182,66,.12);
+  position:sticky;top:0;z-index:1000;
+}
+.header-inner{height:100%;display:flex;align-items:center;gap:30px}
+.logo{display:flex;align-items:center;text-decoration:none;flex:0 0 auto}
+.logo-img{height:64px;width:auto;display:block;object-fit:contain}
+.nav{display:flex;align-items:center;justify-content:center;gap:38px;margin-left:auto}
+.nav a{
+  color:#fff;text-decoration:none;font-size:14px;font-weight:600;letter-spacing:.02em;
+  text-transform:uppercase;white-space:nowrap;transition:color .2s
+}
+.nav a:hover{color:var(--gold-2)}
+.header-actions{display:flex;align-items:center;margin-left:10px}
+.lang{
+  height:42px;min-width:79px;padding:0 14px;border:1px solid var(--gold);
+  border-radius:5px;background:transparent;color:#fff;font-size:14px;font-weight:600;
+  display:flex;align-items:center;justify-content:space-between;gap:12px
+}
+.lang span:last-child{font-size:16px;line-height:1;transform:translateY(-1px)}
+.burger{display:none;background:none;border:0;cursor:pointer;padding:6px}
+.burger span{display:block;width:26px;height:2px;background:#fff;margin:5px 0}
+
+/* HERO */
+.hero{
+  position:relative;overflow:hidden;color:#fff;
+  background:
+    radial-gradient(ellipse 65% 85% at 77% 45%,#0a3a2d 0%,#05291f 48%,#031d16 100%);
+  min-height:646px;
+}
+.hero::before{
+  content:"";position:absolute;inset:0;pointer-events:none;opacity:.35;
+  background-image:
+    linear-gradient(rgba(224,182,66,.055) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(224,182,66,.055) 1px,transparent 1px);
+  background-size:60px 60px;
+  -webkit-mask-image:radial-gradient(ellipse at 73% 65%,#000 0%,rgba(0,0,0,.9) 32%,transparent 72%);
+  mask-image:radial-gradient(ellipse at 73% 65%,#000 0%,rgba(0,0,0,.9) 32%,transparent 72%);
+}
+.hero-inner{position:relative;min-height:562px;display:grid;grid-template-columns:52% 48%;align-items:center}
+.hero-content{position:relative;z-index:4;padding:42px 0 64px}
+.hero-title{
+  color:#fff;font-size:clamp(56px,6.1vw,88px);font-weight:700;line-height:.98;
+  letter-spacing:-2px;margin:0 0 10px
+}
+.hero-company{
+  color:var(--gold);font-size:18px;font-weight:500;line-height:1.35;margin:0 0 23px
+}
+.hero-divider{width:91px;height:3px;background:var(--gold);margin-bottom:25px}
+.hero-desc{
+  color:#e0e7e3;font-size:16px;line-height:1.7;max-width:585px;margin-bottom:34px
+}
+.hero-buttons{display:flex;gap:18px;align-items:center}
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:14px;
+  min-height:50px;padding:0 24px;border-radius:5px;text-decoration:none;
+  font-size:15px;font-weight:600;transition:.22s;border:1px solid transparent
+}
+.btn span{font-size:24px;font-weight:300;line-height:0;margin-top:-2px}
+.btn-primary{background:var(--gold);border-color:var(--gold);color:#071f18}
+.btn-primary:hover{background:var(--gold-2);border-color:var(--gold-2);transform:translateY(-1px)}
+.btn-outline{background:transparent;border-color:var(--gold);color:#fff}
+.btn-outline:hover{background:rgba(224,182,66,.09);transform:translateY(-1px)}
+
+/* Derrick is the supplied asset: keep its path/name intact. */
+.hero-image{
+  position:relative;height:100%;min-height:562px;display:flex;
+  align-items:flex-start;justify-content:center;z-index:2
+}
+.hero-img{
+  width:auto;height:390px;max-width:none;object-fit:contain;
+  margin-top:29px;margin-left:32px;
+  filter:drop-shadow(0 12px 28px rgba(0,0,0,.38))
+}
+.hero-waves{
+  position:absolute;left:0;right:0;bottom:-4px;width:100%;height:205px;
+  z-index:1;pointer-events:none;opacity:.95
+}
+.hero-waves svg{width:100%;height:100%;display:block}
+.hero-waves .line{fill:none;stroke:rgba(224,182,66,.34);stroke-width:1.15}
+.hero-waves .line-bright{fill:none;stroke:rgba(224,182,66,.65);stroke-width:1.45}
+.hero-grid-dots{
+  position:absolute;right:6%;top:50%;width:180px;height:150px;opacity:.08;
+  background-image:radial-gradient(rgba(224,182,66,.9) 1px,transparent 1px);
+  background-size:9px 9px;mask-image:linear-gradient(to bottom,transparent,#000,transparent)
+}
+
+/* FEATURE STRIP */
+.hero-features{
+  position:relative;z-index:5;border-top:1px solid rgba(224,182,66,.18);
+  background:rgba(0,0,0,.16);min-height:106px
+}
+.features-grid{display:grid;grid-template-columns:repeat(3,1fr);min-height:106px}
+.feature-item{display:flex;align-items:center;gap:17px;padding:18px 28px 18px 0}
+.feature-item+.feature-item{border-left:1px solid rgba(224,182,66,.18);padding-left:28px}
+.feature-icon{width:51px;height:51px;flex:0 0 51px;display:flex;align-items:center;justify-content:center;color:var(--gold)}
+.feature-icon svg{width:48px;height:48px}
+.feature-text h4{font-size:16px;font-weight:600;color:#fff;margin-bottom:2px}
+.feature-text p{font-size:13px;color:#9eada8;line-height:1.35}
+
+/* CONTENT */
+section{padding:72px 0}
+h2{font-size:34px;color:#123d31;margin-bottom:20px;text-align:center;position:relative}
+h2::after{content:"";display:block;width:60px;height:3px;background:var(--gold);margin:12px auto 0}
+.section-intro{text-align:center;max-width:800px;margin:0 auto 40px;color:#596662;font-size:17px}
+.about{background:#f5f7f6}
+.about-grid{display:grid;grid-template-columns:1.45fr 1fr;gap:48px;align-items:start}
+.about-text p{margin-bottom:17px;color:#596662}
+.about-text strong{color:#123d31}
+.about-badge{background:#06382b;color:#fff;padding:34px;border-radius:10px;text-align:center}
+.about-badge h3{color:var(--gold-2);margin-bottom:17px;font-size:21px}
+.about-badge p{margin-bottom:9px}
+.about-badge a{color:var(--gold-2);text-decoration:none;font-weight:600;display:inline-block;margin-top:12px}
+.products-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:28px}
+.product-card{background:#fff;border:1px solid #e5e9e7;border-radius:10px;overflow:hidden;transition:transform .25s,box-shadow .25s}
+.product-card:hover{transform:translateY(-5px);box-shadow:0 14px 30px rgba(0,0,0,.08)}
+.product-img{height:180px;background:#123d31;display:flex;align-items:center;justify-content:center;color:var(--gold);font-weight:600;font-size:17px;text-align:center;padding:16px}
+.product-body{padding:24px}
+.product-body h3{color:#123d31;margin-bottom:9px;font-size:18px}
+.product-body p{color:#596662;font-size:15px}
+.advantages{background:#06382b;color:#fff}
+.advantages h2{color:#fff}
+.advantages h2::after{background:var(--gold)}
+.advantages-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:18px}
+.adv-card{background:rgba(255,255,255,.055);padding:25px;border-radius:9px;border:1px solid rgba(255,255,255,.1)}
+.adv-card h3{color:var(--gold-2);margin-bottom:9px;font-size:18px}
+.adv-card p{opacity:.92;font-size:15px}
+.partner{background:#f5f7f6}
+.partner-box{background:#fff;max-width:860px;margin:0 auto;padding:38px;border-radius:10px;box-shadow:0 5px 22px rgba(0,0,0,.05)}
+.partner-box h3{color:#123d31;margin-bottom:18px;text-align:center}
+.partner-box p{color:#596662;margin-bottom:12px}
+.partner-link{text-align:center;margin-top:22px!important}
+.partner-box a{color:#a27a11;font-weight:600;text-decoration:none}
+.contacts-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px}
+.contact-info h3{color:#123d31;margin-bottom:18px}
+.contact-info p{margin-bottom:10px;color:#596662}
+.contact-info strong{color:#202a27}
+.contact-info a{color:#123d31;text-decoration:none}
+.mt{margin-top:22px!important}
+.contact-form{display:flex;flex-direction:column;gap:14px}
+.contact-form input,.contact-form textarea{padding:14px 17px;border:1px solid #d8dfdc;border-radius:6px;font-size:16px;font-family:inherit}
+.contact-form input:focus,.contact-form textarea:focus{outline:none;border-color:#123d31}
+.contact-form textarea{min-height:130px;resize:vertical}
+.footer{background:#101614;color:#b8c2be;padding:45px 0 30px;text-align:center}
+.footer-logo{font-size:22px;font-weight:700;color:#fff;margin-bottom:10px}
+.footer p{margin-bottom:7px;font-size:15px}
+.footer a{color:var(--gold-2);text-decoration:none}
+.copyright{margin-top:30px;padding-top:20px;border-top:1px solid #303734;font-size:13px;opacity:.7}
+
+/* RESPONSIVE */
+@media(max-width:1100px){
+  .container{width:min(100% - 56px,1200px)}
+  .nav{gap:22px}
+  .nav a{font-size:12px}
+  .hero-inner{grid-template-columns:55% 45%}
+  .hero-title{font-size:clamp(52px,6vw,72px)}
+  .hero-company{font-size:16px}
+  .hero-img{height:350px;margin-left:10px}
+}
+@media(max-width:900px){
+  .header{height:74px}
+  .logo-img{height:56px}
+  .nav{
+    position:fixed;top:74px;right:-100%;width:290px;height:calc(100vh - 74px);
+    background:#03261d;flex-direction:column;align-items:flex-start;padding:35px 28px;gap:24px;
+    transition:right .25s;box-shadow:-10px 0 30px rgba(0,0,0,.25)
+  }
+  .nav.active{right:0}
+  .nav a{font-size:14px}
+  .header-actions{margin-left:auto}
+  .burger{display:block}
+  .hero{min-height:auto}
+  .hero-inner{grid-template-columns:1fr;min-height:0}
+  .hero-image{order:-1;min-height:360px;height:360px}
+  .hero-img{height:330px;margin:24px 0 0}
+  .hero-content{text-align:center;padding:10px 0 54px}
+  .hero-divider{margin:0 auto 24px}
+  .hero-desc{margin-left:auto;margin-right:auto}
+  .hero-buttons{justify-content:center}
+  .hero-waves{height:150px}
+  .features-grid{grid-template-columns:1fr}
+  .feature-item{min-height:84px}
+  .feature-item+.feature-item{border-left:0;border-top:1px solid rgba(224,182,66,.18);padding-left:0}
+  .about-grid,.contacts-grid{grid-template-columns:1fr}
+}
+@media(max-width:600px){
+  .container{width:calc(100% - 32px)}
+  .header-actions{display:none}
+  .logo-img{height:52px}
+  .hero-image{min-height:300px;height:300px}
+  .hero-img{height:285px}
+  .hero-title{font-size:50px;letter-spacing:-1.5px}
+  .hero-company{font-size:15px}
+  .hero-desc{font-size:15px}
+  .hero-buttons{flex-direction:column}
+  .hero-buttons .btn{width:100%}
+  section{padding:58px 0}
+  h2{font-size:29px}
+}
+
+/* ===== RENDER MATCH: ПРЕИМУЩЕСТВА + ПРОИЗВОДИТЕЛЬ ===== */
+.render-advantages{
+  position:relative;
+  overflow:hidden;
+  background:
+    radial-gradient(circle at 86% 50%,rgba(25,74,58,.62),transparent 34%),
+    linear-gradient(135deg,#03251c 0%,#052d22 58%,#0a3b2d 100%);
+  color:#fff;
+  padding:42px 0 18px;
+}
+.render-advantages::after{
+  content:"";
+  position:absolute;
+  right:-80px;
+  top:0;
+  width:38%;
+  height:100%;
+  opacity:.08;
+  background:
+    repeating-linear-gradient(90deg,rgba(255,255,255,.55) 0 1px,transparent 1px 18px),
+    repeating-linear-gradient(0deg,rgba(255,255,255,.4) 0 1px,transparent 1px 18px);
+  transform:perspective(500px) rotateY(-12deg);
+  pointer-events:none;
+}
+.render-advantages-inner{
+  position:relative;
+  z-index:1;
+  width:min(100% - 84px,1100px);
+  margin:0 auto;
+  display:grid;
+  grid-template-columns:34% 66%;
+  gap:34px;
+  align-items:start;
+}
+.render-advantages-intro{
+  padding:0 0 20px;
+}
+.render-brand{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  margin-bottom:42px;
+}
+.render-brand-mark{
+  width:52px;
+  height:52px;
+  flex:0 0 52px;
+  color:#e0b642;
+}
+.render-brand-mark svg{
+  width:100%;
+  height:100%;
+  display:block;
+}
+.render-brand-name{
+  color:#fff;
+  font-size:21px;
+  font-weight:800;
+  line-height:1.05;
+  letter-spacing:.2px;
+}
+.render-brand-sub{
+  display:block;
+  margin-top:4px;
+  color:#fff;
+  font-size:12px;
+  font-weight:600;
+  letter-spacing:.5px;
+}
+.render-advantages-intro h2{
+  margin:0;
+  color:#fff;
+  font-size:31px;
+  line-height:1.15;
+  text-align:left;
+  letter-spacing:.3px;
+  font-weight:800;
+  text-transform:uppercase;
+}
+.render-advantages-intro h2::after{
+  display:block;
+  width:72px;
+  height:3px;
+  margin:19px 0 20px;
+  background:#e0b642;
+}
+.render-advantages-intro p{
+  max-width:310px;
+  color:#edf2ef;
+  font-size:15px;
+  line-height:1.55;
+}
+.render-advantages-grid{
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:12px;
+}
+.render-adv-card{
+  min-height:192px;
+  padding:14px 15px 12px;
+  background:#f7f6f1;
+  border:1px solid #c79f36;
+  border-radius:10px;
+  color:#111a17;
+  box-shadow:0 2px 8px rgba(0,0,0,.14);
+}
+.render-adv-icon{
+  width:50px;
+  height:50px;
+  margin:0 auto 8px;
+  color:#b58a22;
+}
+.render-adv-icon svg{
+  width:100%;
+  height:100%;
+  display:block;
+  fill:none;
+  stroke:currentColor;
+  stroke-width:1.5;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+}
+.render-adv-card h3{
+  margin:0 0 5px;
+  color:#111;
+  font-size:15px;
+  line-height:1.15;
+  text-align:center;
+  font-weight:700;
+}
+.render-adv-card p{
+  margin:0;
+  color:#1d2421;
+  font-size:11px;
+  line-height:1.45;
+  text-align:left;
+}
+.render-advantages-bottom{
+  position:relative;
+  z-index:1;
+  width:min(100% - 84px,1100px);
+  margin:26px auto 0;
+  display:grid;
+  grid-template-columns:1fr 1fr 1fr;
+  gap:12px;
+}
+.render-advantages-bottom::before{
+  content:"";
+  position:absolute;
+  left:0;
+  right:0;
+  top:-13px;
+  border-top:1px solid rgba(224,182,66,.28);
+}
+
+/* Manufacturer */
+.render-manufacturer{
+  background:#f8f8f5;
+  padding:25px 0 0;
+  color:#17201d;
+}
+.render-manufacturer-inner{
+  width:min(100% - 84px,1100px);
+  margin:0 auto;
+  display:grid;
+  grid-template-columns:56% 44%;
+  min-height:292px;
+}
+.render-manufacturer-copy{
+  padding:0 34px 23px 0;
+  border-right:1px solid #c9a227;
+}
+.render-manufacturer-kicker{
+  margin:0 0 5px;
+  color:#a27a19;
+  font-size:12px;
+  letter-spacing:1.4px;
+  text-transform:uppercase;
+  font-weight:600;
+}
+.render-manufacturer-copy h2{
+  margin:0;
+  color:#103b2e;
+  font-size:27px;
+  line-height:1.08;
+  text-align:left;
+  letter-spacing:.1px;
+}
+.render-manufacturer-copy h2::after{
+  display:block;
+  width:70px;
+  height:3px;
+  margin:13px 0 13px;
+  background:#b58a22;
+}
+.render-manufacturer-copy p{
+  max-width:620px;
+  margin:0 0 11px;
+  color:#222a27;
+  font-size:12px;
+  line-height:1.48;
+}
+.render-manufacturer-slogan{
+  color:#a27a19 !important;
+  font-size:12px !important;
+  margin-top:12px !important;
+}
+.render-manufacturer-info{
+  padding:0 0 20px 38px;
+}
+.render-info-row{
+  display:grid;
+  grid-template-columns:51px 1fr;
+  gap:12px;
+  align-items:start;
+  margin:0 0 16px;
+}
+.render-info-icon{
+  width:51px;
+  height:51px;
+  border-radius:50%;
+  background:#06382b;
+  color:#e0b642;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+.render-info-icon svg{
+  width:29px;
+  height:29px;
+  display:block;
+  fill:none;
+  stroke:currentColor;
+  stroke-width:1.5;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+}
+.render-info-row h3{
+  margin:2px 0 1px;
+  color:#15221d;
+  font-size:16px;
+  line-height:1.15;
+  text-transform:uppercase;
+}
+.render-info-row p,
+.render-info-row a{
+  margin:0;
+  color:#202825;
+  font-size:11px;
+  line-height:1.45;
+  text-decoration:none;
+}
+.render-info-row a:hover{color:#a27a19}
+.render-manufacturer-footer{
+  border-top:1px solid #c9a227;
+  min-height:48px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:20px;
+  color:#25302b;
+}
+.render-manufacturer-footer-inner{
+  width:min(100% - 84px,1100px);
+  margin:0 auto;
+  min-height:48px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:20px;
+}
+.render-footer-brand{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  font-size:12px;
+  letter-spacing:1.2px;
+  font-weight:600;
+}
+.render-footer-mark{
+  width:29px;
+  height:29px;
+  color:#a27a19;
+}
+.render-footer-mark svg{width:100%;height:100%;display:block}
+.render-footer-site{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  color:#222b27;
+  font-size:12px;
+}
+.render-footer-link-icon{
+  color:#a27a19;
+  width:27px;
+  height:27px;
+}
+.render-footer-link-icon svg{width:100%;height:100%}
+
+@media(max-width:980px){
+  .render-advantages-inner{
+    width:min(100% - 40px,760px);
+    grid-template-columns:1fr;
+    gap:25px;
+  }
+  .render-advantages-intro{
+    text-align:center;
+    padding-bottom:0;
+  }
+  .render-brand{justify-content:center;margin-bottom:24px}
+  .render-advantages-intro h2{text-align:center}
+  .render-advantages-intro h2::after{margin-left:auto;margin-right:auto}
+  .render-advantages-intro p{margin:0 auto}
+  .render-advantages-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .render-advantages-bottom{display:none}
+  .render-manufacturer-inner{
+    width:min(100% - 40px,760px);
+    grid-template-columns:1fr;
+    gap:25px;
+    padding-bottom:22px;
+  }
+  .render-manufacturer-copy{
+    border-right:0;
+    border-bottom:1px solid #c9a227;
+    padding:0 0 22px;
+  }
+  .render-manufacturer-info{padding:0}
+  .render-manufacturer-footer-inner{width:min(100% - 40px,760px)}
+}
+@media(max-width:600px){
+  .render-advantages{padding-top:30px}
+  .render-advantages-inner,
+  .render-manufacturer-inner,
+  .render-manufacturer-footer-inner{width:calc(100% - 28px)}
+  .render-brand-name{font-size:17px}
+  .render-brand-sub{font-size:10px}
+  .render-advantages-intro h2{font-size:25px}
+  .render-advantages-grid{grid-template-columns:1fr}
+  .render-adv-card{min-height:0;padding:15px}
+  .render-manufacturer-copy h2{font-size:23px}
+  .render-info-row{grid-template-columns:44px 1fr}
+  .render-info-icon{width:44px;height:44px}
+  .render-manufacturer-footer-inner{display:block;padding:11px 0}
+  .render-footer-brand{margin-bottom:8px}
+}
+
+
+/* ===== RENDER MATCH: CONTACTS + FOOTER ===== */
+.render-contacts{
+  background:#f7f7f5;
+  color:#202522;
+}
+.render-contacts-inner{
+  width:min(100% - 84px,1100px);
+  margin:0 auto;
+  padding:30px 0 20px;
+  display:grid;
+  grid-template-columns:49% 51%;
+  gap:30px;
+}
+.render-contact-info{
+  padding-top:0;
+}
+.render-contact-kicker{
+  margin:0 0 8px;
+  color:#ad8220;
+  font-size:13px;
+  letter-spacing:1.2px;
+  font-weight:600;
+}
+.render-contact-info>h2{
+  margin:0 0 10px;
+  color:#292d2c;
+  font-size:34px;
+  line-height:1.05;
+  text-align:left;
+}
+.render-contact-intro{
+  margin:0 0 14px;
+  font-size:12px;
+  line-height:1.5;
+}
+.render-contact-row{
+  display:grid;
+  grid-template-columns:38px 1fr;
+  gap:11px;
+  align-items:center;
+  margin:9px 0;
+}
+.render-contact-icon{
+  width:36px;
+  height:36px;
+  border:1px solid #e0d9c9;
+  border-radius:50%;
+  color:#a97e20;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background:#fff;
+}
+.render-contact-icon svg{
+  width:21px;
+  height:21px;
+  fill:none;
+  stroke:currentColor;
+  stroke-width:1.5;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+}
+.render-contact-row h3{
+  margin:0 0 2px;
+  font-size:12px;
+  line-height:1.15;
+  font-weight:700;
+}
+.render-contact-row p,
+.render-contact-row a{
+  margin:0;
+  color:#202522;
+  font-size:12px;
+  line-height:1.35;
+  text-decoration:none;
+}
+.render-contact-row a:hover{color:#ad8220}
+.render-contact-manufacturer{
+  margin-top:13px;
+  padding-top:13px;
+  border-top:1px solid #d6d2c8;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:18px;
+}
+.render-contact-manufacturer-kicker{
+  margin:0 0 4px !important;
+  color:#ad8220 !important;
+  font-size:11px !important;
+  letter-spacing:1px;
+  font-weight:600;
+}
+.render-contact-manufacturer strong{
+  display:block;
+  font-size:12px;
+  margin-bottom:4px;
+}
+.render-contact-manufacturer>div:first-child>p:last-child{
+  margin:0;
+  font-size:11px;
+  line-height:1.4;
+}
+.render-yongsen-badge{
+  width:76px;
+  height:44px;
+  border:1px solid #b8ad92;
+  border-radius:4px;
+  flex:0 0 76px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  color:#786d55;
+  font-size:10px;
+  font-weight:700;
+}
+.render-contact-form-wrap{
+  padding-top:0;
+}
+.render-contact-form{
+  background:#fff;
+  border:1px solid #e2e1de;
+  border-radius:4px;
+  padding:22px 23px 18px;
+  box-shadow:0 2px 8px rgba(0,0,0,.035);
+}
+.render-contact-form h2{
+  margin:0 0 7px;
+  color:#252a28;
+  font-size:21px;
+  line-height:1.1;
+  text-align:left;
+}
+.render-contact-form>p{
+  margin:0 0 17px;
+  color:#6c6f6d;
+  font-size:11px;
+}
+.render-form-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:11px;
+}
+.render-contact-form input,
+.render-contact-form textarea{
+  width:100%;
+  box-sizing:border-box;
+  border:1px solid #dddeda;
+  border-radius:3px;
+  background:#fff;
+  color:#252a28;
+  font-family:inherit;
+  font-size:12px;
+  outline:none;
+}
+.render-contact-form input{
+  height:38px;
+  padding:0 11px;
+  margin-bottom:11px;
+}
+.render-contact-form textarea{
+  height:96px;
+  resize:vertical;
+  padding:11px;
+}
+.render-contact-form input:focus,
+.render-contact-form textarea:focus{
+  border-color:#b88a23;
+  box-shadow:0 0 0 2px rgba(184,138,35,.08);
+}
+.render-contact-form label{
+  display:block;
+  border:1px solid #dddeda;
+  border-radius:3px;
+  padding:8px 11px 0;
+  margin-bottom:13px;
+}
+.render-contact-form label span{
+  display:block;
+  font-size:12px;
+  font-weight:600;
+  margin-bottom:5px;
+}
+.render-contact-form label textarea{
+  border:0;
+  padding:0 0 8px;
+  box-shadow:none !important;
+}
+.render-submit{
+  border:0;
+  border-radius:3px;
+  background:#c4952d;
+  color:#fff;
+  min-height:37px;
+  padding:0 13px;
+  font-family:inherit;
+  font-size:12px;
+  font-weight:600;
+  cursor:pointer;
+  display:inline-flex;
+  align-items:center;
+  gap:20px;
+}
+.render-submit span{
+  font-size:21px;
+  line-height:1;
+}
+.render-submit:hover{background:#a98024}
+.render-form-note{
+  display:flex;
+  align-items:flex-start;
+  gap:8px;
+  margin-top:15px;
+  color:#777a78;
+  font-size:10px;
+  line-height:1.35;
+}
+.render-lock{
+  color:#656967;
+  font-size:15px;
+  line-height:1;
+}
+.render-footer{
+  background:#252b2e;
+  color:#f5f5f3;
+  padding:18px 0 0;
+}
+.render-footer-inner{
+  width:min(100% - 84px,1100px);
+  margin:0 auto;
+  display:grid;
+  grid-template-columns:1.25fr .85fr .85fr .9fr;
+  gap:0;
+}
+.render-footer-company,
+.render-footer-column{
+  min-height:122px;
+  padding:0 28px;
+  border-left:1px solid #596064;
+}
+.render-footer-company{padding-left:0;border-left:0}
+.render-footer-logo{
+  font-size:34px;
+  line-height:.9;
+  font-weight:800;
+  letter-spacing:1px;
+}
+.render-footer-sub{
+  margin-top:3px;
+  font-size:9px;
+  line-height:1.05;
+  font-weight:700;
+}
+.render-footer-company p{
+  margin:13px 0 0;
+  color:#e7e9e8;
+  font-size:11px;
+  line-height:1.45;
+}
+.render-footer-column h3{
+  margin:0 0 8px;
+  color:#fff;
+  font-size:11px;
+  letter-spacing:.8px;
+}
+.render-footer-column a{
+  display:block;
+  margin:0 0 3px;
+  color:#eceeed;
+  font-size:11px;
+  line-height:1.25;
+  text-decoration:none;
+}
+.render-footer-column a:hover{color:#d6ae51}
+.render-socials{
+  display:flex;
+  align-items:center;
+  gap:13px;
+  margin:12px 0 10px;
+}
+.render-socials a{
+  width:21px;
+  height:21px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:17px;
+  font-weight:800;
+  margin:0;
+}
+.render-socials a:nth-child(2){font-size:15px}
+.render-footer-work .render-footer-phone{
+  color:#d5aa43;
+  font-weight:700;
+  margin-bottom:6px;
+}
+.render-footer-bottom{
+  width:min(100% - 84px,1100px);
+  margin:12px auto 0;
+  min-height:38px;
+  border-top:1px solid #596064;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:20px;
+  color:#e3e5e4;
+  font-size:10px;
+}
+.render-footer-bottom a{
+  color:#e3e5e4;
+  text-decoration:none;
+}
+.render-footer-bottom a:hover{color:#d6ae51}
+
+@media(max-width:900px){
+  .render-contacts-inner{
+    width:min(100% - 40px,760px);
+    grid-template-columns:1fr;
+  }
+  .render-footer-inner{
+    width:min(100% - 40px,760px);
+    grid-template-columns:1fr 1fr;
+    row-gap:22px;
+  }
+  .render-footer-company,.render-footer-column{
+    border-left:0;
+    padding:0;
+  }
+  .render-footer-bottom{width:min(100% - 40px,760px)}
+}
+@media(max-width:600px){
+  .render-contacts-inner,
+  .render-footer-inner,
+  .render-footer-bottom{width:calc(100% - 28px)}
+  .render-contact-info>h2{font-size:29px}
+  .render-form-grid{grid-template-columns:1fr}
+  .render-footer-inner{grid-template-columns:1fr}
+  .render-footer-bottom{
+    display:block;
+    padding:10px 0;
+    line-height:1.5;
+  }
+  .render-footer-bottom a{display:block;margin-top:5px}
+}
+
+
+/* ===== Новый каталог продукции ===== */
+.products-catalog{padding:28px 0 24px}
+.products-catalog-head{align-items:flex-end;margin-bottom:14px}
+.catalog-kicker{display:block;color:#b58a1b;font-size:10px;font-weight:800;letter-spacing:1.5px;margin-bottom:4px}
+.products-catalog-head h2{font-size:30px!important;letter-spacing:1px}
+.products-catalog-head p{max-width:440px;text-align:right;line-height:1.4}
+.catalog-intro{
+  width:min(100% - 72px,1200px);margin:0 auto 16px;
+  display:grid;grid-template-columns:repeat(3,1fr);gap:10px;
+}
+.catalog-intro-item{
+  border-left:3px solid #c9a227;background:#f7f9f8;padding:10px 13px;
+}
+.catalog-intro-item strong{display:block;color:#103d30;font-size:12px;margin-bottom:3px}
+.catalog-intro-item span{display:block;color:#4c5651;font-size:11px;line-height:1.35}
+.catalog-card{position:relative;min-height:100%}
+.product-card-number{
+  position:absolute;z-index:2;top:9px;left:10px;
+  background:#0b382b;color:#d9b43c;border-radius:3px;
+  padding:3px 6px;font-size:10px;font-weight:800;letter-spacing:1px;
+}
+.catalog-card .product-match-image{height:150px}
+.catalog-card .product-match-body{padding:10px 14px 34px}
+.product-card-type{
+  display:block;color:#b58a1b;font-size:9px;font-weight:800;letter-spacing:1.2px;margin-bottom:4px;
+}
+.catalog-card .product-match-body h3{font-size:17px;margin-bottom:5px}
+.catalog-card .product-match-body p{font-size:11px;line-height:1.4;min-height:48px}
+.product-card-tags{display:flex;flex-wrap:wrap;gap:5px;margin-top:9px;padding-right:20px}
+.product-card-tags span{
+  display:inline-block;padding:3px 6px;border:1px solid #d7dfda;border-radius:3px;
+  color:#405049;background:#f8faf9;font-size:9px;line-height:1.2;
+}
+.catalog-card .product-match-open{bottom:8px}
+.catalog-note{
+  width:min(100% - 72px,1200px);margin:10px auto 0;
+  color:#6b756f;font-size:10px;line-height:1.4;
+}
+.catalog-note span{color:#b58a1b;font-weight:800}
+@media(max-width:900px){
+  .catalog-intro{width:min(100% - 40px,760px);grid-template-columns:1fr}
+  .catalog-note{width:min(100% - 40px,760px)}
+  .products-catalog-head{display:block}
+  .products-catalog-head p{text-align:left;margin-top:6px}
+}
+@media(max-width:600px){
+  .catalog-intro,.catalog-note{width:calc(100% - 28px)}
+  .products-catalog-head h2{font-size:26px!important}
+  .catalog-card .product-match-image{height:165px}
+}
+
+
+/* ===== Фильтры каталога продукции ===== */
+.catalog-filters{
+  width:min(100% - 72px,1200px);margin:0 auto 10px;display:grid;
+  grid-template-columns:1.65fr 1fr 1fr 1fr 1fr 1fr auto;gap:8px;align-items:end;
+  padding:12px;background:#f3f6f4;border:1px solid #dce4df;border-radius:5px;
+}
+.catalog-filter{min-width:0}.catalog-filter label{display:block;margin:0 0 5px;color:#365047;font-size:9px;font-weight:800;letter-spacing:.7px;text-transform:uppercase}
+.catalog-filter input,.catalog-filter select{width:100%;height:38px;box-sizing:border-box;border:1px solid #cfd9d4;border-radius:3px;background:#fff;color:#173c31;font:inherit;font-size:11px;padding:0 10px;outline:none}
+.catalog-filter input:focus,.catalog-filter select:focus{border-color:#b58a1b;box-shadow:0 0 0 2px rgba(181,138,27,.12)}
+.catalog-search-wrap{position:relative}.catalog-search-wrap span{position:absolute;left:10px;top:8px;font-size:18px;color:#8a958f;pointer-events:none}.catalog-search-wrap input{padding-left:31px}
+.catalog-range-inputs{display:grid;grid-template-columns:1fr 10px 1fr;gap:4px;align-items:center}.catalog-range-inputs span{text-align:center;color:#8a958f}
+.catalog-filter-reset{height:38px;padding:0 12px;border:1px solid #b58a1b;border-radius:3px;background:#fff;color:#72570d;font-size:10px;font-weight:800;cursor:pointer;white-space:nowrap}
+.catalog-filter-reset:hover{background:#b58a1b;color:#fff}
+.catalog-filter-status{width:min(100% - 72px,1200px);margin:0 auto 12px;color:#6b756f;font-size:10px;line-height:1.4;min-height:14px}
+.manufacturer-panel.filter-empty .manufacturer-table-wrap{display:none}
+.catalog-no-results{display:none;padding:18px;text-align:center;color:#68746e;background:#f7f9f8;border:1px dashed #ccd6d1;font-size:11px}
+.manufacturer-panel.filter-empty .catalog-no-results{display:block}
+@media(max-width:1150px){
+  .catalog-filters{grid-template-columns:repeat(3,1fr)}
+  .catalog-filter-search{grid-column:span 2}
+  .catalog-filter-reset{width:100%}
+}
+@media(max-width:900px){
+  .catalog-filters{width:min(100% - 40px,760px);grid-template-columns:1fr 1fr}
+  .catalog-filter-search{grid-column:span 2}
+  .catalog-filter-status{width:min(100% - 40px,760px)}
+}
+@media(max-width:600px){
+  .catalog-filters{width:calc(100% - 28px);grid-template-columns:1fr}
+  .catalog-filter-search{grid-column:auto}
+  .catalog-filter-status{width:calc(100% - 28px)}
+}
+
+/* ===== Компактный блок «Отрасли» ===== */
+.industries-compact{padding:72px 0 76px;background:#f5f7f5}
+.industries-compact .source-section-head{max-width:1200px;margin:0 auto 28px;padding:0 36px}
+.industries-compact .industry-grid{max-width:1200px;margin:0 auto;padding:0 36px;display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.industries-compact .industry-grid article{padding:20px 20px 19px;background:#fff;border:1px solid #dce4df;border-radius:4px;min-height:150px;transition:transform .2s ease,box-shadow .2s ease,border-color .2s ease}
+.industries-compact .industry-grid article:hover{transform:translateY(-2px);box-shadow:0 8px 22px rgba(16,61,48,.08);border-color:#b8c9c0}
+.industries-compact .industry-grid article span{display:block;margin-bottom:10px;color:#b08a3e;font-size:11px;font-weight:800;letter-spacing:.12em}
+.industries-compact .industry-grid article h3{margin:0 0 8px;color:#103d30;font-size:17px;line-height:1.2}
+.industries-compact .industry-grid article p{margin:0;color:#68736d;font-size:13px;line-height:1.5}
+@media(max-width:900px){.industries-compact .industry-grid{grid-template-columns:repeat(2,1fr);padding:0 20px}.industries-compact .source-section-head{padding:0 20px}}
+@media(max-width:600px){.industries-compact{padding:56px 0 60px}.industries-compact .industry-grid{grid-template-columns:1fr;padding:0 14px}.industries-compact .source-section-head{padding:0 14px}.industries-compact .industry-grid article{min-height:0}}
+
+</style>
+
+
+<style id="company-products-render-match">
+/* ===== О компании + Продукция: match supplied render ===== */
+.about-match{
+  background:#fff;
+  padding:0;
+  border-bottom:1px solid #d7dcda;
+}
+.about-match-inner{
+  width:min(100% - 72px,1200px);
+  margin:0 auto;
+  min-height:376px;
+  display:grid;
+  grid-template-columns:minmax(0,1.08fr) minmax(410px,.92fr);
+  gap:34px;
+  align-items:center;
+}
+.about-match-copy{
+  padding:18px 0 14px;
+}
+.about-match-copy h2{
+  margin:0 0 2px;
+  color:#0b382b;
+  text-align:left;
+  font-size:46px;
+  line-height:1.05;
+  letter-spacing:-1.2px;
+}
+.about-match-copy h2::after{display:none}
+.about-match-subtitle{
+  margin:0 0 12px;
+  color:#1e2825;
+  font-size:18px;
+  line-height:1.3;
+}
+.about-match-intro{
+  max-width:650px;
+  margin:0 0 10px;
+  color:#1d2522;
+  font-size:15px;
+  line-height:1.35;
+}
+.about-points{
+  border-top:2px solid #c9a227;
+  width:100%;
+  max-width:650px;
+  padding-top:7px;
+}
+.about-point{
+  display:grid;
+  grid-template-columns:54px 1fr;
+  gap:13px;
+  align-items:center;
+  margin:7px 0;
+}
+.about-point-icon{
+  width:50px;
+  height:50px;
+  border-radius:50%;
+  background:#06382b;
+  color:#e0b63d;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  flex:0 0 auto;
+}
+.about-point-icon svg{
+  width:30px;
+  height:30px;
+  fill:none;
+  stroke:currentColor;
+  stroke-width:1.5;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+}
+.about-point h3{
+  margin:0 0 1px;
+  color:#103d30;
+  font-size:15px;
+  line-height:1.15;
+  font-weight:700;
+}
+.about-point p{
+  margin:0;
+  color:#303835;
+  font-size:12px;
+  line-height:1.25;
+}
+.about-match-note{
+  margin-top:3px;
+  color:#323a37;
+  font-size:12px;
+}
+.about-match-note span{color:#b68a19;font-size:16px;margin-right:4px}
+.about-match-visual{
+  height:100%;
+  min-height:350px;
+  display:flex;
+  align-items:center;
+  justify-content:flex-end;
+}
+.about-match-visual img{
+  display:block;
+  width:100%;
+  max-width:485px;
+  height:auto;
+  object-fit:contain;
+}
+
+.products-match{
+  background:#fff;
+  padding:8px 0 20px;
+}
+.products-match-head{
+  width:min(100% - 72px,1200px);
+  margin:0 auto 7px;
+  display:flex;
+  align-items:baseline;
+  justify-content:space-between;
+  gap:20px;
+}
+.products-match-head h2{
+  margin:0;
+  color:#103d30;
+  font-size:20px;
+  line-height:1.2;
+  text-align:left;
+  letter-spacing:.4px;
+}
+.products-match-head h2::after{display:none}
+.products-match-head p{
+  margin:0;
+  color:#242b28;
+  font-size:13px;
+}
+.products-match-grid{
+  width:min(100% - 72px,1200px);
+  margin:0 auto;
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:8px 14px;
+}
+.product-match-card{
+  min-width:0;
+  overflow:hidden;
+  background:#fff;
+  border:1px solid #dce1df;
+  border-radius:7px;
+  box-shadow:0 1px 6px rgba(0,0,0,.07);
+  display:flex;
+  flex-direction:column;
+}
+.product-match-image{
+  height:102px;
+  background:#fff;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  overflow:hidden;
+}
+.product-match-image img{
+  display:block;
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+.product-match-body{
+  position:relative;
+  min-height:82px;
+  padding:5px 14px 9px;
+}
+.product-match-body h3{
+  margin:0 0 3px;
+  color:#103d30;
+  font-size:15px;
+  line-height:1.2;
+}
+.product-match-body p{
+  margin:0;
+  padding-right:22px;
+  color:#252d2a;
+  font-size:12px;
+  line-height:1.28;
+}
+.product-match-body a{
+  position:absolute;
+  left:14px;
+  bottom:4px;
+  color:#bd8b17;
+  font-size:25px;
+  line-height:1;
+  text-decoration:none;
+}
+@media(max-width:900px){
+  .about-match-inner{
+    width:min(100% - 40px,760px);
+    grid-template-columns:1fr;
+    gap:8px;
+    padding:20px 0 16px;
+  }
+  .about-match-copy{padding:0}
+  .about-match-copy h2{font-size:38px}
+  .about-match-visual{min-height:0;justify-content:center}
+  .about-match-visual img{max-width:480px}
+  .products-match-head,.products-match-grid{
+    width:min(100% - 40px,760px);
+  }
+  .products-match-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media(max-width:600px){
+  .about-match-inner,.products-match-head,.products-match-grid{width:calc(100% - 28px)}
+  .about-match-copy h2{font-size:32px}
+  .about-match-subtitle{font-size:15px}
+  .about-match-intro{font-size:14px}
+  .about-point{grid-template-columns:44px 1fr;gap:10px}
+  .about-point-icon{width:42px;height:42px}
+  .about-point-icon svg{width:25px;height:25px}
+  .about-point h3{font-size:14px}
+  .about-point p{font-size:11px}
+  .products-match-head{display:block}
+  .products-match-head p{margin-top:4px;font-size:12px}
+  .products-match-grid{grid-template-columns:1fr;gap:10px}
+  .product-match-image{height:150px}
+}
+</style>
+
+
+<style id="product-modal-styles">
+/* ===== Всплывающее окно для продукции ===== */
+.product-match-open{
+  position:absolute;
+  left:14px;
+  bottom:4px;
+  appearance:none;
+  border:0;
+  background:transparent;
+  color:#bd8b17;
+  font:inherit;
+  font-size:25px;
+  line-height:1;
+  padding:0;
+  cursor:pointer;
+  transition:transform .2s ease,color .2s ease;
+}
+.product-match-open:hover{
+  color:#8f6810;
+  transform:translateX(4px);
+}
+.product-match-open:focus-visible{
+  outline:2px solid #c9a227;
+  outline-offset:4px;
+  border-radius:3px;
+}
+.product-modal{
+  position:fixed;
+  inset:0;
+  z-index:3000;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:24px;
+  visibility:hidden;
+  opacity:0;
+  pointer-events:none;
+  transition:opacity .22s ease,visibility .22s ease;
+}
+.product-modal.is-open{
+  visibility:visible;
+  opacity:1;
+  pointer-events:auto;
+}
+.product-modal-backdrop{
+  position:absolute;
+  inset:0;
+  background:rgba(3,25,19,.72);
+  backdrop-filter:blur(5px);
+}
+.product-modal-dialog{
+  position:relative;
+  z-index:1;
+  width:min(920px,100%);
+  max-height:min(720px,calc(100vh - 48px));
+  overflow:auto;
+  background:#fff;
+  border:1px solid rgba(201,162,39,.45);
+  border-radius:14px;
+  box-shadow:0 24px 80px rgba(0,0,0,.35);
+  transform:translateY(16px) scale(.985);
+  transition:transform .22s ease;
+}
+.product-modal.is-open .product-modal-dialog{
+  transform:translateY(0) scale(1);
+}
+.product-modal-close{
+  position:absolute;
+  top:14px;
+  right:14px;
+  z-index:3;
+  width:38px;
+  height:38px;
+  border:1px solid rgba(255,255,255,.65);
+  border-radius:50%;
+  background:rgba(6,38,29,.82);
+  cursor:pointer;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+.product-modal-close span{
+  position:absolute;
+  width:16px;
+  height:1.5px;
+  background:#fff;
+}
+.product-modal-close span:first-child{transform:rotate(45deg)}
+.product-modal-close span:last-child{transform:rotate(-45deg)}
+.product-modal-content{
+  display:grid;
+  grid-template-columns:45% 55%;
+  min-height:430px;
+}
+.product-modal-image-wrap{
+  min-height:430px;
+  background:#f7f8f7;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  overflow:hidden;
+}
+.product-modal-image-wrap img{
+  width:100%;
+  height:100%;
+  min-height:430px;
+  object-fit:cover;
+  display:block;
+}
+.product-modal-copy{
+  padding:54px 48px 42px;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+}
+.product-modal-kicker{
+  color:#b18a25;
+  text-transform:uppercase;
+  letter-spacing:1.3px;
+  font-size:11px;
+  font-weight:700;
+  margin-bottom:8px;
+}
+.product-modal-copy h2{
+  margin:0;
+  color:#103d30;
+  font-size:31px;
+  line-height:1.12;
+}
+.product-modal-divider{
+  width:56px;
+  height:3px;
+  background:#c9a227;
+  margin:17px 0 18px;
+}
+.product-modal-copy > p{
+  margin:0;
+  color:#303835;
+  font-size:15px;
+  line-height:1.6;
+}
+.product-modal-extra{
+  margin-top:24px;
+  padding:15px 17px;
+  border-left:3px solid #c9a227;
+  background:#f4f6f4;
+  color:#28312e;
+}
+.product-modal-extra strong{
+  display:block;
+  color:#103d30;
+  font-size:14px;
+  margin-bottom:4px;
+}
+.product-modal-extra p{
+  margin:0;
+  font-size:13px;
+  line-height:1.45;
+}
+
+.product-modal-specs{
+  margin-top:20px;
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:10px;
+}
+.product-spec-item{
+  padding:11px 13px;
+  border:1px solid #dfe5e1;
+  background:#fafcfb;
+  border-radius:5px;
+}
+.product-spec-item strong{
+  display:block;
+  color:#103d30;
+  font-size:12px;
+  margin-bottom:4px;
+}
+.product-spec-item span{
+  display:block;
+  color:#39443f;
+  font-size:12px;
+  line-height:1.45;
+}
+.product-modal-source{
+  margin-top:14px;
+  color:#68736e;
+  font-size:11px;
+  line-height:1.45;
+}
+@media(max-width:700px){
+  .product-modal-specs{grid-template-columns:1fr}
+}
+
+.product-modal-contact{
+  align-self:flex-start;
+  display:inline-flex;
+  align-items:center;
+  gap:10px;
+  margin-top:26px;
+  padding:11px 18px;
+  background:#c9a227;
+  color:#102d24;
+  border:1px solid #c9a227;
+  border-radius:4px;
+  font-weight:700;
+  text-decoration:none;
+  transition:.2s ease;
+}
+.product-modal-contact:hover{
+  background:#e0bc45;
+  border-color:#e0bc45;
+  transform:translateY(-1px);
+}
+.product-modal-contact span{font-size:20px;line-height:.8}
+
+body.product-modal-lock{overflow:hidden}
+
+@media(max-width:700px){
+  .product-modal{padding:12px}
+  .product-modal-dialog{
+    max-height:calc(100vh - 24px);
+    border-radius:11px;
+  }
+  .product-modal-content{
+    grid-template-columns:1fr;
+  }
+  .product-modal-image-wrap{
+    min-height:210px;
+    max-height:250px;
+  }
+  .product-modal-image-wrap img{
+    min-height:210px;
+    max-height:250px;
+  }
+  .product-modal-copy{
+    padding:32px 24px 28px;
+  }
+  .product-modal-copy h2{font-size:25px}
+  .product-modal-copy > p{font-size:14px}
+}
+</style>
+
+
+<style id="product-card-hover-and-gallery-styles">
+/* ===== Анимация карточек продукции ===== */
+.product-match-card{
+  position:relative;
+  transition:
+    transform .28s cubic-bezier(.2,.75,.25,1),
+    box-shadow .28s ease,
+    border-color .28s ease;
+  will-change:transform;
+}
+.product-match-card .product-match-image{
+  transition:background .28s ease;
+}
+.product-match-card .product-match-image img{
+  transition:transform .45s cubic-bezier(.2,.75,.25,1), filter .3s ease;
+}
+@media (hover:hover) and (pointer:fine){
+  .product-match-card:hover{
+    transform:translateY(-7px);
+    border-color:rgba(184,143,31,.55);
+    box-shadow:0 13px 28px rgba(5,45,34,.16);
+  }
+  .product-match-card:hover .product-match-image img{
+    transform:scale(1.045);
+  }
+  .product-match-card:hover .product-match-body h3{
+    color:#0a4b38;
+  }
+}
+@media (prefers-reduced-motion:reduce){
+  .product-match-card,
+  .product-match-card .product-match-image img{
+    transition:none;
+  }
+}
+
+/* ===== Управление фотографиями в модальном окне ===== */
+.product-photo-manager{
+  margin-top:24px;
+  padding-top:20px;
+  border-top:1px solid #dfe4e1;
+}
+.product-photo-manager-title{
+  margin:0 0 9px;
+  color:#103d30;
+  font-size:13px;
+  font-weight:700;
+}
+.product-photo-actions{
+  display:flex;
+  flex-wrap:wrap;
+  gap:8px;
+}
+.product-photo-upload{
+  position:relative;
+  display:inline-flex;
+  align-items:center;
+  gap:7px;
+  min-height:40px;
+  padding:8px 12px;
+  border:1px solid #cbd3cf;
+  border-radius:5px;
+  background:#fff;
+  color:#173d31;
+  font-size:12px;
+  font-weight:600;
+  cursor:pointer;
+  transition:.2s ease;
+}
+.product-photo-upload:hover{
+  border-color:#c9a227;
+  background:#faf8ef;
+}
+.product-photo-upload input{
+  position:absolute;
+  width:1px;
+  height:1px;
+  opacity:0;
+  pointer-events:none;
+}
+.product-photo-hint{
+  margin:7px 0 0;
+  color:#6a736f;
+  font-size:10px;
+  line-height:1.4;
+}
+.product-gallery{
+  display:grid;
+  grid-template-columns:repeat(4,minmax(0,1fr));
+  gap:7px;
+  margin-top:12px;
+}
+.product-gallery:empty{display:none}
+.product-gallery-item{
+  position:relative;
+  aspect-ratio:1/1;
+  overflow:hidden;
+  border:1px solid #d8dfdc;
+  border-radius:5px;
+  background:#f5f7f6;
+}
+.product-gallery-item img{
+  width:100%;
+  height:100%;
+  display:block;
+  object-fit:cover;
+}
+.product-gallery-item button{
+  position:absolute;
+  top:4px;
+  right:4px;
+  width:24px;
+  height:24px;
+  border:0;
+  border-radius:50%;
+  background:rgba(6,38,29,.82);
+  color:#fff;
+  cursor:pointer;
+  font-size:16px;
+  line-height:1;
+}
+.product-gallery-item button:hover{
+  background:#8b2020;
+}
+.product-modal-copy .product-modal-contact{
+  margin-top:18px;
+}
+@media(max-width:700px){
+  .product-gallery{grid-template-columns:repeat(4,minmax(52px,1fr))}
+  .product-photo-upload{min-height:44px}
+}
+</style>
+
+
+<style id="product-gallery-sort-confirm">
+/* ===== Сортировка дополнительных фотографий ===== */
+.product-gallery-item{
+  cursor:grab;
+  user-select:none;
+  transition:transform .18s ease, box-shadow .18s ease, opacity .18s ease;
+}
+.product-gallery-item:active{cursor:grabbing}
+.product-gallery-item.is-dragging{
+  opacity:.45;
+  transform:scale(.96);
+}
+.product-gallery-item.is-drag-over{
+  transform:translateY(-3px);
+  box-shadow:0 0 0 2px #c9a227 inset;
+}
+.product-gallery-item .product-gallery-drag{
+  position:absolute;
+  left:4px;
+  top:4px;
+  z-index:2;
+  width:24px;
+  height:24px;
+  border:0;
+  border-radius:50%;
+  background:rgba(6,38,29,.82);
+  color:#fff;
+  font-size:13px;
+  line-height:24px;
+  text-align:center;
+  cursor:grab;
+}
+.product-gallery-item .product-gallery-remove{
+  position:absolute;
+  top:4px;
+  right:4px;
+  z-index:3;
+}
+.product-gallery-order-hint{
+  margin:7px 0 0;
+  color:#6a736f;
+  font-size:10px;
+  line-height:1.35;
+}
+.product-delete-confirm{
+  position:fixed;
+  inset:0;
+  z-index:5000;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:20px;
+  background:rgba(3,25,19,.62);
+  backdrop-filter:blur(4px);
+  opacity:0;
+  visibility:hidden;
+  pointer-events:none;
+  transition:opacity .18s ease,visibility .18s ease;
+}
+.product-delete-confirm.is-open{
+  opacity:1;
+  visibility:visible;
+  pointer-events:auto;
+}
+.product-delete-confirm-dialog{
+  width:min(420px,100%);
+  background:#fff;
+  border-radius:12px;
+  box-shadow:0 20px 65px rgba(0,0,0,.3);
+  padding:28px;
+}
+.product-delete-confirm-dialog h3{
+  margin:0 0 9px;
+  color:#103d30;
+  font-size:21px;
+}
+.product-delete-confirm-dialog p{
+  margin:0;
+  color:#454e4a;
+  font-size:14px;
+  line-height:1.5;
+}
+.product-delete-confirm-actions{
+  display:flex;
+  justify-content:flex-end;
+  gap:9px;
+  margin-top:22px;
+}
+.product-delete-confirm-actions button{
+  min-height:40px;
+  padding:8px 16px;
+  border-radius:5px;
+  cursor:pointer;
+  font:inherit;
+  font-size:13px;
+  font-weight:700;
+}
+.product-delete-cancel{
+  border:1px solid #cbd3cf;
+  background:#fff;
+  color:#173d31;
+}
+.product-delete-confirm-button{
+  border:1px solid #9b2b2b;
+  background:#9b2b2b;
+  color:#fff;
+}
+.product-delete-confirm-button:hover{background:#7f2020}
+@media(max-width:700px){
+  .product-delete-confirm-dialog{padding:23px}
+  .product-delete-confirm-actions{flex-direction:column-reverse}
+  .product-delete-confirm-actions button{width:100%}
+}
+
+/* ===== SOURCE-BASED SECTIONS: CERTIFICATION / INDUSTRIES / SUPPORT ===== */
+.source-certification,
+.source-industries,
+.source-support{padding:76px 0}
+.source-certification{background:#f7f9f8}
+.source-industries{background:#fff}
+.source-support{background:#eef3f0}
+.source-section-head{width:min(100% - 56px,1120px);margin:0 auto 42px;text-align:center}
+.source-kicker{margin:0 0 8px;color:#9b7a1a;font-size:12px;font-weight:800;letter-spacing:.14em;text-transform:uppercase}
+.source-section-head h2{margin-bottom:18px}
+.source-section-head>p:last-child{max-width:850px;margin:0 auto;color:#596662;font-size:16px;line-height:1.7}
+.cert-claims-grid{width:min(100% - 56px,1120px);margin:0 auto 44px;display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.cert-claim-card{background:#fff;border:1px solid #dfe7e3;border-radius:12px;padding:25px;box-shadow:0 8px 24px rgba(10,45,35,.05)}
+.cert-badge{display:inline-flex;min-width:56px;height:36px;align-items:center;justify-content:center;padding:0 10px;border-radius:18px;background:#06382b;color:#f0c957;font-size:12px;font-weight:800;letter-spacing:.05em}
+.cert-claim-card h3{margin:17px 0 8px;color:#123d31;font-size:20px}
+.cert-claim-card p{margin:0 0 10px;color:#596662;font-size:14px;line-height:1.55}
+.cert-claim-card small{display:block;color:#87928e;font-size:12px;line-height:1.5}
+.cert-documents{width:min(100% - 56px,1120px);margin:0 auto;background:#fff;border-radius:14px;padding:30px;box-shadow:0 10px 30px rgba(10,45,35,.06)}
+.cert-documents-head{display:flex;align-items:flex-end;justify-content:space-between;gap:30px;margin-bottom:24px}
+.cert-documents-head h3{margin:0;color:#123d31;font-size:25px}
+.cert-documents-head p:last-child{max-width:470px;margin:0;color:#697570;font-size:13px;line-height:1.55}
+.cert-doc-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:22px}
+.cert-doc-card{overflow:hidden;border:1px solid #dfe7e3;border-radius:10px;background:#fbfcfb}
+.cert-doc-card>a{display:block;background:#edf2ef;padding:14px}
+.cert-doc-card img{display:block;width:100%;height:360px;object-fit:contain;background:#fff;border:1px solid #e2e7e4}
+.cert-doc-body{padding:18px 19px 20px}
+.cert-doc-body h4{margin:0 0 7px;color:#123d31;font-size:18px}
+.cert-doc-body p{margin:0 0 8px;color:#596662;font-size:14px}
+.cert-doc-body span{color:#8a948f;font-size:12px}
+.industry-grid{width:min(100% - 56px,1120px);margin:0 auto;display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.industry-grid article{position:relative;background:#f7f9f8;border:1px solid #e0e7e3;border-radius:12px;padding:25px 24px 24px;min-height:165px}
+.industry-grid span{display:block;color:#c29a28;font-size:12px;font-weight:800;letter-spacing:.12em;margin-bottom:20px}
+.industry-grid h3{margin:0 0 8px;color:#123d31;font-size:19px}
+.industry-grid p{margin:0;color:#5f6b66;font-size:14px;line-height:1.55}
+.source-support-inner{width:min(100% - 56px,1120px);margin:0 auto}
+.source-support .source-section-head{width:auto}
+.support-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.support-grid article{background:#fff;border:1px solid #dfe7e3;border-radius:12px;padding:25px;box-shadow:0 7px 22px rgba(10,45,35,.04)}
+.support-num{color:#a27a11;font-weight:800;font-size:22px;line-height:1;margin-bottom:22px}
+.support-grid h3{color:#123d31;margin:0 0 9px;font-size:18px}
+.support-grid p{color:#5f6b66;margin:0;font-size:14px;line-height:1.55}
+@media(max-width:1000px){
+  .cert-claims-grid,.support-grid{grid-template-columns:repeat(2,1fr)}
+  .industry-grid{grid-template-columns:repeat(2,1fr)}
+}
+@media(max-width:700px){
+  .source-certification,.source-industries,.source-support{padding:58px 0}
+  .source-section-head,.cert-claims-grid,.industry-grid,.source-support-inner{width:calc(100% - 32px)}
+  .cert-documents{width:calc(100% - 32px);padding:18px}
+  .cert-claims-grid,.industry-grid,.support-grid,.cert-doc-grid{grid-template-columns:1fr}
+  .cert-documents-head{display:block}
+  .cert-documents-head p:last-child{margin-top:12px}
+  .cert-doc-card img{height:320px}
+}
+
+
+/* ===== Каталог по производителям вибросит ===== */
+.products-manufacturer-catalog{background:#fff;padding:12px 0 28px}
+.manufacturer-catalog-head{width:min(100% - 72px,1200px);margin:0 auto 14px;display:flex;align-items:flex-end;justify-content:space-between;gap:24px}
+.manufacturer-catalog-head h2{margin:0;color:#103d30;font-size:30px;line-height:1.05;letter-spacing:.5px}
+.manufacturer-catalog-head h2::after{display:none}
+.manufacturer-catalog-head p{max-width:560px;margin:0;color:#303835;font-size:13px;line-height:1.4;text-align:right}
+.manufacturer-tabs{width:min(100% - 72px,1200px);margin:0 auto 12px;display:grid;grid-template-columns:repeat(6,1fr);gap:6px}
+.manufacturer-tab{appearance:none;border:1px solid #cfd8d3;background:#f5f7f6;color:#23463a;padding:11px 8px;border-radius:3px;font:700 12px/1.1 inherit;letter-spacing:.4px;cursor:pointer;transition:.15s ease}
+.manufacturer-tab:hover{border-color:#b58a1b;background:#fff}
+.manufacturer-tab.is-active{background:#0b382b;border-color:#0b382b;color:#e2bd4a;box-shadow:inset 0 -3px 0 #c9a227}
+.manufacturer-panel{width:min(100% - 72px,1200px);margin:0 auto;border:1px solid #d9dfdc;background:#fbfcfb}
+.manufacturer-panel[hidden]{display:none}
+.manufacturer-panel-head{display:flex;align-items:flex-end;justify-content:space-between;gap:20px;padding:14px 16px;border-bottom:3px solid #c9a227;background:#f5f8f6}
+.manufacturer-panel-head>div span{display:block;color:#b58a1b;font-size:9px;font-weight:800;letter-spacing:1.5px;margin-bottom:3px}
+.manufacturer-panel-head h3{margin:0;color:#103d30;font-size:20px;line-height:1.15}
+.manufacturer-panel-head p{margin:0;max-width:560px;color:#46514c;font-size:11px;line-height:1.35;text-align:right}
+.manufacturer-table-wrap{overflow-x:auto}
+.manufacturer-table{width:100%;border-collapse:collapse;min-width:940px;font-size:11px;color:#26302c}
+.manufacturer-table th{padding:9px 10px;text-align:left;background:#0b382b;color:#fff;font-size:9px;line-height:1.2;letter-spacing:.4px;font-weight:700;white-space:nowrap}
+.manufacturer-table td{padding:9px 10px;border-bottom:1px solid #e1e6e3;vertical-align:top;line-height:1.35}
+.manufacturer-table tbody tr:nth-child(even){background:#f7f9f8}
+.manufacturer-table tbody tr:hover{background:#eef4f0}
+.manufacturer-table td:nth-child(1){font-weight:700;color:#103d30;min-width:190px}
+.manufacturer-table td:nth-child(3),.manufacturer-table td:nth-child(4),.manufacturer-table td:nth-child(6){white-space:nowrap;font-weight:700}
+.manufacturer-catalog-note{width:min(100% - 72px,1200px);margin:10px auto 0;color:#68736d;font-size:10px;line-height:1.45}
+.manufacturer-catalog-note strong{color:#103d30}
+@media(max-width:900px){
+  .manufacturer-catalog-head{display:block;width:min(100% - 40px,760px)}
+  .manufacturer-catalog-head p{text-align:left;margin-top:6px}
+  .manufacturer-tabs{width:min(100% - 40px,760px);grid-template-columns:repeat(3,1fr)}
+  .manufacturer-panel,.manufacturer-catalog-note{width:min(100% - 40px,760px)}
+  .manufacturer-panel-head{display:block}
+  .manufacturer-panel-head p{text-align:left;margin-top:6px}
+}
+@media(max-width:600px){
+  .manufacturer-catalog-head,.manufacturer-tabs,.manufacturer-panel,.manufacturer-catalog-note{width:calc(100% - 28px)}
+  .manufacturer-tabs{grid-template-columns:repeat(2,1fr)}
+  .manufacturer-catalog-head h2{font-size:26px}
+}
+
+
+/* ===== Mobile-first presentation inspired by the supplied mobile reference ===== */
+.mobile-logo-mark,.logo-copy{display:none}
+.mobile-product-cards{display:none}
+
+@media(max-width:600px){
+  body{background:#fff;overflow-x:hidden}
+  .container{width:calc(100% - 28px)}
+  .header{height:72px;background:#03261d;box-shadow:0 2px 14px rgba(0,0,0,.12)}
+  .header-inner{gap:10px}
+  .logo{min-width:0;display:flex;align-items:center;gap:9px}
+  .logo-img{display:none}
+  .mobile-logo-mark{
+    display:block;position:relative;width:38px;height:38px;flex:0 0 38px;
+    border:2px solid var(--gold);transform:rotate(30deg);border-radius:4px
+  }
+  .mobile-logo-mark:before,.mobile-logo-mark:after,.mobile-logo-mark span:before{
+    content:"";position:absolute;inset:7px;border:1.5px solid var(--gold);border-radius:2px
+  }
+  .mobile-logo-mark:after{inset:12px;border-width:1px}
+  .mobile-logo-mark span:before{inset:17px 7px;border-width:1px;transform:rotate(-60deg)}
+  .logo-copy{display:flex;flex-direction:column;min-width:0;line-height:1.05}
+  .logo-copy strong{color:#fff;font-size:16px;letter-spacing:.01em;white-space:nowrap}
+  .logo-copy small{color:var(--gold);font-size:8px;font-weight:800;letter-spacing:.7px;margin-top:4px;white-space:nowrap}
+  .header-actions{display:none}
+  .burger{margin-left:auto;padding:8px 3px;width:43px;height:43px;display:flex;flex-direction:column;justify-content:center;align-items:center}
+  .burger span{width:28px;height:2px;margin:4px 0;background:#fff;border-radius:2px}
+
+  /* Hero becomes a compact image-backed mobile first screen. */
+  .hero{min-height:560px;background:#03261d}
+  .hero:after{
+    content:"";position:absolute;inset:0;z-index:1;
+    background:linear-gradient(180deg,rgba(3,38,29,.48) 0%,rgba(3,38,29,.62) 34%,rgba(3,38,29,.92) 100%);
+    pointer-events:none
+  }
+  .hero:before{opacity:.12;z-index:2}
+  .hero-inner{width:100%;min-height:488px;display:block;position:relative;z-index:3}
+  .hero-image{position:absolute;inset:0;min-height:0;height:100%;display:block;z-index:0;overflow:hidden}
+  .hero-img{width:100%;height:100%;margin:0;object-fit:cover;object-position:center;filter:none;opacity:.62}
+  .hero-content{
+    position:relative;z-index:4;min-height:488px;display:flex;flex-direction:column;justify-content:flex-end;
+    text-align:left;padding:52px 14px 34px
+  }
+  .hero-title{font-size:31px;line-height:1.08;letter-spacing:-.6px;margin-bottom:7px}
+  .hero-company{font-size:11px;line-height:1.35;margin-bottom:16px;max-width:330px}
+  .hero-divider{width:48px;height:2px;margin:0 0 14px}
+  .hero-desc{font-size:13px;line-height:1.45;max-width:350px;margin:0 0 20px;color:#eef2f0}
+  .hero-buttons{display:block}
+  .hero-buttons .btn-outline{display:none}
+  .hero-buttons .btn-primary{width:100%;min-height:48px;font-size:14px;border-radius:4px}
+  .hero-waves{height:82px;bottom:48px;opacity:.55;z-index:2}
+  .hero-grid-dots{display:none}
+  .hero-features{z-index:5;min-height:72px;background:#03261d;border-top:1px solid rgba(224,182,66,.3)}
+  .features-grid{width:100%;min-height:72px;display:grid;grid-template-columns:repeat(3,1fr)}
+  .feature-item{min-height:72px;padding:9px 7px;display:flex;flex-direction:column;justify-content:center;gap:4px;text-align:center}
+  .feature-item+.feature-item{border-left:1px solid rgba(224,182,66,.3);border-top:0;padding-left:7px}
+  .feature-icon{width:28px;height:28px;flex:0 0 28px;margin:auto}
+  .feature-icon svg{width:28px;height:28px}
+  .feature-text h4{font-size:10px;line-height:1.1;margin:0}
+  .feature-text p{display:none}
+
+  /* Content rhythm */
+  section{padding:48px 0}
+  h2{font-size:25px;line-height:1.12;margin-bottom:16px}
+  .section-intro{font-size:14px;margin-bottom:25px}
+
+  /* About: keep it concise on phones. */
+  .about-match-inner{width:calc(100% - 28px);display:block;min-height:0}
+  .about-match-copy{padding:36px 0 22px}
+  .about-match-copy>h2{text-align:left;font-size:25px}
+  .about-match-copy>h2:after{margin:10px 0 0}
+  .about-match-subtitle{font-size:13px!important;line-height:1.4}
+  .about-match-intro{font-size:13px!important;line-height:1.5}
+  .about-points{gap:12px!important}
+  .about-point{padding:12px!important}
+  .about-point h3{font-size:14px!important}
+  .about-point p{font-size:12px!important;line-height:1.45!important}
+  .about-match-visual{display:none}
+  .about-match-note{font-size:9px!important;line-height:1.4!important}
+
+  /* Manufacturer catalog: mobile cards instead of a wide table. */
+  .products-manufacturer-catalog{padding:42px 0 18px}
+  .manufacturer-catalog-head,.manufacturer-tabs,.manufacturer-panel,.manufacturer-catalog-note,.catalog-filters,.catalog-filter-status{width:calc(100% - 28px)}
+  .manufacturer-catalog-head{margin-bottom:14px}
+  .manufacturer-catalog-head h2{font-size:25px!important;text-align:left}
+  .manufacturer-catalog-head p{font-size:12px;line-height:1.45}
+  .manufacturer-tabs{grid-template-columns:repeat(2,1fr);gap:6px;margin-bottom:10px}
+  .manufacturer-tab{min-height:38px;font-size:10px;padding:8px 6px}
+  .manufacturer-panel{border:0;background:transparent}
+  .manufacturer-panel-head{padding:11px 12px;border:1px solid #dce4df;border-bottom:3px solid #c9a227;border-radius:4px 4px 0 0;background:#f5f8f6}
+  .manufacturer-panel-head h3{font-size:16px}
+  .manufacturer-panel-head p{font-size:10px}
+  .manufacturer-table-wrap{display:none!important}
+  .mobile-product-cards{display:grid;gap:8px;padding-top:8px}
+  .mobile-product-card{
+    display:grid;grid-template-columns:86px minmax(0,1fr);gap:12px;align-items:stretch;
+    background:#fff;border:1px solid #dce4df;border-radius:6px;overflow:hidden;
+    box-shadow:0 3px 12px rgba(16,61,48,.045)
+  }
+  .mobile-product-visual{
+    min-height:118px;background:linear-gradient(145deg,#0a3d30,#03261d);
+    position:relative;display:flex;align-items:center;justify-content:center;overflow:hidden
+  }
+  .mobile-product-visual:before{
+    content:"";position:absolute;width:70px;height:70px;border:1px solid rgba(224,182,66,.45);transform:rotate(45deg)
+  }
+  .mobile-product-visual:after{
+    content:"";position:absolute;width:42px;height:42px;border:1px solid rgba(224,182,66,.25);transform:rotate(45deg)
+  }
+  .mobile-product-code{position:relative;z-index:2;color:var(--gold);font-size:9px;font-weight:800;letter-spacing:.8px;text-align:center;padding:8px}
+  .mobile-product-body{padding:10px 10px 9px 0;min-width:0}
+  .mobile-product-type{display:block;color:#b58a1b;font-size:8px;font-weight:800;letter-spacing:.9px;text-transform:uppercase;margin-bottom:3px}
+  .mobile-product-title{font-size:14px!important;line-height:1.2!important;color:#103d30!important;margin:0 0 5px!important}
+  .mobile-product-execution{font-size:10px;line-height:1.3;color:#596662;margin-bottom:7px}
+  .mobile-product-meta{display:flex;flex-wrap:wrap;gap:4px}
+  .mobile-product-meta span{padding:3px 5px;border:1px solid #d7dfda;border-radius:3px;background:#f8faf9;color:#405049;font-size:8px;line-height:1.2}
+  .mobile-product-card[hidden]{display:none}
+  .manufacturer-panel.filter-empty .mobile-product-cards{display:none}
+  .catalog-filters{margin-top:10px;grid-template-columns:1fr;padding:9px}
+  .catalog-filter label{font-size:8px}
+  .catalog-filter input,.catalog-filter select{height:36px;font-size:10px}
+  .catalog-filter-reset{height:36px}
+  .catalog-filter-status{font-size:9px;margin-bottom:8px}
+  .manufacturer-catalog-note{font-size:9px;line-height:1.45}
+
+  /* Industries stay compact and scannable. */
+  .industries-compact{padding:48px 0 52px}
+  .industries-compact .source-section-head{padding:0 14px;margin-bottom:20px}
+  .industries-compact .source-section-head h2{text-align:left}
+  .industries-compact .source-section-head h2:after{margin:10px 0 0}
+  .industries-compact .source-section-head p{font-size:12px;line-height:1.45}
+  .industries-compact .industry-grid{grid-template-columns:1fr 1fr;gap:7px;padding:0 14px}
+  .industries-compact .industry-grid article{min-height:112px;padding:13px 11px;border-radius:5px}
+  .industries-compact .industry-grid article span{font-size:8px;margin-bottom:6px}
+  .industries-compact .industry-grid article h3{font-size:12px;line-height:1.25;margin-bottom:5px}
+  .industries-compact .industry-grid article p{font-size:9px;line-height:1.35}
+
+  /* Support and certificates */
+  .source-support,.source-certification{padding:48px 0}
+  .source-section-head,.source-support-inner{width:calc(100% - 28px)}
+  .source-section-head h2{font-size:24px}
+  .support-grid{grid-template-columns:1fr!important;gap:8px!important}
+  .support-grid article{padding:15px!important}
+  .support-grid h3{font-size:15px!important}
+  .support-grid p{font-size:11px!important}
+
+  /* Avoid oversized document images on phones. */
+  .cert-documents{width:calc(100% - 28px);padding:12px}
+  .cert-doc-card img{height:240px!important;object-fit:contain}
+}
+</style>
+
+</head>
+
+<body>
+
+<header class="header">
+  <div class="container header-inner">
+    <a href="#" class="logo" aria-label="ООО «НСК»">
+      <span class="mobile-logo-mark" aria-hidden="true"><span></span></span>
+      <span class="logo-copy"><strong>ООО «НСК»</strong><small>СИТА ДЛЯ ВИБРОСИТ</small></span>
+      <img src="./images/logo.png" alt="ООО «НСК»" class="logo-img">
+    </a>
+    <nav class="nav" id="nav">
+      <a href="#about">О компании</a>
+      <a href="#products">Продукция</a>
+      <a href="#certification">Сертификация</a>
+      <a href="#industries">Отрасли</a>
+      <a href="#support">Изготовление по чертежам / под маркой заказчика</a>
+      <a href="#contacts">Контакты</a>
+    </nav>
+    <div class="header-actions">
+      <button class="lang" type="button" aria-label="Выбор языка"><span>RU</span><span>⌄</span></button>
+    </div>
+    <button class="burger" id="burger" aria-label="Меню"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="hero-grid-dots" aria-hidden="true"></div>
+
+  <div class="container hero-inner">
+    <div class="hero-content">
+      <h1 class="hero-title">ООО «НСК»</h1>
+      <p class="hero-company">Официальный представитель Shenzhou Yongsen Hardware Products Co., Ltd.</p>
+      <div class="hero-divider"></div>
+      <p class="hero-desc">
+        Сменные ситовые панели для вибросит (Shale Shaker Screens)
+        и других продуктов для буровых растворов. Официальная API сертификация
+        гарантирует соответствие международным стандартам качества.
+      </p>
+      <div class="hero-buttons">
+        <a href="#products" class="btn btn-primary">Наша продукция <span>→</span></a>
+        <a href="#about" class="btn btn-outline">О компании <span>→</span></a>
+      </div>
+    </div>
+
+    <div class="hero-image">
+      <img src="images/hero-derrick.png" alt="Буровая вышка" class="hero-img">
+    </div>
+  </div>
+
+  <div class="hero-waves" aria-hidden="true">
+    <svg viewBox="0 0 1600 260" preserveAspectRatio="none">
+      <path class="line" d="M0 190 C130 145 210 215 350 176 S610 145 760 184 S1010 226 1160 164 S1410 116 1600 178"/>
+      <path class="line" d="M0 212 C150 170 250 234 390 197 S620 160 780 202 S1030 238 1190 180 S1420 140 1600 196"/>
+      <path class="line" d="M0 232 C135 192 260 250 420 216 S650 182 820 218 S1060 250 1220 198 S1430 165 1600 214"/>
+      <path class="line-bright" d="M0 245 C160 207 275 259 440 227 S670 198 840 230 S1080 260 1240 213 S1440 181 1600 226"/>
+      <path class="line" d="M0 160 C120 126 245 184 370 151 S610 118 750 159 S990 203 1140 141 S1390 94 1600 155"/>
+      <path class="line" d="M40 255 C220 225 330 262 500 240 S760 214 900 241 S1140 264 1320 230 S1500 213 1600 224"/>
+    </svg>
+  </div>
+
+  <div class="hero-features">
+    <div class="container features-grid">
+      <div class="feature-item">
+        <div class="feature-icon">
+          <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5">
+            <path d="M24 44s17-8.2 17-21V10L24 4 7 10v13c0 12.8 17 21 17 21Z"/>
+            <path d="m17 24 5 5 10-11"/>
+          </svg>
+        </div>
+        <div class="feature-text">
+          <h4>API сертификация</h4>
+          <p>Соответствие стандарту API RP 13C</p>
+        </div>
+      </div>
+
+      <div class="feature-item">
+        <div class="feature-icon">
+          <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5">
+            <path d="m24 4 17 10v20L24 44 7 34V14L24 4Z"/>
+            <path d="m7 14 17 10 17-10M24 24v20"/>
+            <path d="m15 9 17 10M11 31l9 5M33 31l-9 5"/>
+          </svg>
+        </div>
+        <div class="feature-text">
+          <h4>Высокое качество</h4>
+          <p>Прочные и надежные решения для бурения</p>
+        </div>
+      </div>
+
+      <div class="feature-item">
+        <div class="feature-icon">
+          <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5">
+            <path d="m8 21 9-9 7 4 7-7 9 7-8 8-7-4-8 8-9-7Z"/>
+            <path d="M15 26 9 32l7 7 9-9M31 22l8-8 6 6-7 7"/>
+          </svg>
+        </div>
+        <div class="feature-text">
+          <h4>Официальный представитель</h4>
+          <p>Прямые поставки от производителя</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="about about-match" id="about">
+  <div class="about-match-inner">
+    <div class="about-match-copy">
+      <h2>ООО «НСК»</h2>
+      <p class="about-match-subtitle">Официальный представитель Shenzhou Yongsen в России и СНГ</p>
+      <p class="about-match-intro">
+        ООО «НСК» представляет продукцию Shenzhou Yongsen на российском и рынках СНГ.
+        Производитель специализируется на разработке, производстве и поставке сменных
+        ситовых панелей для вибросит и запасных частей.
+      </p>
+
+      <div class="about-points">
+        <div class="about-point">
+          <span class="about-point-icon">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <circle cx="12" cy="12" r="9"></circle>
+              <path d="m8.3 12.1 2.4 2.4 5-5"></path>
+            </svg>
+          </span>
+          <div>
+            <h3>Официальный представитель Shenzhou Yongsen</h3>
+            <p>Мы работаем с продукцией Shenzhou Yongsen и сопровождаем поставки, технический подбор и запросы заказчиков.</p>
+          </div>
+        </div>
+
+        <div class="about-point">
+          <span class="about-point-icon">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M12 3 19 6v5.5c0 4.5-3 7.5-7 9.5-4-2-7-5-7-9.5V6l7-3Z"></path>
+              <path d="m8.8 12 2.1 2.1 4.5-4.5"></path>
+            </svg>
+          </span>
+          <div>
+            <h3>API сертификация</h3>
+            <p>Ситовые сетки соответствуют API RP 13C (ISO 13501). Производство сертифицировано по API Q1, ISO и HSE; продукция прошла испытания в лаборатории Intertek.</p>
+          </div>
+        </div>
+
+        <div class="about-point">
+          <span class="about-point-icon">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M4 6.5 12 3l8 3.5v11L12 21l-8-3.5v-11Z"></path>
+              <path d="m4 6.5 8 4 8-4M12 10.5V21"></path>
+              <path d="m7 5 8 4m-6-5 8 4"></path>
+            </svg>
+          </span>
+          <div>
+            <h3>Ситовые сетки для shale shaker</h3>
+            <p>Поставляем сменные ситовые панели для различных моделей вибросит и выполняем подбор по техническим параметрам оборудования.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="about-match-note">
+        <span>★</span> API RP 13C • OEM/ODM • международные поставки • технический подбор
+      </div>
+    </div>
+
+    <div class="about-match-visual">
+      <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAMCAgICAgMCAgIDAwMDBAYEBAQEBAgGBgUGCQgKCgkICQkKDA8MCgsOCwkJDRENDg8QEBEQCgwSExIQEw8QEBD/2wBDAQMDAwQDBAgEBAgQCwkLEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBD/wAARCAFZAeQDASIAAhEBAxEB/8QAHQAAAQQDAQEAAAAAAAAAAAAAAAECBQgGBwkEA//EAHIQAAECBQIDAgcGCRATDgcBAQECAwAEBQYRByEIEjETQQkUFiJRYdIVMnGBldMXGSNCUpSWs9EYJDNGVmJydYaRkqG0wdTkJjY3RVVXZXN0goOEk6SxtcLj8CUnOENHSFRjZHaFo8PhKDQ1RFNYpaLx/8QAGgEAAwEBAQEAAAAAAAAAAAAAAAEFAgQDBv/EAD0RAAECAwQGBgkFAAMBAQEAAAEAAgMEEQUSITETQVFhkaEUFSJScXIyM1NigZKywdEGJDRCsSOC8OFj8f/aAAwDAQACEQMRAD8A6kYzHjqdRk6TJuz8++liXZSVLWr970n1dSdofUqjJUqSdn6hMIYl2U8y1q6Afh9Uc0uNrjcn65UJnSvSyceQoOGXm5uXOVNE+aWmin3z5zgke8zyp87JTNnJx0IiDBxiHgBtO7/V6C7DZpYmDRzOwb1snV7wmVs2Jes/bVAt6brLMirsXH5VTQbQ6DgoKlnzlDv5RgHbJIOMKT4WRnorTWrH+6sRSCamhp/LO0uTdSbmfQW52YbVkUts7ql21D/jz/xjg95ugb85iGN73kDtdlZH9/u+1HCyTiRRfMRx/wCxFfAagp0S1HMN2gG6mSvwfCySyc82mtXGf+sY/DDPptcsNhppVj/bsfhihZvq9SMG7qz9vu+1CeXF5fmsrX2+77UaNmv9ofmKz1wdg4BX2HhaGD10zq37Nj2oX6bPL/0s6t+yZ9qKEm+706eV1Z+33fag8ur1HS7q19vu+1C6uf33fMUdbnZyCv0jwskrjz9M6z/alk/6UNPhaJNOydM6wfhUz7UUIN+Xqet31v5Qe9qE8ur0/NdW/lB72oYs54/u75il1udnIK+48LTLH32mNX/ZM+1CHwtcvnA0xq37Nn8MUJN83oet3Vr5Qe9qBN83onpd1a+UHvag6uid93zFHW52DgFfhPhZpcjKtMqwPgUz+GFPhZmMfzMqt8a2fwxQg37ex/LhW/lB72oUX5eoGBeFb+UXvag6uid93zFPrc7BwCvn9NmYz52mdV/Zs/hhT4WaVA/mZVbP6Nn8MUKN+Xqet31r5Qe9qF8vr3xjyvrWP0wd9qH1fE75+Yo63OzkFfEeFolBkq0zqw/t2fahw8LVKgfzM6qf7dn2ooWb9vc7eWFbx+mDvtQ035exH8uFa+UHfag6vf33fMUdbnYOAV9B4WpkHfTCrY/Rs+1D/ptctjA0vq2f0bPtRQjy6vbvvCt/KD3tQovy98Y8sK18oO+1B1c/vu+Yo63OwcAr7Dws8uD5+mFXHwKZ9qF+m0SnQaY1b9dn2ooQb6vcje8K38oPe1CeXV7d94Vv5Qe9qH1dE77vmKXW52cgr7Dws8tk82mNW/Zsj/ShyfCyy3fpdVv2bP4YoP5d3r33dWT8M+77UIb5vXr5XVn7fd9qDq6J33fMUdbnZyCvz9Nklx77S6sAfC17UMPhZ5dO30LqsT3ecz7UUMF9Xt08sa19vu+1B5c3qN/K+t7f1Qe9qF1c/vu+YrXXB2DgFfZPhZpfGV6X1gfApn8ML9NolzsNLqxn9Ez+GKCqvy9unlhW/lB32oQX3ewOfLCt/b7vtQdXRO+75il1wdg4BX6+myM/XaX1n4iz+GF+mxsY/mX1r9dr8MUG8ur2PW761j9MHvahvlteR/LbWvlB72oXV0Tvu+Yo63OwcAr9jwskukZXpdWf12vwwg8LVKnb6F9Y/ZNfhigwvm9B+W6tfKD3tQ4Xzeh38r638oPe1B1c8f3d8xS64OzkFfn6bPKJ99pfWN+mVNe1DD4WmW6fQvqw/ujP4YoUL6vYflwrfyg97UJ5d3ufy31o/wB/u+1B1a/2jvmKfW52DgFfUeFml8nm0xq2/wD1jP4YcnwtEonrphVz/bs+1FCTfl79Dd9ax/Z7vtQnl5ev5r639vu+1B1c/vu+YpdcHZyCvx9Nskeh0urH7Nn2oPptkl0+hdWB/bs/hig5vy9T+W6tfb7vtQnl1eh63dW/lB72oOrn+0d8xR1udg4BX4HhZpMnKtMKzj9Gz+GD6bNJ9BpfWB/bs/hihPl1e528sK3j9MHvag8u71G3lhW/lB72oOrn993zFPrc7OQV9vps0n1VplWP2bP4YQeFok+g0xrH7Nn8MUJN+XsdvK+t/KD3tQnl3eo/LfWvlB72oOrn993zFHW52cgr9J8LNL/XaX1n9dn2oPptMmTj6F9Y/XZ9qKDeXt6kYN3Vo/DUHvahDfd6fmurXyg97UHVz/aO+YpdbnYOAV+R4WaWBPNphWP2TPtQh8LNLY20wrGf0bP4YoP5d3t08sK3j9MXvahwvy9sY8sK2P8AxB72oOrn993zFHW52DgFfT6bM0DvpfWMepbP4YB4WlgddL6x8a2fwxQpV+XqrY3fWz/4i97UN8ubz/NdWvlB72oOrn993zFPrc7BwCvz9Nqlgd9L6wf7dn8MIfC2S3QaX1YH9Gz+GKE+Xl7fmvreP0we9qE8ur0HS7q38oPe1B1c/vu+YpdbnZyCvwPCzsDdemNYGfzzPtQg8LTKnb6GdX/ZM+1FCfL29yMG8K0R+mD3tQgvq9R+W6t/KD3tQdXP77vmKfW52DgFfU+FplxsdMav+zZ/DHz+m0NHpplVv2bP4Yof5dXoet31v5Qe9qF8ur1G3lfWx/4g97UHVz++75ijrg7BwCvinwsrP1+mNY+JTP4YarwtLQyE6Y1YH1rZ/DFDVXzeiut31v5Qe9qFTfF5jY3dWvlB32ofVz++75ijrh2wcAr4N+FlcO/0MKsR6nWYlLe8K7SJ2tycjW7KqNLk3XUpemnOydSykn3yko84p9OMkdcHGI5/m/75AwLvrWP7Pd9qPszcouRg0O+KjMPtuKKpOpvqU87IOkAZJOSphWAFoG4wFp3SUry6Qe0Vvu+DjUJttZznUIHxC732Re9Av+gS1xW7OszMvMNpXltwLA5gFDBGxBBBBGxBBET+xGRHHDhS4nbt4a7sas+8n1m3nlJAUVFxqXQs8wWkpzzy6883MnPLkrTnKkq642delFvmiMVuhzSHW3UJUpIWlRQSnI3SSFAgghQOFAgg4MdUnOOLujxz2tR1OG0b9oVEFsZulhfEax/82FT8EfLOd4IqUqsKhXhIuIC9rEEhY9qPmTTUy8wubQrz2QltpSlIA/4xQeACvrQlRG6sjnw8safNOy7ToVdruUPPIVkUlJ2UhCh1mjkhSx+RDIB5ySi4HhSlhF8W6BnJnZj9zysUpvheL1uEAD/6rN9P68vaPn5FojXnOzc59d9HUA8AFyWtFcyLQag2m6oqT4qDGOg7oafUB+tCEkd+fhhuT6YtL58bU8dYCYbmEMFEJT1zCg5hsEFEJ0LmG7kZgB7jBRCdmF5jDR8MIT6IKITwfSYOYR88n0wZPpgohPyYMwzJ9MLk+mEhOznrCZx6INzvB6d4dEJcwvN6Ybn0wnN6oEJ+fghMmEzCcxhhCeMdcwsMG8fVpt595uXl2VvOurS222gZUtajgJHrJIHxwnYCpTAqaJBnp/ljK5zSy+Kfp4jVKpURcjbkxNNSUpMzKuzVOOOBRHYNnznEAIUSvATtsTFgrf4TZC0NdrKtC6ZxFVpy7ecuKsoewGlTEuopdYHTLHaKZHndU82eu0Zxr62UW/qhRtPbPqDU7S7dccmp2Zl1AsOzakhtCGyNlJbRzjI83LhA2EQOuHTE3CgSbbzXCrnagMuJIVs2S2WlokebdRwwDdZOfBVh6jugAIgG23+3/vAtSUDKlBI9Ktov1oMVDzwS7+jMO2PojeGi3CHqZqyWK1VJVy1rYWOdVRnmiHn0d5l2DhS9vr1cqB1BV0jINZOC677SSu6NKnHrxtd5PbNoYKXZ5hHp5UebMI9CmhnHVO2TKdbUg2P0YxBe5V2VyqqrbFnnQOkCGbvPhmq3wQLQ4y4th5CkONkpWhQKVJI6gg7g+qAj07fDFQdoVGSlOq00Oayqz9Lr5v8Aoler1mURdWatsMLqMvLK5plDbvacriGvfLSOyVzcuSMjYjOMUSe/Bjc3ChrNJaNanpnK8+tmgV2X9zak8AT4v54W0/gbkIWN8b8q1HuEbf4hOH2iXlr7Y5s5yXlJDUluYdn5qRCHGUuS4C35tsJPKedpaCcEAryeqoiRbUfJzroEy2kMi813gMQVZh2Y2bk2x5c1eDQt8TgQqdE7emEJ7olruterWRdNWs+uoSmoUacckn+X3qlIOApPpSoYUD3giImLLHtiND2moKjvY6G8sfmEkLmEVDcmNgVSX0z6TAVegw0HMIowUQlJ74TmhIIMEJ2RC83oMMggwQn5OYdzf7Yj5Zz8MLmEhOJ3hM52BENzmAnHfDohO+OFzDMwo64gohO2+GF7swkITjpCQnZ9cGe8wwH0wpO0CEpMKk/BHzJMCSe+HRC+sA9Of1jDOYQoVAjesqolZplUpqLUux8syrXN7nVIIK105atylSRuuXUd1JHnIJK0ZPMldpuBfW3UjT/VRrRmpLTN08JcW0hT/OGEp5VlDahkLZWlfOjuBIUnAUoKpkDjfviyvCwkDipoyQNvcOXx9oS+IkWjDayE5zdQLhuIpiFasqK4x2DeB4g6iuzWCd9oIQKIAA2GIIuMNWgqiRRcvPClkm/bdHembmf3PKxSy+By3tcIH9Fpwf8AnLi63hTEjy5txeRkzkyD9rysUqvwct8XED3Vac+/LiFZvonxf9an2z60+DPpUCrrDScQpPfDIsUqoif3ZghAcwsGCEQQ0k9ISABCfBAOm0EJCIIIIdUIgMEEBQiCCDG8AQnD4INs5hO7rBmGhHfkwkBOYIEIghAYUn1QVQnJ9MZ3pxbdaYDOsHuUZu2bJr9KcrS0EFbSFPhYVy96cIwT3FSc9YwLOIuj4P2bty4rT1B0uraGH11N1mZck3sHxiUcaLDmE53CSE5I3HOPTEe3Z10jJOjNbeApXwJoeSrWLKtm5tsNxpnTxAwW29T7b031Iu6Xua+bslpO06BSVSkwTVBJtVRUypqYLTq+ZJUyhDbCykHKlOpB96c0g16uLTi4L7XL6S2vTqNbFLZEnLLk2C2Z9eSXJhefOIJPKjm35Ug7ZIizVE0w00020k+jrrIxKV+sU6mqlqTKzqeZkOtrcRLoS2dnn3VAKUpWcZwAEoikb007MuKffwXFqK18owAonJwPhiH+m5ZhiOfCe5zYfZGptddNp3qv+oZh+jayI1oc/E7d3grQ6baI8PMjoPQ9ZtZ6jXpdupTb0s4ZV9wtc4fdQ2kNstle6Wjk56+iJJniI4RtKiHdI9EHqxU2t2p+faS2UqHeHphTryf7VCfijy6gJH0vax1BIBcrQJ2/7VORUxKfh/Xj3kpEWqYsSaiOID3ClaCgOGS85ud6rEKHLsbUsaSaVNSFufVfit1d1bamKZP1hFEokx5q6ZSyptLqPQ88SXHQR1BISfsYhtJuIXVHRdQl7QriXKUpXO5SZ9HbSaj3lKMhTaj9k2U578xrdGw2gJAyT0i62y5JsDo+jFzZRRTak4+MI+kN5W8c4peGzVhKUa6aKFioqSEqqEi2mYPrIdbU3MJHq874Y+85oXwrag6a3lfmj0/cRdtunzEx2Spp5Dbb6GFOoSpD6OZSSE9yvjitl/6KapaaUSj3JeVqTMlTK4yh1l4HnDKlbpZfx+ROlO4QrGx9IIG/eEh5aOHnXAk/kci4oeo+IPdI+bnJODJS4m7PiuDbzRS9UZgFfRSc1GnY/RZ+E2t0mpFDlUKuWm9wUW1b3o9fue2ZO4qRLvYqFNmmEuomJdY5V8qVbBYCuZJ+yAi+NkW3o/RLitPVDRquy71rOTj0nM0tudLjVNenmw0Hm2lkrYJcQ0242cDzkqwOUlXOptzKUkZ6DpF2tH7I081p0UpN5W9ISdK1BshHik47KoDaZ5cv57SZpCcc6Xmwj6ofOCskE8uD6/qeC0MZGiPc1p7LqYihGsavFeH6cjFznwWtBI7Q21GwrSHEhTKlfmo+o2rltSHb2nSazK0d6poUOydmAy2z5h+v89skkdAtB+uEaT2/BF3+IOTtHTfgzoFjUx1lD1eXTHpVOMOTj3MmamXz3/CegKkp9EUfMUP05Nmck+yKMYS1u8CgB+K4LelhLzNa1c4XjuJ1IJyYbkGAnaET1i+oicID1gghVQk37oTODmHQhAgQlG+8BGYbkwZgohLg/FBgQmc9RBn0QDBCU7CGw4DbpBj1QVQgZhQe8QQYxtDCE7PphCR1hIOsACEd+YIIIEIhM/FCwhHqgQlz3wgML0GIb3iGhfVJOIs/wr8v4qujDbHuBLkfD4hLRV9JizfCurl4q6MDvmgy4/xCWiTanqX+V32VayfXs8wXZbuHwCCAwRYh+gFWOa5g+FHHPe1vg9fHpnf+95WKU37/AC83Gf6rzv39cXY8KNgXzbvrnpjb+95WKT33vfFxb5/3WnPvy4hWb6J8X/WVOtn1p8GfSsfV0hsPI7obiLSiBKnpAdhtAM4zBnMFEJsEOx6IAB1ENCB0hYMZhcenaM0Qm43zCwoEGPRAhJBC90JCQlA2zC59Xxw3JgzDohLgGEPWCCGckIgggjKEg2hYTIhYEJRtkjvi4un+jFB1L4cLc1B0wdct/Ua2WJyVdm6a4WF1B1p1xSmXikglam1I5V9fOSDlOwp0TnaLOcOrPEBYNgOaoaTU+mXjb1RmXWKtbfaK8al32CAHEo2PMUFJy2VEpIBQrAIg/qFsXozXQXhrg4Z5HPsnVirtgFnSHNiNJBByzG/4LPn9OxcWkt9a1amVF+rMStLq4s2lzR/GtLlldoG30t+97Za1eaSMpTy9TjFKQnbCjtsIvHYsxP8AELN0LR6ck3KZYFDp8rW6+0HFJmZ9Tj6ixT3ehbDbiHEuDqSz3ZTildYkxIVyp09HvZSemJdI9SHVJHr6CPD9PviCJGgxz26g3Rk1py+JzK97fhtEOFFhDs4ipzJ1/hWovZrxjweVjlG/Y1dPP6j43Ng/5YrZYWn1z6l3VJWZZ9NVO1OeJCEcwCG0J3W64o7JbSN1KPTuySBFntN0HVDgYuey5MF2qWfPTEw20ndSkJcE4kgD7JCn0j1oiqtBuKsWxV5K47cq0zTqlIuB+Vm5ZfKtpfpB7wR1G4IyCCDG7IMRrJqCz0w91K78QvK2LpfLRn+gWNrTdgVLaoaXXfo7dcxaN7SLbEw0ntWJlpZVLTbHQOsrIHMnOxBAUkjBAMWP4aNAaPZlG+j7rchmm0+nMifpcpPpISy2NxOPIPVR83smyMkkKxkpEbC0x180g4ibdk5LW2m27JXRajnukfdHlRLP9kMqmmCojGwy4wc9AQFDpW7ia4jqnrhXTSKGt+TsymvlclLK81c86NhNPjuPXkQfeJP2WTHB0m07WPV72GGR6btVPd8V3iWs2zP37X3wfQbrrv8ABRnENxB3BrpcJCDMSFrSDqjS6apWCo9PGHwDhTyhn0hAPKPrlK2jwqtlPDprssnZVOcAPpIkH4qsBnp398W1sJg6YcDF6XLUU9jM3w68xJJVspbb3JKN4/tUzDg/OjPSO21pWDKSMOTgClXNAHxBXJZU1Fm5yJNxjWjXE7sKKoTQ8wAnYCLc6I6dOV/h7b1H0sqszQ9QrWqE83MuyTgSmryyVJf8UmEHzV/U1/UypJwdsYJxUtOE7nGB/ki6Fu0ar8O+nthag2kpJpd6UyVkrwkpt1XYtzDzC32aig78im08yVjopKQNjvGv1FEcIMOFDdR5dgDk6gxB8RzWP0/DrFiRHDsgGtMxXIhe2ztJ6RO23XNetYJ2YrsjQpGoLtmlT7naS0lIS5cDKuQ7K51JBQjHKAUk8xIxR5OSgFRPNjfPXMW3vBvW/UnQzxZUnK2LprbdDafddqKiJysol2hyFSB5wDiwkpR5iSVJyVbRUhCipIJGCd8Qfp4RHaZ8V4JvZDJoGQ8dq1bxaNG1jSMMzm47fBIdoIVUJH0YxC+dRBBDckwUQnQhEG4EBVAAhJtCQQsNCADBt1EKADARttBVCUdIIQZ9MLAShLjO5gPWEhTsOkIFCSCFxvCRpCIIIIRzQiCDO+IIaEnQ7wAA7wpGYaIyhPAiznCx53FXQ8d9vsf5vlorECQYs5wpZ/FV0NJ/oCwP8QlomWn6l/ld9lVsn17PMF2X9HwQQuMgHPUQRYZ6IVc5rmH4UYA3zbnrn5gf4vKxSe+974uM4/nvO/f1xdjwpR5b2tsg7mdmT8fYSsUlvo/yb3Dv/Pac+/LiFZmR8X/Wp1s+tPgz6VBKhpGRCneCLSiJvwwZgIOYXHQwkIGTCwY/Wg+OCqEoIhT694bBCwQlzk7wuT3Q3pBkQkIMEEEOiEuNs5hIIIdEIghO/EGDn1QFCUnEJjO8HUwuIyEJkKDiFKfRCcsazQndY3Nw28Q81oVV51mqyj0/a9XKTPyzSkh1h1IwmYa5iElWDyqSSOYcu4KRnTMT9iXrVdPbvpd40VmWemaW+HewmWwtl9BHKtpaTkFKklST3jORviOG0ZOHOyzoMVt4EZZc12yEy+UmGxWOoQcTuVzqnxUaZURF16m6cEViZfo7RmZbxJTD0vOtuqSwuYChu0vxg5WCRzICc5cTnRnEToMjSe2LFuVp916ZrskWq6txzn56oR2y3BnoFBaxgbfUQepMWTp73DbxGWsaxQBQ7ar81KOyj6G0S8tOy3aoKHWXm/NEwyoKOxBSRhSSlQBTj1XumVvDUDRrR2+ZGRqs5SZyo+7awpE1Iz5ZpzrLK0qBI5nQVLLasLQeo96T8JZ8z0KMHQWObdrpA7MhrTdx1gZcF9vOyonIBhxXA3qXCMgSRXBaF4VtYmtH9SEO1uY5Lar6E0+sc26GQFZamSP+rWTzf9W4vvwI+vFVw+zukF0O3NbcsX7IrjxdkZhnz25JxzzvFlqGwSQSW1dFIwMkp3hdcNHatppqJcFDoFLn52iSEsisMPttl0y1PdUUpLpG4CFhTZUfsQTjMZloFxSSFq0U6UavUzygsabb8WbU41265FlR/Iyg/krGcEJ98jqnIASPoYxffba1n9qoF5u0aviF89BDRDNlWj2aE3XbDs8Cq4hIczzAEA/EPXHoRuN9/wBqLSakcGbVWpY1B4ca5L3PQJsF5uliaS48hPeJd5RAdAO3Zr5XB0847RHaUcFV03DJm79Yaj5DWvKp7d9uZWhudW2OpUHPMlk7e+c870I6GOxv6gkDB0xfQ5U/tXZTOq43WDPCNog3DbqptrktfaAaF1nXC8G6egPS1vU9aF1ifSMcjZ6MtnoXnBskfWjKiMDfOeM7VSl3DX6ZpJZq2G7asodktqXP1FU4lAb5EY2KWGx2YPepTnXaJzVjigtW0LY+hBwxSSKVRWG1szFcZQpLjvNssy5V55Uv66YX5x+tAGFRX+xNL7u1ArVEptHpU21IVqrIo7dWcl1+KNvlKlqBcxyqUhtDiygEnCfXHJBESaji0Z3sMbW4055Yk76Lri3JaAbOku291Lzh/g3LNeFXS+n6o6sSdPr8n4zQ6Oyqp1NpXvXUpIS20r1KcKcjvSlUb/tbUuy6da7Ok+rtWlqfT9NLldp87Mz4Km6g1LFw09ltKQpTiikoUsAHCWQD+SCMlpEnYGgOsspZVtUiYLL1hJ7KXYaK5qoTLU84ordUBgOOBaiVrIQkJ6hKQIkKTQNCdKKQ9qJrbX7WqlzTrszUphtxxqc7J+Yc7V1uUl/OLiyeVBc5eYpbQMpSgR83aNoCfiaWIxxY4C4G51xqd2f+L6Kz5Dq+CITHAPBN8nKmGCr3xQ8VchqvTzYOniZlFtJeQ7PTjyS25UFoOUIDfVDSThXnecohOyQnBrZsMn0mNh66atr1jvh24ZahytEo0onxWkUyXZQ2GJfmJ5l8gAU6snmUfgA2AjXRj7ax5KHIyjIcNlzWRmanadZXxtrTb5yac97r2oHV8NyUnMJCE4gzkbRVGSmpYQHJgx6TBjI6YhIQScwhxC49cJy+iAFCSCHcsJjfpDQlTCwDaCMoSYELCE4hYZQiCCCAISg+mA/DCQpjSEkEBghIRjvMEEG0NCIIU90JCyQjGYs5woqzxV0M460Fg/4hLRWQEiLM8KhxxV0Mf1Clx/8Az5aJVp+pf5XfZVrI/kM8wXZzuGBBBtiCLDR2QqxzXMHwpABvW2weonpj9zysUlvoYvi4vR7rTn39cXd8KZgXlbJGxM9Mj/F5WKRX5ny3uLf+e059+XEOzPRPmf8AWVPtkf8AKfBn0qCIxCQE5gBzFmqhhEEEEFUIgzBBGUIztiCCCGUJpzmFxjpAqAQUQlggggQiCCCGShJvnpCmCA7xlCQQsJACc4gQlggghhCXBMLiESe6HQFMYLNNJU6QKu1DWtFNqz1DmEdmmZpswW1ybhVkOrQElTiOoIThQzkc3vYubRdAdBZqhJrOkGoM5R2zMNVGWnZCupm5dM0yctuONPFSeZJ2I8xXKpSSQCRHP4Hu7om7MmLOl7mlH7/kKtOULmInG6U+21MkdxSXElKsdSnYkdFDv+ftayo027TQYzm0GIGIPwV6yrVhyrRBiww4E4E4UV02NS3V8Q1CuSZ9yqlSG6A9a1wVCkTSJuTYmFvFxDjiE5WywpQQnmcHKnnIKjgk6Z4xdEKDplddPuO0pBMjRrjDvaSbY+pys02QVhsfWoUlYUE9AQoDAwBvSy7x4DqbR25ikeTMiWU83PVZJ/3QQrH/AOR1KnSf0CsejrGo9dOIfSG9Uy1kUS0bguG2qfMqmkzk1V3ZR9t3lKAZUuIdWlGFKyHgUnGyU4BPy9lumWT7OjQntY0UcCKVGr41X0FpCXfIPEeI0vcatoa0K0Zp7qdf+ldV917Euebpby1BT7SCFy8zjudZVlDg9ZGR3ERM6oa56m6wzGb1uFbkihfaM0uUT2EkyfSloHClfnllSvXE3aelFjatTr9P0tuW5ZCel2+2eYuGjhyTYTgnmdn5RSktI29+60gQxeidLtK1pS+dSrumfcWfWtEqbSkRVUulKiCFzhUiUZUcbJUtS8blI6R9Y+PZ2n0r2DSjDLtL5gQLQ0OiY86PPPBebh00gGtGqEna8+t1qjyjS6lV3Gjyr8WQUp7NJ7lOLWhsHqApRHSLc6t3fI2ffmn1As2hUyWtfT9c25N9pONU+QYm3pVcvLSjbqwQp1IdWtSEJWtIUCrGSYrlpLrjphpJcD6bcsu6Jel1hCJSrVKYrqHKiqWSrmCWUNNNtN+dgnCuYgYCxG/63fvAfc1GMzW5iiTJLZGJiVnfdFA70hfL2wOc9FYJ7++Pm7bfMvn2xYsN7oV0gADWRQk78cF9BYwl4cmYcOI0RK1JJ2ZAKUq+h2n16moXnrLfCJycqbaDNim1hMjT5eXbH1NlJ98tCNzzLVhSiVcoMVB11kuHak1FFI0PYrc46w5mdqszP9pJr6/U2UFAU5vv2hUE7bBQORi2p81pbNXQ6dJKDVqdQkEhJqkwl1x5Wc86QEgtoA6JUpau8kZwMRKlEdST6Ys2PY8WVcI74ziKYNoAB8Nyk2rarI4MCHCaDrdUklN9UITCneEIzH04wXzqbBDsbYhp2h5oSg+mHfBHzBJhQd4yhPgg6wQIRBBBGqoRBBBAQhJjJhYIIRQiCCCEhEEEEMFCIIIMGGhEGTBBDQiF2x3QkGR0hFCCnYxZjhWIHFVQ/XQmP83y0VpzkYiy3CskjiroSfRQ2D//AD5aJNp+pf5HfZVrI/kM8wXZvuHwQQQRaZ6IVY5rmJ4UpWbztpONxPTH7nlYpNfQ/k3uL9Npz7+uLteFMSkXlbJB3M7MfeJWKS3yc3tcO+f91p37+uINmDA+Z/1lcFtetPgz6VAH0Q0HEPV1hvLFpQksITiHAZhqiEgkkbDJzAhJuevSHRPzWn9+U+ji4Z+x7hlqURzCeepb7cvy42V2ikcuPXnEQeBgHIAPQxhkWHF9BwPgVt8N8P0wQmQEYiZodn3bc0rUJ23LYqlUl6Qz4zUHpOUW63KNcqlc7qkjCBhCyCcZCVeiIcnIGCNwD8PwQxEa4loOISLHABxGBSQR7Z6h1+lS8rOVagVOQl55PPKPzUk6y3MJwDltS0gLGCk5TnYg9DCpoNdVTPdsUSo+53N2fjvijni3Nnl5e15eTPNt167QtKygNRitaN9SKHBeGCPbO0Ou02SlanUaJUJWSnhmVmX5RxDMwMZy2tQCV7b+aTtCpoVeVRDcqaDUjRw52JqIk3DKhzYcpeCeQHJAxzZyQIWkYcajYlo35UK8MEe0UOuGkmvCh1I0sOdkZ8SbhlgvOOXteXkznbGeu0PptvV+ssPzVHoFUqDMr+Tuyck6+hnbm89SEkJ80E742GYDFYBUkUyRo3k0oVHwR9pWXmJ2YZlJNhx96YUltlppBWtxajhKUpG6iSQABuSY9Vct+v21NIkbjoVSpM0632rbM/KOS7i0ZKeYJcAJTkEZx1BEaL2A3ScUrrrt6mCj4I9NMpdTrc0JGi02cqEypJWliUl1vuFI6qCEAnA79omUacajOfkenl1K/Q0SbP8A6cYfGhQzde4A+K22DEeKtaSPBY7C4Me+RoFeqUrNVCm0KpTkrIDmm5iXk3HWpYYJy4tIIQMAnziNgfRHjAzv3Ru8DUDUsFrm5hNhY9rtBr7NHRcLtBqaKS652LdQVJOiVW5kjlDxTyFWUqGAc7H0Q6Qt64apITlVpdBqU7I04ZnJmXlHHGZYYJ+qLSClAwCcqI2B9EZ0jBjUJ6N9aUK8KYUAEx7k2/cBoyrjFCqRpKXOyVUBKOeKheccvbY5ObO2M5zHjSk9+No0HtNS05LJa4UqM09Ix3kfAf3oF4CklQCgCDg9Dv02xjPw5iRm7ZumQqctQ5216zK1Ocx4rJzFOeamH8kgdm0pIUvJBGwO4I7o27ZlpcOrVMt57Vuq3RatxUd17yjoU1ITJNUQSVsdkUpSqXBQUA5wSCemQqOSZnoUu28Rerqbif8A+aqrqlpSJHcQOzTbhj/7UsCvfVy67zpDVrIZkLetiXIU1QKIwZaS5/8A8jiclby/z7qlmIaydQ7z04n3KhZ9fmZDxgcs1LghyWnEd6H2VZbdSemFJ+DEF40Sco1Zfccter0KQnnnpimS1TYcbd8W7QhA5lgdpyjCSoZGREVTKLWq/N+59Ao89U5soU72ElLLfcKBjKuRAJwMjJxjcQQoMroMGi4cTWn+7Vp8SYEahJvD/wBkvvcddauOtzdbYodPo6JtQc8SpyVJlmlcoCuzStSikEgq5c4BJAwMCI7oAO6J5vTTUo5/3uLrPwUSaP8A6e/WPM1Zt4zFaXbcvaFbdrDae0XTkU59U0lGAeYtBPOBhSTkpAwQe+PWHGgNbdhvFANupeT4MYmrmmp3KJ2x3QhONomavZV6UCVM9X7Mr1MlgQC/O0t9hsE93MtAGY+VFtO6rkDyrctir1ZMuUpeMhIOzAbKs8oUW0nlJwcA9cHGcRoR4RF++KDesaGKHXLpqd2KioIyKf081BpMk9UqrYVySUnLp53pmYpEw002OmVLUgJA3HUjrHmo1oXbcrb7tt2rWau3LKSl5VPp70yGlKyUhRbSoJJAOAeuIBHhFpfeFPEIMCK1wYWmuyhUNCFMT9QsG/KTKuz9Vsa45KVZSVOvTNJmGm2wO9SlIAA9eYipCm1CqTjVOpchMzs2+eVmXl2VOuuH0JQkFSj8AMNsaG4F7XAgb0jCiNcGlpBO5eTBhInrgsi8rTUyi6rSrVFVMZ7EVGQdlu0wMnl7RIz8UeiS011GqMq1PU3T+5pyWfSHGn5ejzLjbiDuFJUlBBGN8gxkzEGl6+KeIWhLxS65dNdlCsbHSFidq1i3vb8l7pXBZldpkmFpbMxO0x9hsKVnCSpaQMnBwPUY8SLeuF2mOVtq36oumtBRcnUyTqpdGFBJy6E8gwo43PXbaGI0NwvBwp4hIwYgN0tNc6U1KPg6x6adTKjV59ml0inzU9OTKihmWlmVOuuKwThKEglRwCdgdhmJmf061BpEouoVawrkkZVoczj8zSJlptA9KlqQEgfCY06LDhmjnAHxSbCiPF5rSR4LHwMQcoj3UyiVqtvKl6HR5+pOpTzluSlXJhYSTjJDYJAyRv0J2j5SdNqNRm00+nU+am5twlKJeXYW46tQBJAQkFRIAJxjuMBiNFanLNZDHmlBnlvXm5RDTtE/I2NetSm5uRp1mV+amZBYbm2WaXMLcl1EZSHEhGUEjcBQBPcDH3XpjqWg4VpzdQPo9xJr5uMOmYLTQvHEL0EvGIqGHgVjMETNNsq86xL+OUizq9Py/aKa7aVpj7zfOk4UnmQgjmB6ju78QlXs277flkTlftStUuXcWGkPTtOel0KXjPKFOJAJwCceqDTwi66HCuyoSMGIG3i008FDwRN06xb3rMiip0ay7gqEm4pSETMpS5h5pSknCgFoQUkg7EZ278R86xZ9327Kon7htKtUqVcX2SH56nvS7a3ME8gU4lIJwknGegJ7oNPCvXLwrsqEaCLdvXTTwUSB6YXA9ESVYtm5LcTKKuG3apSxPNl6VM9Juy4mG9vPb50jnTuN05G49MR0erCHi804LBaWmjhQpMEdIaRiHwh6RtZTYQdIWCEUJQCYs5wsJH4quh477fl/83S0VjB/aizHCqsDitoYJ29wWAPk+WiVafqn+R32VWyf5DPMF2bwcDpBCnfeCLDD2Qq5zXMHwpZJvW2xncTsx+55WKTXx/LtcX6bTv39cXb8KWkeWVtK9M9M5+15WKSX1/LvcP6bTn39cQ7MyPmf9ZU+2fWnwb9KgldYSAnMKOsWVDTgIspwKad0K7tSatddwyrc0xZ0k1OSzTqAtAm3VqS26UnY9mlt1SQfruU9UiK2AxZXgOv6h2vqZWbPuGcRKMXlTm5OVdcOEqnGlqU21k7ArQ68BnqoJHVQiPb2l6vi6H0qas6a+SrWGIZn4ely++rmsnszjd1LrmscjL1r3PXaVZqSJAU4SqQ5LsOuBtDnbe/WtPMlSuYlKvOASNsfSr8LNs3LxdTtjSzS6fa7lNTc01KyyuQpQpfIqWbI94lT+dxjlQSE9Ex47I4KdT6TrFKLrbUk1atGqaJ33TTNoKpqXacDiEJaB7RK1cqQrmASnc5O2ZKp8U1rW5xe1G8g8qdtVNMbtmYm5VPaY5F9oqYbA/JEJf5k7e+SCRnaPmjoxFcLG9ma024U/wC2a+hF8wwbW74pXZr+C2po/qJpdN25qc1pfpXSqVQ7Mll83KlCfdtKGpg5eHIVcp7JYBcU4eVZJxkiND6wWZpRqxw9DiG0qsuXtCoUqcEnW6VKpCJdeVobUAlICMpLrS0rSlOUqIIz037otp5pDT7f1Rm9M9VafV6Fd0stb3IUH3DaWzMD6plQUQA6sjnCCEt4OdzGhtV780c034fzoBo/dYut6qzaZuq1ZvzmhhxtxauZI5OZRaaQlCSQlKSSc9Z1n4T7hKB968zOvo07V6v/ALYqE9QyY6Vdu3XUpTOvZosu4ibKreoVgcPFj2+2tyo1RlMoyTultJkJRS3V+hKEJUtXqB9UZvxF0+06Bwk1ez7MmkuU2152n0YhBPmvsTbPapUeilc6iVEZHOVd8ZLcF80DSfh3tbVKpyjD1apNsSsjQA71XNzUqyORI9B7FKlHqENq9MaDl56eqHg+6vU6hMuzU1OXWp2Yfc3U66uoNKWpR7yVHJ+GCXEaO2C41DGRaeJLiSfgKJRzAgOitbi98OvgA0DmU3iRSVcIehiCoq5JdjAJ6fjPGPihKQ0U+DvraCSAa+lWM9fx+xGb35pNfGsHCxo7SLDpjU6/T6dKzL6XJltgJQZUJzlZAPnbYESsjoBqa3wc1TSVyjyqbmeqvjjcsZ5rkLYmmnCe15uQeYhRxnuxHT02CyBDhPf2hGqRXVeK5jJxnx4kRrDdMKgO+6FriksPOeDun5Vltx5b1xgIabGVLWaiyAkAdSScY9cby0ssKl6UaEXFpo3NNquRi2Zqt3A22TlD01LvpSCcYISJctjqcNc310Y/wrm2JHhUlq9eKUCl0Gs1CtOLWCQ0uVeK0OY+uKVJBA71BPfiMX4b9QKpqYxxC39WEKbVUaY2tqXJyJaXRJzyWWgfzqEpBPerJ745prSzAmGCoYyLU7ySAB8MeS6pZsKBoXu9J0O6BsABJP8Ai0xwTWJ5X630aoTTXNJWzLLrD6seaHEANs57sh1xKh3fUj6I2XxVzdM1s0JtXXmgyYSqk1SbpE2CsLLbC31tAqVjoHGmlD1TEe3hWetXR3hruTWC/GZzxS55pNOCJRP44elU5YQlrdJBU67MHIUCAgHIxGX6TTehmsGjt96K6M0Ws0lpUk7NGSqpUsiYdSEtPNqLrpwHWGcjmGDg43zHZaE6/rEzzWuLYTmtrqpiHV48lxyUpD6B0R7gHRAXU11/rTgtFcBLPPxAsKRkBuiz2CNtj2Y/yKiwnDhr/qLqdrDfNoXPUZN2k0JuackEsSYaWnknQ0jmWDlXmHf17xrPgisGoWXJ1jiKu96UptuS9LnJRlTj47VK2nk9upaB7xKSypAyeZSjsOmY/wAH9Ou1XV+96mtB5pyjOTKk43BXOtK/0sR6WtDgzsWbjAVuNaAdhrivKyzFk4cvAJpfc4kbRTBe3hCt+p3fozrfa9ISFz1ZZElKpU7yhb7krMJQCo7DJV1MaS1C4bNYtL6Ku47utZLVLbWlt2alJpqZQyVHCefkOUAkgAkYyQM7iN8cGNLrFe0k1pottlxNUn8yskUOdkoPrlH0t4Xkch5yNyRjrGYWDa+omkHDfqMviQrwckJ2QmGKbITlQE842pyXcQGw5zKBU46psJbSo4KSrbJjfWMaRnoujcDVzOyczUAYeC0+z4M9JwxEBFGuN7UMScVicpY92ah8BNtW1ZlEmavURXnZnxVhSArs0Ts1znz1JAA5h35j6aPaZX5pnw2a2yV9W1N0WYqNMddl0PLbJcQiTeSojkUrGCcb46x5pa7bqsnwf1sV+0q7O0aoorKmTMyi+RxSFzsyFJz6Djf4I9uiF+X1qLwxa1Tt7XPP1x2n0+YYl1TawtTSDIuKUAcA4Jx19EcsTpRgRSKaPTb6+kF7Q+jaeG01v6L4eiUzTKxbo1M4EnbQs+SbnKnNXA6+0yt9DKcNzqFrJUshIwlKjgn1RWrUXRnUvSZcknUC1Zily0672TE0l1t+XcVjdIcbUpIVjJ5SQcAnGMxaTRy1tQ7t4HU0LS+YmZe4ZmuPuyzrE74kvlRPJLmHuZPL5iVZ333EM1plbrsXhClbN1vuFqpXjUqvLqkEOzQmnkoRMBzAcO7nZspWCvcDtAnJyM9MtaEaVm4kFhDg6KQW/wBsdfgF4zEhBmpeHGeC0thg1/rhq8VL8R3OeMzRdxKjzpMugnONvG3j++Ygrh0+p958Yd3XrdYS1aen9Pp9aqr74JbUtuSbWy0fTuhbih3paI+uEZBxEM44x9F2MEKPi2B1/wDu3h1+KIjjt1ApNiWtNaa200hisX0oVKvutE9oZVpCG0BXoLnYIQB9g0v7LJ4JUxnPl4MPN8NwrsF7E8F2RxApHixaUZEDqbTdwHFYj4QR1NTrentVbUtSZyjTLyCsYPItxtacjuPnRjnAA2RxBIQCoBygT6TynB98xmMj49ShExpiB1NvLOPjZiB4Ad+IJsj62gT5/wD9y4/firLMu/plzDsd/pUmM8O/UAdtI/wLNdPuKzWS5eIWR08qtWpi6FMXDMUxbaKclLhYQtxKBz5znzU7xlFquuDwhlwtkqIVRCk7nJHiMtt+0IrrpFlXFlSDy++vSY9P/SHNvRFgbYBR4Q240cuc0hWQO78YSpjmnZSDKveIDQAYBOG2oXZJTMSZhtMV1SIopwKntH9cdYb915vXTW7qM3U7Llnamwh1dL7JEs006pDSFrxyupcThPKrJOQemREdwt09q0KrxBUOwW0u+5FacapDSCFgrbROBloZOFAKSlIye6NUar8ZmtYuC5bPotSptKk5OpTlPYmpaTPjSGm3Vtgha1qCV4SPOSkHO4xtGXcCMrW5uxtV0W+8r3WmGmESTqnMKE0qXmuzUVKzvzlJyc+kxzzVnxoEhFmHtDGuDBdBqDQjEr2lp+DHnmQWEuc0vxIxGGQWH6u6lcZDmn9UpurNry9Pt2ottyc6/wCIMIIK1gpAUh0kElIGySIyLg3r9Rs3RDW29KU8lqapMo1Nyi1p50B9qVmVoJSdiOYoyDGMap6acZSNPapUdVq2J63aY0menWnKnKuq+pnZQDaeYlJOcAxuGxuH7UizuFe7dPJCnyExdd6zAU62J5CWWZZXZIwXTsT2TbhwO9zHdHVMRZWHINgEsF94rdrTAgnPdmueBBm32gY4DzdYaXqVyP8A4KPtbVq9tX+D7U+4r9npaZnZVM1T0Ll5cS4LPZS6gFJTsTzOq/aiF0NmZHQLharGuUhTpWbuWuPKalnXwcIb7fxdpokYPIFBx1QBHNsM7CMr0t0A1Ptnhq1C0wrVIkmq3cEy45Tmkz7a23ApphIKnAeVGS2rr3D1ximkNNRrrwr1vRGkT8rK3PbM+4EsvOYCwmaL7a1YyQ2oqcaKxsCn4I4w+WuxmwSNFpW3qZXaf5VdNyYLob4w/wCXROu171f9WOSnGBLX1plc1ha9W4uvKqKD7mTNMlWZdTC+VRQtYKglKkL5FJWkZxkHPfO8IfEZqZct5ULSOtT8g7QKfQ3WZdtuTSh5IlmUhrLnU4CSD6YxClcJSrS02uW/deK9MWsmkoJkJSQdlphyYISccysqRzLXyIQhJ5upOB0xvgeDj3EBTgUjnFIqBUAM4w2PwxWjytmx5CY6KKgY7gaf1UyBHtGDOwOlGhdQbyK607iL4idTr5rV06U1iapz1Ckq+6ywyzIBL5Es+sNDtMkk4Aztvn1xbC1qZb1rW7anCNWWueYuCy596eUlzzUvEjtcpxvzLemVhWf+I9eYqtYFgLv3jTqNAmJUuycjdVRq08nlykMy8w4753qKw036+eN5XPrxwzSPEGa5X6fdaruoM77iiqNcxkWCgrYWAgPgFvLr3Mez3yo474n2nCBZClJaGey2+Q3vEUaT8cV32bEIiRZmZeO066L2yuICrzwuUieoXFDa1HqbZanqZUKhKzCDsUutSkylQ/ZJIi41GubiSGvtXp9bpEgjS1sPeLzzwYSoNBkFCkrSvtFEubKC08uObpgZ1bddkKtDj9teqsS3LLXQ29U0hKfN7fxSYae6d/O3zn+ueuM7p9k8T34pScuNu4XmtOVTpc8XmKgh5lyULQ+pNywJUhzn6HCcbkkjY89qzLJ2I2O67jCrjXOp9GmtdFlwHScN0EVwiatlMK7lr3hInLWneKjVJ+xHGvcGYln1U7xY4aW0Z5nzmwNuQqKuX87jG0fPgm0+p1vzUxrDdjyZabuGoP2/bCHshT6iVqfcRjqV9ktIPTlbcP1wjIeH9NsOcZuqxsrxcU8UkHMoB2PjHaynjHJjbAeDo22yFRD1rUKlVLi/000qsxLcvbFgTL1PaYZJ5DN+KuJc+Hs0gNg9ebtDk5jUy+LMRI0vCqA6G0k6wGtJp4k0r8VmAyDAZCjRaGkRwA1VJpX4CqwHUziG1L0R181RZsOcp7CKxVmXJoTkmJgktMAIKckY2WoHrmNu8UnEXqjpdStPp6zavKsPXBT3Jye7eTS8FrCJcpKQfeDLi9h6R6IqrxXLKOIW/kkYxUB6sfUG/wAMba44xy0TSNpSeVYoLpP7CVin0CXixpEvYDeaa76NFKqd06YhQpwNeRdcKbquNVsjhwrmpJ4RK5WNNJRE5dztwTj0o12aFJW65MMKdPKtSU+8W6dztGi+Ii8uJWpUCm29rnR5WnyEzOmbkezlmELW802oHCmnFHZLu4IHURuzhpp2oFS4MavI6WzK5W6Hq3NeIPIeQyUqDsuV+cvzR5nON/T6TGn9Z9JuK6flaAdXZ1NUYnKuzSaWh2pS7ikzk15qR5oGAeTBUo4GBHlZ5gstSKXXBR5z9LLVuW58RolnQwy/UsGXo56962Hamo11aR8D1v3TZkyxL1F+vTLAW+wHkhDk3MFWEnv+pjePNxO3bW7+4NbAu6430O1Gq1Zt+ZW032aVLDE6jIT3bJEefiIoruk3C3YGkFcmZXygcqC52ZYYd7QAAvuuEH65KVvoRzdCQcdI8WtpH4grS9aQce6CMbdfqc8P3o8oMGE98Kba3F0Z1DtGPJer40RjHyjnYNhDDYcFn/E/oPqPrLRdN56wKZKzqKPQewme3nW2OXnblygDnPnbIV+/FKr3sS8NN7gdte+KFMUmpNoS72L2CFtqJCVoUklK0HBHMkkZBHUERevX/TLXTUGlabPaM1acp3uZR0pnX2ayuRAWttjsiUhQLmOVZ96cZPpwdR+EArVJerVh2wanL1C46HSHk1p5sjnSpzsezCwPelSm3l8p3AWDjCo6f0/PxmvhylQ4G9gK1bQk4+K8LckILmPmiC1wu55Ow1eCqlCHpCc3ohI+2ovjEQQQnfiGhKO8HvizHCuAeKuhED+cLH+b5eK0Ad+MRZvhVGOKuhpP9AZfHyfLRJtP1L/I77KtZH8hnmC7NpA5RBCAkCCLDR2QqxC5h+FJ3vC2gf8Ap0yf8XlYpHfQ/k2uID+i079/XF3PCl7XjbR2/wDnpgf4vKxSS+seW9xfptOff1xEsvI+Z/1lcFs+tPgz6VAQo6wKHfCCLKhL6DfugKQe7pCZ9ELzADzjj1wjimDdxCyad1P1JqFH8nahqBcs1SuTszJvVaYWypH2JSV4KfUdoxnJwEjYDoBCFXohArf4PTGYcKHC9WAPAUWoj3xT/wAjifErILcvy9LRlKjIWrdNSpMtV2+xn2pR8tpmkcqk8rgHvhhaxv8AZGIQLJAGcADHxR88kd0KFZgaxrXFzRic96Re5wDXGoHJStRui5axIStJq9xVSekZAASsrMzrrrMuAnlHZtqUUownYYA22j5i4rgTRVW4mu1EUhbnaqp4mnBLKXkHmLWeQnIBzjOQDEdzeqEKu6AQ4YFABT77UaR5N69uWTU/U3UakybFOpV/XLJSksgNsS8vVphpppI6JShKwlI9QEba0C4p6xptVq9N6g1W6rplqnTkysqwuoqf7B4OA9ph9ZA83IyN4r7zYhQveOWZs6Vm4ZhvYMd2O3NdUtPzEq8PY84bTgppu7Lpl7fVajVz1dNFUSpdOTOuiVUokEqLQVyEkgHp1j4Uy5riobE3LUOv1GnMz6Q3NNyc24yiYSARyuBBAWMKUMKz74+kxGlQx1j58wzHQIMMAtoKLw0sQuDi41Uq/ctwzVHl7dmrgqb1JlCDLyC5txUsyRkgpaJ5EnKldB3mPnSLiuC3ZpU9blfqVJmVo7NT8hNuS7ikZB5SpBBIyAcZ7ojswsa0TC0tIFDqolpH1vVxGSlHLpuh+i+TkxctWdpHbLmPEHJ11Ut2ylcynOyKuQqKiVFWMknPWEo1x3Dbjz0zb1eqNKemG+yeckZtyXU4jOeVRQQSMgHB2yB6IjRn0Z+KFz6jC0TACABjnggxYl69eNRrUtRLtuy2kvIty6KvSkTCw48mRnnZcOKGwKg2ocxHpMFbuy6rmU2bkuer1bsTzN+PTzsxyH0p7RRwd+6InIgzC0MK9fuiu2mKemiXbl402VUq5c9xvUJu13biqi6KyrnbpqpxwyiFZKuYM55AcqUc46kwtOue5aTTZyj0q4anJU+oZE5Ky0240zMgp5cOISQFjlJG4O20RWSO+DJ7xDLGHNo4c1kRH1vXjXL4bFPUi+b2oEkim0K86/TZRsqUhiTqb7DaSo5UQhCwkEkkk43MeKrXDXbgnE1CvVufqc0lIQHp2ZcfcCQc8vMsk49WYj8nuEJzGMiDCD74aK7aYpmLEc24XGniVOT963fVapK1uqXXWZ2pSOPFZyYn3nH2MHmHZuKUVIwSSOUjBOY8FcrdYuWdVUrhq05VJxaEtqmJ19T7hSNgCpZJwN8DpHhKz0hObMNsJjaFoA+CbosR+BKlavctx3F4sbhuGp1UyTfYy3j045Mdg39gjtFHkTsNhgQtDuOv2xPe6ls12oUid5C14zITTku7yEglPOghWCQNs9wiKBh3NDuNu3KYeCzpH3r9cV75WtVaRqaa3KVKaZqKHjMJnG3lJfDpOSvtAebmySc5zvHpN5XaK0u5EXTV01d1AbXUEzzomVpwBgu83ORhKRuegAiGKoaVj0wGGx2bR/7UgPe3AHXVeh2ZfmX3JmZfW888suOOuKKlrWSSVKJ3JJJJJiSo933ZbSH0W3dNYpCZkpU+mQn3ZcOlOeUq7NQ5sZOM+kxDBX+2IObPpMDmNcLrhUJNe5jrzTQrIKjqJqHV5B+k1S/rlnJOaQW3ZeYq8w604n0KQpZCh6iMbRt/XPijqGp3kyqzV3HayaNT1yk223VFtiZcJRhz6iU5wEkecPror/nB3H68AUc5jkfZstEeyIWCra0w25rrZaEzDY6G15o6lcccFvbQXidrel13zNevepXRc9Pep65VuSNVW4EPFxtQcw8op2CFjI3871mNQM3FU6bX37ht6pz1Lm1TDrzMxLTCmX2wtROAtBBGxwcHBxETkd0KT3xqHZ8vCiOiMbi6gOyg3LL56PEhthPdUNqRtx3qcuW+bzvRTK7vu2s1sy2ex90J52YDX6ELUQn4useGj1us0CdTUqDV52mzaUlAfk5hbLoSeoCkEEA94zvEfzQoXHSIUNrbjWgDZTBeDor3vvuca7damabdt00aqzFepNzVeSqU3zeMTstPOtPvcygpXO4lQUrKgCcncgGI+Zmn5x5x+aeW868suOuOnmUtRySok9SSSST1JjzhYhecd+YAxrTVoWXPc7AkqfmL8vmbqMjV5q9a+/P0tCm5Gadqb63pVChhQaWVcyARseUiPtOal6j1CXVKT+oVzzLC0lK2nqzMrQoHqCkrwRv0jGebMLzR5mWgmnYGG4L06RGxo847ypGh3FcFsTC5y267UKTMOI7JbshNLl1qRkHlKmyCRkA46ZAj5ylaq0jU0VqSqk3LVBtxTyJtp9SH0uKzlYcB5uY5OTnJyY8BX6YTm9UemjZUmgxWNI7AVy3r21KpT9anXqlV56YnpuYOXn5lxTrjpxjzlKJKtgBue6PTWbnuS4xKpuG4alVEySOzlhOza3uxRt5qOcnlHmp2G2wiKyPTBzAHYwBjcDQYZJX3Y45rIqNf1825Ie5du3rX6XJdop3xaRqb0u12hxlXIhQGTgb4ztD6hqPqHV0S7dWv2451MpMNzkuJmqPuhl9Byh1PMo8q0nOFDcZOIxwKEBV6IyZeCXXiwV20FVsR4obdDzTZXBSVauKvXJUF1a463P1WecASqZnplb7pHcOdZJx6swTlx3BUKNL27PV6ozFJk1c0vIOzS1yzJ33Q0TypPnK3A+uPpiMK8dcQhXneNCHDAAoMMljSPqSTnmp9GoF/NNJl2b7uRtpCQhKEVeZSlKQMBIAXgAAAY6YiBecdecW886txxxRWtalEqUo9SSdyT6TvDebPqhOsNkKGw3mAA+C06LEeLr3E/FEEKBmEMei80QQQQkJycnYxZzhUGeK2iD+oEuf/AOfLRWIKIizXCmSOK6gj+ocuPi8QlolWn6l/kd9lVsn+QzzBdm8E9IIDBFlvohWKrmJ4UkBV420kj+eEx+55WKR32MXxcf6bzn39cXb8KUoC8LaOR/8APzG397ysUkvo5va4t/57Th/85cQrMyPmf9an2z60+DPpUGekMhx6Q2LIUIJw2Ee6hz1NplXlp+sUBmtyTRV2sg9MvS6H8pIALjKkrTgkK2IzjB2yD4OaEzvmMlt4EFaDi01Cz9V/aWkn/wCHykY7v5Katn77DfL3SwdOHukn4bpq3zsYFgQmBHP0SHv4ldHS4m7gFsFN+6WDrw90g/qpq/zsKb80qPTh6pI/VVVvnY19gQQdEh7+JR0uJu4BZ/5d6W//AK+0n7qqt87CeXelef8Ag90o/qrq3zsYDCYAh9Eh7TxKXS4m7gFsAX3pSOvDzSvurq3zsPF+aSgbcO9I+6urfOxr3A9EOHwwdEh7TxKOmRN3ALPTfWlR6cPNIx/3rq3zsAvrSsdOHmkfdVVvnYwXlhpT6oOiQ9p4lHTIm7gs+F+aV9FcPNJ+K6qt87AL70qzkcPNK+O6qt85GA47sQcvqg6JD2niUdNibuC2AL90qxj8TxR/juqrfOwgv/SnO/DxR/uqq3zsa/IHqgwIOhw9p4lHTYm7gthi/tJ8f8HelfFdlW+chir90o6jh4pX3WVb5yMAPww0geqDokPaeJR0yJu4LPzfulfdw9Ukfqrq3zsIb90s/wD18pH3VVb52MBx6xBjPfB0OHtPEoE5E3cFn6b/ANKhseHqjn4Lqq3zsO8v9Kcebw70n47qq3zsa/CR0gKPVC6HD2niUdMibBwWfeX2lJ/5u9I+6urfOwovzSk/83ikj9VdW+djAOXeDEPokPaeJR0yJu4BbAF+6Vj/AJvVI+6urfOwG/tLO7h6pQ/VXVvnY1/iFwMZ2g6HD2niUdNiUrhwWeKv7S4/832kfdTVvnY+ZvvTAnI4f6QP1U1b56MFKfghuB3QdEh7TxKXTIm7gs/Rfel313D9SD+qiq/Ox9PLvSnv4fKSf1U1X52NfJH+2YcR3EwdDh7TxKOmRd3ALPTfelH/AOvVK+6uq/OwovvSkdOHilfdZVfnYwHHrgx64OiQ9p4lPpkTdwCz4X3pTnfh6pY/VXVfnIeL70oxn8TzSvurqvzka/AHfAQn1RnokPfxKfTIm7gFnhvzSzP/AAeqRj/vVVvnYTy90p7uHuk/dVVvnYwJSYbgeiH0SGNZ4lLpsTdwWfi+9K85PD7Svg8q6t87B5eaVdTw80o/qrqvzkYCBClI74fRIe/iUGciDZwCzzy70s7uHylD9VVW+cg8vNLR/wA3ylfHdVV+cjACkeqE9WYXRIe/iUdMibuCz835pcdxw+0j7qat87CeXmlw2/E+Uj7qKt87GBBMOCRD6HD2niUdMibuAWfJvzS3G/D1SPiumrD/ANWHeXWlGP8Ag9Uv7rKt85GABI74MD0QuiQ9p4lHTIm7gs+N9aWdBw+0j47pqx/9WG+XWlo6cPlI+6ir/OxgJ+CCDokPfxKfTIm7gFn3l5pb38PlH+6ir/OwovvSrv4eqQfhuirfOxgEEHRIe/iUdLibuAWwDfmlR6cPFHHwXTV/nYgror1n1iXl27a04lLadbcUp51msTc52yCMBGJhagnB3yMHujHIAcRtksxhqK8Vl8y94oacE/fvO8JkQmdukJHvRc6DjuggghoRjrFm+FXfiuof6RS/7glorMPexZjhWBRxW0VP9RJfH2hLRJtT1L/I77KtZH8hnmC7NkZxmCEJxtBFlvohVSuYXhSN7yt30ifmf3NKxSa+Ri97jA/otOfflxdzwpIAvK2yOpnZn9zysUkvsny5uMeirzg/85cQ7MyPmf8AUuG2PWnwZ9KgVQkKqEiwFCCIIIIEIggghoRBARmCM5IRG1uG/hxvbiYv1dmWjMy1Pl5KX8cqlUm0KUzJscwSk8qd1uKUcJQCM4USQEkjVaUxbfwdPEfYmgWoVw0nUaYFOo15S0owKqUFTcnMsLdLfbYBKWlh9YK9wlSUZwkqUlihK9oDWOiARMAtmveDB02q7lQtKxOKel1K9aW2pUzTHJeWcLa07EOstPF5hPMQCTzFOeh6RV/TLhsuG7eI+X4cbxnlW1WPHZqRnJhDImgwtmXdeCkp5kdohYbSUqyMpWD6ot/dHg/rhZuqY124P9c5BT8xMzFRp4VMpUptT3P2iWJ5rnQtKg4tI7RHQ4Uonzo0rwpP6lI4/wC3JTWCaq81eEnO1GTqi6s72sylbdLmUpCl7hSQgI5SCUlJSUkgiNECq6osJt9ou0x1ZUWmeIzRprQPWGt6Ut3CqtJo7coszy5YS5cL0u28RyBS8Y7QJ98c4jYde4RJShcI1M4nzfb7r9S8VIopp4ShHbTfYfk3aEnA873g9Hri3XE3wBzWuWtdd1Pa1no1ARVkSbfiEzTi640WZdDOSrtkg57PmGwO8M4qtNnNIPB0saamvMVk0GapUuqfYb7Nt/mqCVcyU8ysDz8dT0hUoUGVuF5cMAMFoLh58H9b2t+ilN1frGsTlronZmcZdZdprbjLIZmFsg9op1HvigHcdVY+H2aq+D3sLTfTO5r+p/EhI1yZt+mPz7VPakGEmZU2nIRzJmVEZO2QD8Ebt4b9N3Na/BwjS5iuyVFXWJuoMePTjXaMs9nVi9lSApOchGOuxUPgitOu/ABOaHaYVTUyZ1Wtyuppbss34lJU5SHHO1eQ0DzFwgYK89D0gOAWnQGCECGVwzT+HTgKmuIrR2d1NpeonuTUETk7IyVNdpwW0+6yhPJzPdokoClqwTyHABO/SNCaX6UVK/NZaFo7XHZi35+pVn3FnVuy/O5IvJUpLgU2SnKkqQoEZHTrHQngo1Fb0h4Da3qa9TTUGberdRnXpbmKFOtB1lKwk499yqVy9xUB64NVdGaLN8V2ifFVpkWpu179rEiak+wnCBNLl1KYmfzoeaSEqzj6o0M+c5DpgEjKNfDa5u6qqXfXCZSrE4pqFw61DUnFOq7cs45X5mSQz4v2rTq92i5ynBbCd3Bnm/X3xL+C+0zn325SQ4sqY9MOqCG226dLrWtROAAkTWSc7YEat8JgptXFDUEOecPcCm5zggjlXufiwPhjM/B3aAW3T26rxZapSknIWzZzcwqjLmmE9mqYZB7edwRuGQChBGculZG7aTCGLqLLGw9OYZZXFaq4wuD6U4VZe13WNR1XO7cipz6kaYJQspl0tHmGHXOYEvAdBjHfmGcW3CFKcL9Ps6elr8mLj8qUzSiHKcmVEuGUsnYhxfNntvVjl9cYNxI67VniF1Uq1/1cuMyCwZKlSiiSJOQQVdmjH2Rypa/StR7gMdPuLjhVe4naJZLMpf8AJ2z5ONPqBmZJUx26X0NAYwtHLjsfXnm7sQDHJIQWRdJoxlkqAcJfCBKcTNGu6rzV+vW4LXXLpCG6cma8YDiHFE5LqOXHZ47/AH3q31bohone/EBfElYViSjSpyYZM1MzMyopl5KWTy87rqgCQAVpSAASpRAA3yOpvChwtzfDBbF8Skzf8jcvlE204hUrJmXDAZadG+XF8xPa+rpGjPBXykrQNH9UNSWZdtypNPtyySU79lKyfbpT8BW+cjvwPRsAJiUBuBw21UZ9K706bmm7MmeKSQbvZxntEUzxGX51Hl5siWMx2yk9+c9N8RTbXvQy++Ha95uxb7lWDMtseOSU3KqKpafljzBLrSiAeqSkpIBSoEHbBOOVS5bgna+9e71YnPKB+aVVlVJLihMeNlzn7YL6hfOeYK7sejaL7eEsLV78MOjurtSl2xWZtTCFrSkA8k9TFzDqfg7SWbOO6AUcMErkKM0ljaEKu/E9whDhvtSy7n8vFXB5XlzDJpglfFuVltzr2q+fPaY6JxjPfiPtwo8IslxL2/edZmr8et02kpgBtunpmRMBxpxe5LiOXBbx35z3YiyHhVW/F9MtIkp6ImppGfglWt/2o8HgqFlVlazIOeUJkds/9nmds/FCAxonoWdIuUwoudIKlJQr7IA7esf7CLR6QcFkjrbw5VvWWxdQp2aua325tE3a5piSTNMDtA0h0Ocx7RkpUg8m6lcvcTFX0jLaD+dBz+3FmuALiHOhGtLNLrk32dqXupilVPmPmS0xzkSs0fQELWpCv+rdUo+8AgGJoVzwNHpLsTJYRws8N9a4m9RzZVOq/uTTpKRcqFTqni/bCWaThKAlBKQpS3FpCRzDYOK35cRII4W6xePENVtBNF7gF1+4zy2JyuTMv4nKsFnCZl1YSpzDaHD2YIJK1DAG4i9+rcjZHAFpDqXeNgOtIujU2vu+4jXZBJk1upJbaSATlmVCpp4HGOZaUnqI1/4LaXl6PpNqrqGGUv1RueSwXHPOWpEvJ+MIST1IKn1E+kjPcIZbqXR0VjS2E7E5lQrXgw9NUzbdlzvFJT273cZ5xS0yktz83LnaWL4fUnG+dtt8d0U+1+0IvjhzveZse+mmXHew8ckJ6WKjLz8tkgONkgEbpKVJIylQ7wQTjE3c9wz1ddvZ+sTZrz80auuopWoTHjZc5+3ChuFhw8wOdsDGwi/vhLUMXpw1aSan1KXbTV5l1klYSAeWcpqn3U/Bzy7Zx0GIMHBZLIUVri0ULVqDWPwfVX020Jb1ttq+X7jSxJydTqNNVTAwuWk3mwpx1K0ur5+zK0FQKU+YFqz5uIwLhE4XJbiiumv23M3lMW4KHIMzvbNyCZku87vIUFJWjlx1zk/BHT6b1OteyaDpBYd6SMo7R9Sqc3bxcmFZbEwZFCmmlpIwpDo7Rk5+uW39kcaU4K9B57h74o9W7GW28aSKRITlBmnskzFOdmHS0Mn3ykcqml/nm8/XCGBVe7pRukaWjDXwXOSztILt1E1Sb0msiT90axMVKYkGSvzG0pZWoLecUMhCEoQVqO+BsOYkA3MY8F5YFMMhbV5cT1Op931FAUzT2pWXT2ij0DTTryXnRnIBAGcdBHr8GJQ5Co656v3U+0FzVPzJMKxkobmZ55TnwZ8Wb/WircjYGrvFlrtdztrMtVG5pubna0+qcnky/YtImEoSELX9h2jSEJHvQkYxiENq8WQ2Q2AubeJKjuI/hmv3hmvNm2Lvcl56n1FC36TWJVKksTrSCAsFKt23Ecyedsk45kkKIIMb10r8HjLVHTan6pa96v0/TimVdpp+TlnktBxDbqeZovvPOIbbWpOCGwFEA7kHIEdxl29xnDT2gz3Esm3X6HJVASMhM0/xVUwmbdl3Blam/PIUhtZV9bzJSe4RZFaND/CI6H2pav0Q/JW9bYabX4glxCn5WaDIadzLrUnxhhWMpWgggY3SeZMAWmQYekcKeAKqVxScEFc0CteR1MtO9ZS9rIqDjbXugwyG3ZZToJaUsJUtDjS8codQrHMQCkZBjNNCPB6W5rDobQNaKzrd5MNVgzIdYmKY0thgtzbsukdqp9Hvi2k7gbqwIguJPQriw4b9MWrPr1/TNd0lL6Zfs6XMKEkwpb3aNpmGFpC2gp0JUk8y0BeBzAlINo9C9J3tdfBq0XS+Vr0lR11ZyZKZ2cl+3Za7Guuv5KAoE5DXKN9iQe6GM04cFhikFmrJV61h4AdP9L9MLkv6k8SFPuCcoUiucYpjMnLoVNKSU+aCmYWehJ2SekR/D74P+Y1+0LXqtR9RHJCrvOVCXkqSunJUy69LqUhtKnu0BQFqSAVch5ebO+N4ziG4C57h90zf1InNUKHXW5aelZLxOTpK2VqU8vkCucuqAx1xjfptFmuDnViT0c4CXdS52QVOyNvXDOGdZSTzmWXUG0OlA71JQ6pSR0JSBtmEMTQoZBY+Lde2goue2jmlb2p2tNuaQVibmaC/Wamulzb3i3aPSbiEOFYLZI85KmykgkYOfRElxMaKM8PusFU0ulridrjdOlZOYE67LhhSy+0lZBQFKAxzY6nui+Go+hVKoHG7o7xFWB2UzamotXL064wcspqK5F1xDyT05Zloc/8AXG1n68CKueEn/wCF3c4Jzmm0o59P41RvDLcF5xZcQYZrnXkqvqhIUkd0JGQuJEEEGIaEQQQQIRBBBAhEEEECEozFneFkZ4rqIfTQpf8AcEtFYxvse+LMcKyscVlCJ/oHL/uGViTanqX+R32VayPXs8wXZsjPdBATiCLLfRCrHNcxfClAG8LcHeJ6Y/c8tFJL9GL6uT9OJ37+uLteFK828rb36zsx+55aKSX2rN8XH3j3Xnfv64h2ZkfM/wCpcFs+tPgz6VBK6Q2AnMEWBkoQRBBBC1oRBAIXHdDQkhR1hDsYVMGpCeDtFnuBnRLQTXy5LhsjVit1WRuEMNv28zLTyZZuaRyqDwAKSXHUHs1BAUMpJOCEqIrBnEPbcW06h5pxTbragtDiDhSVDoQRuD6xCFK4r0huDHAuFV0f4WOBTiO0H4gJK6Zq86PI2lTnHlVB6mT7mKywUKSltcryjcqKFEuE8hTlKlEAxFSl/wBpaieFZo1bsmalp2nyocpS52Wwpuafl6VMpdWlQ2WEk9nzDY9ltkYiktR1l1frNGNu1jVa8Z6lKTyKkpmuzTrKk/YqQpZCh6jGL0urVahVBmq0OqTtMnZbPYzUlMLl3mspKTyrQQpOUkjY9CRGyV0GYY0BrBhWqsZ4Q9wK4u73StI2TTEkHf8AnfL/AK8b9vsD6UtbyikgFynnZOw/3WP7W8c96vWqxX59yq16rz1TnngkOTU7MrfeWEgJTzLWSo4AAGT0AEfZd0XS7RU207dFaXRkY5aaqovGUGFcwwxzdnsrzve9d+sZJXmI/aedoIXSzh20suDWXwbbum9rOyTdRrs7PpZXOuKQwCiq9oeZSUqIGG1AYB3iu97+Dc1309s6u33WKlZiqfQae/U5pEpOTCnVtMtlxQQky6QpWE7ZI374rPSNQL+t6RRTKBfdy0uSbUpSJaRrEzLtJKjkkIbWEgk7nbrvHpm9U9UJ+Tfp09qXdszKzLZZfYfrk04262RgpUlThCkkEggjBgJwW3R4T2gOBqBTNXk0f28FbqQOuJmqdPR27GcfAd4lfBh8QEhV6Y9w23m6y+9IuKrNrKmUhXmpV2j0ujm6Kbcy+jG4CnegQI54MXTdEpRnbclLorDNIfz21ObqDyJVzJyeZkKCFZIGcjfEeSm1SqUWeYqlFqc3T52WVzMTUo8pl5pRBBKVoIUk4JGx6GC9TEJw5q45pAwAorycYGl8xrT4Qej6XS9TVTfd6m0xl6bDfMWGkMuuuqSnvUENq5QdubGdsxZ3ik4Y9WtRdJ7Y0G0Em7XtiyKQ02ifl5+afadmEsYDDIDTSwpsEFxalHKnAkkbHPIx28LverbV0O3dXXK0wkJbqS6k+qbQACAEvFXaAYKhgKxgn0xJp1W1WH/Knenp/linfnYYNK1WmzMOri5vpLZ3ETwfamcNFGotXv2sW5OsV6adkpdFKffcWhSG+clfaNIABGMYJORFq/CsdpL27pIOZaVBFRSTnGfqcpn/ACftxz8rl83pdMsxJ3TeNerTEssustVKpvzSG1kYKkh1agDjbIhK9el43SzLy9z3dW6y1KZ8XRUai9NBnIAPIHFK5c4GcY6RkHYvIRmta5rBmug/gsppb9jarpKlLCHZNWNzgGXf2/a/ajXPgwNcbSsyt13Rm+p6VkpC9W2Xqc/NOBDK5xLfZrl1E7AvNKTy5wMtFPVSc05o92XZbjb7VuXVWqQia5S+mn1F6WD3LkDnDak82MnGc9TETygp5SkcpzkY2/Whh2S02aLLtNSvXVvBTaqzOpC6PT7yoSbDdmiRU1vO+6DUkVe88X7PCngjzQecIJ84497B4TnVizqqu0eHiwJ6XmJCyW1u1LxdYW1LPhoMS0tzDbnbZLxWO7tEDrkCo0trRrBJUXyblNV7xapIR2fiKK7NBgIxjl5OfHLju6Rh/Ocj1HPph1pkk6OxrC2EKVzXVjV7Tf6YDwu2BcmllzUhq4aD2Uw/JzbxDSJoy4bm5R0pSpTTiV4KSUkEAH3qwoeTR/S/6X7w0ai3fqxctKer9yIJlpGSeK2lTCWFtysq2pSUqccWtxSlEJ5UpyeiCo8zbWvm87GnVVKyburVvzbieVb9KqDsqtae4KLagVAeg5EJdd8Xrfk+ip3xd9buGbbBS2/VZ92bWhJ6hJdUrlHqGMwAhenS2V0l3tUooRACGkIznlSE59OO+HNqIeQU7HmG/rz1hucCEB84K6EHIIjK4b2NSui/hZ0KTQtI+1QOcCqZ5h38knkRg/gyNcbRsy47m0Zvufl5GTvcsvUyYmFhDLk4lCm3JdSjgBTrakcu4BLZT1UkRTWsXVdNwtsNXDdFZqyZXPYCfqD0yGs9eTtFHlzgZx6B6IiVpCgUqSCCMYI7vRDrjVdJmf8Am0oCvfM+Cr1Sd1KcpDF1UJNhLnMipGYX4+mQKveeL8mC+EZSPOCCcKzjzY+fhPtYLPq8xa+gdhzktMSNjsuv1My7gW0xM9iGWJYKH17bXaFY7i6gHcKAqQxrZrLLUIWwxq3ebdISjshIpr00GAjGOQI58cvq6RhqnCoEKJIVnPrz/wC/+WAkalp0ZgYWw20rmui3hInXW+HvRB+XedZdacacQ42SlbahT2zlJG4UDhQPcR6os9wZa20ziG0kpF+1JiTXetGaNv3A8lpId7ZBSorBG4beHZvADzQpSh1QY4wVi8LtuGVl5G4LrrVUlpM5lmJ6oPTDbG2PMS4ohO22wG20FBvG77U7fyVuyt0TxnlL/uZUXpTteXPLz9kpPNjJxnpkwB1CvVk7diF9MCrTcCWvdv6NcTNzUy8Z9mnUC9Jucpzk6+oIalZtE0pcut1R2SgkuNknYFxJJABI25fPg6tdqZrFWbv0E1OptEoVfmX5lqbFTmZKck2X19otg9gkl1sKPm8qxzBKc4IzHOh11x5xx19xTi3VKW4tZ5lLUTlRJO5JPUnrmMqpWrmq9Dowtuiao3fTqQlBbTIyldmmWEo+xDaXAkD1AYhg4LxZMMu3YgyOCvH4SnUm2KNpxYnDgxdS7nuOhvy0/XJxT4VMDxeVWwhT6t+V55Ty3MHJATk++TmMvHwetq6kaaWlqPwgXMmqy8+yp6dar9WCnHSrlKClaW+Rp1o86Ft8qfhBTg0HcccdWt11xS1uKK1rWolSlHcknqST1PWJy1NQb9sJbzlj3xcNuqmN3vcqqPygdI2BV2Sk8x9ZgwJxTMy17yXio5hdM9cEVnQnwec7phrnezFevKtySqTIpVMKmFrccfC2221rAW4mXaAUXCNuzAH1mfhpDpNc+t/gy6VplaEzIS1TrLswthdQUtEvytV5x5XMUJURlLSgPNO5HwjmPcN1XPd1QNWu246pXJ5SeUzNSnXJl0p9HO4SrHqziPXS9Q9QaHIN0uh6gXRTZJoqLctJVqZl2WypRUrlQ2sJTlRJOAMkkwVXp0xpdWmFKKyeoPg4tedMbErt/wBdr9nvUy3ZB6pTbUrOzJdU00jmUEJMukFWBsCRG2NOZdSPBO3phK8uTk+o7eiptAn4AUxRue1R1Pqkg9SqnqXd07IzSC0/LTNdm3WXUHqlaFOFKknvBBER0vdt2ylFXbUtddaZo7oIcpzdQeRKrycnLIUEHJ3ORud4QOK8hGhscSwHEUXR/wAGVrrK3hbr3D5eYYmqjahFZthcwhKyJQKAW2jm6KYccyjG/ZvYGzZitPhKc/iubiVyYzSqScdP/thFbqZWavRZ1uqUSrT1NnWchqak5lbDyOYYPK4ghQyCQcHcGG1is1q4J5dUuCs1Cqzy0pQqanppyYeUlPvQVuEqIHcMxquFE3TJfBEN2e1eGCCCEuRKBmFA36wgMLAhGM9YMAiA5O4hCT8EJCCMQkEENCIUQkEIoTx1iy/CyM8VVCx/QKX/AHBLRWcKIizPCuCOKuiIP9BJfH2hLRJtT1L/ACO+yrWR69nmC7NYJgggi0z0QqxzXMPwpZJvK2043E9MfueVikt9jF8XEP6rTv39cXa8KdgXpbYB38bf/c8tFJL4Ob1uD9NZz78uIdmZHzP+tcFs+tPgz6VBHrCQp6wkWFCCIIXGekATnvgQjHcYWDG8EBQk6mAbHEL1EJ6oMwhKc90LCZBgjKE4H0wFUM5oOYxtCdBBBGSNaKohCYyCx7Bu3Um45e07Joz1SqcxlQQnzUNNjq66s+a22NsqV6cDJIBswOGXh70alG3+IjVVU7WlNh00SkuKa2PcEISqZcH58hlJidOWrLyThDdUvOTWipVGTsuYnG6VvZZtOAVRsn4IT9f9aLTVK5eDuTqls1qV0Guhq01LnmpmbfbeHuieySlstFyZystubnCk4z39Im5fSTgs1uc9z9K75qdlXC/tL0+fWvlccPRIbmT9UPqaez6o4nW6ITQ+LBe1p10rTGmNF0ixjEcWQ4rS4aq0r4KoA6QsZ9q/obqBohWk0u8qelUpMqUJGpy3MqVmwOoSogFCwOragFDruN4wE9YsQI8KZYIkF15p1qTHgxZZ5hxW0IRC80JBHvRedUvNCwzPdChXoO0ZolVOgOITOO+Dr3Z+Iw6J1SwQmcDaE589IKITjjvhMD0whV/t6ITMPJIp+e6Gk5gz3QRkoqAiCEyIUQJoghxz3iGmBInYiCE6QhJjVUgn80ISTDMn0wZJ74FpPghmTC5MNCCTmDmMJBCKE4HMLDAcQuTBihIdjBAd4MHrDQiFzCQQIS59MGx6mDY75hD6oSEQQQQ0IggghISEZEWf4WCFcVtEOOtClv8AN8rFY0p23iz3CqAOKuiZ7qFLf5vlYk2p6l/kd9lWsj+QzzBdk8naCHY9UEWmeiFWOa5geFN8697cSOom5j9zysUlvUEXncP6azn35cXb8KaUovi3fsjNzB/xeVikt8K/k0uEf1VnPvy4hWZkfM/6yp9setPgz6VBqhICcwCLShhKCIdCE9wg9UJCWEzCw3qYEJ0NwOggJg/agAQlxBAM98A2hUQhQ74aN4fCYEMIR0EeumU+eq9RlKTS5Rc1Ozz7crLS7fv3nlqCUIT6ypQHxx5R1jf3BBaLF0a+U+dmkBTNuSMzVxkZAeASy0fhSuYCx60COOfmhJSz45/qKrpkpYzkwyAMKkLZt+XTS+DLTeR0r09dlX9R7jlkTtbrAQFmXScp7ROep5uZDCDsEpU4RlQzoDSDSW7+IO/l0eWqLylOqM5WKxNFT5ZbKt3FknLrilbIST5xz0CVYg9YL3mNQdULpvKbcUUT9Se8XGc9nKtns2ED9Cy2gfCSe+LOXBUneErhopduUoCUv/UEKmJx9Iw5JpKE85z1BZbW2yj0OLWruMfPOY+z5dgh4zMbMnfiT4NC+gFy0JlxiYS8HUN2AHiVO8YOmsoxbGhmkdFqKpVpNTFuy83MI5ilJRLMh1aEYCjk85CcZJMVy1t4X770TbZqFXelK1QZlwMoqkihaUNuH3qHm1ec0o/WnJBIxnO0b61ZmXWbR4TVEqUpuapKjkkkq7On56/H1jO7i1spLnEPcXDnqXJMTtp3PIyMnIFxCQmXmnpdJLSvzrpI5TnKXOXB87aTIz87IwobYXbADy4ayA+hI361Um7Okp2JEc/sEloadhLcAtRcPGsdO1Uop4aNc1qq1LrLYlaFU315mZd9I+pMlxW5WN+xWdwoBBJCgBXLU/TytaUX7V7Aryg5M0p4JbfSnlTMsKAU08n1KQUqx3HI6iJLVayavo/qTVrRE28iYpE0l6nToyFLaJDku+D9kPNJI6KScdI3pxttyV62bpPrtKMobmLoo6Jad5BtzlpL6E/2qlzKfgAHdF6A+HJzkOJL+qj1w1BwFQR4itVDitiTcnEhTI/5YJpXaK0p8FVMDvg5R3nA9JgR0EbE0A0zVrFrPZ+mxQoy1aqjSJ4p6pk28uTBH9yQsD1kR9LrovnmtvOujWrNu8B1jDhJe1JRVaydU2LQbvBdIM632SJZS1O4Mvyc+8uhxI878kB+CNOcE2hNl8QetC9P79dqSaZ7hTlSC6dMhhwOtOS6UHmKVZSQ8rbHeI6My1Oov4subvQ66aeLpM5bSLKNlePINQAQvtQko7THaCYLg5eXPIopxmKwcDenL+kfH1emmUynlFvUesS0sVdXJRUzJrll/CplTSv140RjgqrpdoiMoMK4rwW/wrcIuv8AL3NafDvfd80++qDJuzbErcLYMvMhtfJg/U05QVlCCpKwU84PKRtGpaVw/wBkTfBDcOv063VEXbTLmZpDSBNYlksqflkK5muXdWHljOeoEbUZ4quGDQB67Krw26UXYL8qzL9LTUrhnAuWlAXeZSkp7ZwlIWhK+XlTzFKQVAR4bcccd8FdeK1r51C+ZbmUe/8AHcjkmFrovFzIRrQCoBVW9I7Spd9ar2bZVecmEU2v16Rpk4qWWEOhl55DaihRBAOFHBIPwGLn17hV4C5HWNfDu7qBqTTL2eeak5ZTqm3JXxl5pLjSQvsOUkhadjjJ2yDFSuGvLnELpkk7A3dSf3S3HTFqU4eLn4yb3lJLTd2Y1ltKmy9bpkzU6s43I1N9Mq0lHZoClIaW2HGElRbUQFFYHmkwNxCJSG17MRrVQOH3g0tW5OJnULQTV2p1GYZsqmvTTU5SXhLqmMOy/ZukKSvZTL6VFHcTjJxvLS3DBwra82ddzvCzfl4+WFo081U064WQGZ5kA+aPqaSCopKQoKOFFOU4OYzTgEu66NSeMLVG8L/kxI3BVaHOmpySUFvxN1M3KtmXSD5wDQaS3uc+bvneMLkOJ3hd4fLLu2ncLun95qu+6JA0o1a5X0FuUZwoBaeVxWeXmKggJGVBPMcCAb16NbDDa4AY55qnNt0l+5q5SqDT1tImKxNy8lLqeVyNpceWlCStXckFQycbD9aLi6vcE+mGj3C9cWormoKrsvug1aUpU6ukzaPcyRmXJhlDssW+UrUpDbu5WpJyR5qfexStDYaSlpvOEAJB78DYRcm0E48Fde5GTnUJgq37/GJCEMVzS4YQ4EVwKxzTjTfgstnTS2ru171OrlZuC6nMrpFpzDaxQGO5U4kAuJUkEFWd8nlShXKVH46v8F1WtLiiofD3p/W1VNi7mGajSJ2eT9UlZNZdDqpjkA5uxEu8olIHOAnABOIjNKmbg4WKrQ9VtYOHWnXhQb2pjblvoqbrDoUCpp4PMAJeSl5TZTyocQlRBGMbxcWpU6m2H4Smxbtqtw1KaTqTa807Ly1XWO0pb5aWlEs2MDkbIbKUoxkLWsZJMMZL2ZDbEYLzaYhajd4dvB/Uq/m+Hqran3y7fCn00p2uNhKZFupKAAYP1MtpPMQnlOQCeUuc2YqJrTpZU9F9TK7ptVKlK1JykPpSzPSxHZTbC0hbToAJ5SUKTzJyeVWRk4zGa6waR6iv8Td0abt23PP16t3RN+IMraViZbmZlS2ngrBBbKXErLnRIBJ6GMH1b0uuPRm9p7Ti7jTRVqWhtUwinTIfZb7RIWlPMEgBXKUkjGRkQqrnjUINGUoc1hBOYSHEQ2BcoRkQZENPWAHECdU6FGO8QkECaIIIICEIggghoSj4IXpCDMO2hITIIDsYIaEo6wH0QkECEQQQQIRAOsEECE8Z74szwrHm4qqHjvoMv+4JWKzA9x3izPCmOTiroaT/AECl8fJ8tEi1PUP8jvsq1kfyGeYLs0CcCCAEY3EEWGDshVjmuXvhTcG+LdGNxNTP7nlYpRe6cXtcI/qrOfflxdrwpyQL0txQ75uZ/c8tFJ77P8nFxY/otOD/AM5cRbMyPi/6yuC2PWnwZ9KgDsYIVQ74Tv8AVFhQgnDB3xDTB8EENCUHEAA6iEgBgQlxtuIDv3wvXvgwIzVCIWEyDCw0IggggQiLPeD3nZdrWasUt1wIcqVuTDbR/PImJdZH7HmPwCKxACM00Y1Gd0m1Rt6/Etrcl6bNcs60jdTko6ktPpA7z2a1kfngIm2tLGakokJuZBVCyo7ZachxHZA//FP6H6aLu7iHoWn9bliW5OsvLqbRT/xcmVuuoUO4KLHZn9GItBxB0fhY1P1GmJ7UbXmbpdWojRpK6dLTDaWpVba1FxOFMLPMVqVzHmxlPqES85RbF0P1huficm6kw7bN0W+ZmmOtec27UXlNuuISoAgKmEtoW2e8uPDuAPPyrz07V6jO1iovKdnJ+Ydm5heffPLcK1q+NSjHzsGHEt2aEwx7mBjABTvH0hjsyX0MZ0Ow4GgewPL3E47BkugWslq2PMSfD/T5G5XzTqbXKfLUR5LQeVPsBtktqUrKQkFLTZKsfX9Ix3iA0z4ZK/q1O3BqHrfULWuNLMoqYk2FISGeRlPZOJKmVlJKUoV1677R59R3+e2eFfkX7+fpRG4H/EycaP40Mq4hbibcUrlMrIAZPcZVr9rrEuyJWLHiw4bYpb2YmIz9OhVK1ZuHLwXxXQw7tMwNaeitvcdtN08mU2xdL0/NquOekS3JKZQDLzUklaVlxxWNiO1JTjrzn0RAcSjPuJwl6G23OJCJ1TKJwNH3yW/FSo7eozLYPwx8qVMNcY1U0ssZilVGXFnyLjF2zXKOx8U5ZdCeyWCTzvFhSEjAIKydwnMYhxn6oSWoOrjlEoLzLlEs1j3HlSyctLfCszCkd3KF8rQI2IZBG0UbNl4jYkvIvrehlznV1Zho+OanWhGY6HMTrKUiBrW78i4/DJaGAxtGwdE9brv0DvB2+bFlKO5WFyTki07UpUzCWEOKSVqQkLThRCeXJzsSMbxr6Ng6F6ZU7Vm9J62atWpqlsSdv1WtdvLNoWtSpSWU6lGF7cpKcHv+CPticV8hDBLhdzWMs3RXGrnTerE6UVlFT92UzKE9JwP9v2gHT8k879qNuMcZes8rrY9r7LNWw1d0zSPcSZdbpRDD8vzJIKm+0/JMNtp5woeahI7o9FA0e0Toun9i3drLqFd1ETqNKTczTqlSKKiZpdJDTq2QiaUoF19wrbVltjlKRjOc5iNs3SbSqnaZNaw6y3ncLdFrFYmqLbtNtmTZVO1PxbHbzalTWEMspKkp5VAqKjjbaDEL2DI0PXTWtNTUy5OzT84/guvurec5RgcylZOB3DJMZ9La939T9EJ/h8l00kWpUqkmrTCzKq8b7cONuDDvNgJ5mUbch2zvC6zaXSGnNRoNUtW4XLhtC8qUKzb9RflvF5ktBwtuy8w1khLzTiChXKSk7EYzgS1T0RtqT4exrLLaoU+p1tFXplPm6JItFbNNanG3ltiYmMbvANZU22DydCSTs8VhsOIHG78VruyLrq1i3dRb1oCmE1Ogz7NRk1PtBxsPtKCkFSduYZHTMZ9UuIzUypa3NcQwqMlK3my8y8l+VlQ2wezZDHIprmIKFNDlUM75PQ9J6t6KaPTunl8XLpfqlcNwVPTmVk5urzk7RUStGqIffSypEmvm7ZK0qVlIdTlYScADcSWouiOjmmlly85XKpq3MXHNW3IVZMxLUCU9wWp2clEPtsqmVlKi2FuJSojKhv1O0FCF6CBFbkcM1EUXi+1ctrWC4Nb7dlLXkLluiTTJVLsqWTLOAdnzOhouEhxRZQVK5tzk43MaWP1QlSsEkn1de6LF2nwxWFVZqzdObq1Lq9K1L1Cordbo0m1TGnKRKIfbcck5eceUsPB15LXVtGEFaQQe/FaBoVb9V0CvPVyZ1KlRcNqJk3XLXk5cuuy7b1QEmDNunCW1qUHFJbRzHlSlSiOYCFSuSy+HFcO1jrWnS2knfHWNi0zXK96RojUuH6XTSjalWqgq8x2sqTNeMBbSxyu8+AMsI25ScE7+hNG9M5HUirVuYuK4V0G2LSoz1fr9Sbl/GHWpVspSlthokBbzji0oQCQNyT0wcqlNKNEr5uGxJXS/VWupZue6pK2arRq/JyzVYkEzDiUpnGexKmX2cFQ2wUq5Qc80HgsQ4cSlWnPBTek3HVr1o7Z8rYlEnKFWKNTBimtVyQVMuSCc5CWnELQrkTk8oVzco2GAAI1RqZrJqNqtfx1NvS5337gQpoy0ywfFxJJaVzNJlwj8iCFEqGN+YkkkkmMvvuyuH2m3C5YdhX7qFPXDL3G3Q31VakSDMoGxMlh9xBZeU4VDBKeZCQe/EZdenDno4l3VS3NOdTrxm7o0jbem6rK1qkSrcrOy0vMIZmVS7zLhKVJKspDiRzHAxuSGF6mHGcLpNQF75LwlHFJJUFFHVX7fmpttgsJq8zRkKnUpxgKyFBtSu/Jb3PUGK1Vut1i5atO3BcFTmalUqk+uanJuZcK3X3lklS1KPUkn96LHP6KcJbek6NYWdQ9Xl0l24VWyhg0mmB8TQlfGe0KQvHZBGB77myemN48lk8Ltk3Fcun8hWryuKTpt0aazV81J2Vl2HJhl+XU92jLIUkJKClnI5snJxnfYGKb2RItA51VWwjHxww79I3vZmlug2rGolGsjTS7dQewnKZWJ6eerchItLQqVkXZhgNFhxaSFLaIWFAeb0OTkfeR0m4fLa0h051D1XunU1qf1AkZ+dS1bkhT3ZRgS02tgpKphSFZICVYyep6DENeQlnmpCr+Rv/lhMGN+0bSPQGQ0mt7UvUa/79pibqrdYplOTTKPKTKGpeTcQEvPoW6hWSl1BUGyrfmA6AnXus2lU9o5fczZs1V5asSplpapUyqyqShmoSEw2HGH0pO6eZJwUnOFJUMkbwUWHwXMFSsGghSMQkC86IggggTCIIXHd3wYPfAhKDC5huQNoNusJCWEIxB16wfBtAEJIIDjuggQiCCCGhEKMQmMwuN8QihL3xZrhX34qqH66DL/AOb5aKzZxFl+Fj/hU0RPooUv/m+WiTavqH+R32VayP5DPMF2ZycD4IIPR8EEWmeiFWOa5h+FKIVetupPdOzH7nlYpNfYHlzceO6sTv39cXZ8KakpvW3FD66bmP3PKxSe+h/JxcX6bzh/89cQ7NyPi/61wWz60+DPpUEf2ob3w49IbFgKEEfHBCgfrQFPohoSQQQoECEZ/wD+wA74hcCDAhVQjG+YWCAjENCSFggwYSEqfhhSMw2HQjtRkrFcPnEXbtCtea0R1ukV1fT+qpUy04pCnF03mVzEcqfPUzzeeOTz21ecnOcD331wSXBMy/lXoLdFNve2ZtPayiVTzSJpA+wDmQy8B6eZCu7lzvFZ4mbUva8rGnVT9mXTVKI+o5WqRmVNBz9GkHlX/bAxEj2ZFhxHR5B9wuzBxad+4q1BtKFFhtgzzbwGRHpD8qzd73JdbLWhNs1XR++6dO2PUpRh1L1NSpNRWy2wFJlVNrUHFYYWoJyNsHPWPdqHw2ajcRGsFSv6Zpj1j2tMsSqFPVtCPHyhplKFkSqFq5d0nBcWgd59EaQqfE5rdWn6LOVW8UzMzb80Z2QfXIS4W28W1N8ysIwvzVKGFAjeIC+NaNWdSJcyd639VanKE5MoXQzLE+kstBLavjSYmwrJnoTmOhXWEBwJqT6RqaD8qhFtWRitc2IHPBIIGAyFBVb/ANStdNN9CbEmdEuGV7xiemuZFaulDgdUVlPK4pt4Y7Z8jKedP1NoHCMq3TUltIQkIT0TsP8AbvheUDp6v2oWL0hZ8OQYQ03nONS45k71En5+JPuF4UaMgMgERtnhnu63bLvyu1W56nLyEnMWXcUg248vlDkw9IuIaaB+yWohKR6TGpoQjO46x371xsddcCrW8NlwU+xbft19HEzbEpYcwAq/bBvBtUyF4cPaiSk+zWl8OthBStpSFBWy84xECie0v1t0jpOncje9B04qNiXPXZygy1yOutSU3Rqk+l4NCYbQ5yPsKSlPKpJ5k9CT0rdyYOP2vTDkpI9UBXsZglt0jBbk4gLts1+mWBpVYdeFwUnTiizMi9XEMKZaqM9NzKpmZUyhfndilRShBUBzYJ6Yj4UC6Lcl+GC87NnKsy1WahelEnZeTCh278q1LzKXXEJOxCSsDr1UPTGpADtjug5cDb4DBrqvLSdq9TcrXVaqaaWboLqBp65r1RNQLLq8q0/p/bgYX7q0qql0r8ZmGy0kSxQlbqVnnUF52Azgy1v6jUm0qJXboubii8vrQqmnz1vyNkT0w+qoJnXZZDbUs5I8vi7SWFgnxkHcIBGSqKdYz3mDfbc7QVxXp0l2YCuHat5aWVu6dMOJK5NUqJTX9O7ZkJGs2s4p33VnajTGnG5bxVARyuNzGGFFRUOQc2fVqPTe/KExorr1RK9VpaUrF3ytDdp0qokLmnWqr2z6W9t+VBKjnG0aXOenMfggAI3gS05OK3Dw+XXaVPbv7Tq/K2ihUrUW3fchFacaU4zTp1p9ExLOPJTlfYlbZSspBI5gegOJy1La0n0d1I0xrlS1hpVy1+SvWm1CquUBSn6LTaUy+2oqXMuNoW68SnmKUJ5UpCs5OM6C39f68LjfOTCBSEWlMMla/Wu67ir9wt164+K2x71tZF6StRk6LTytUzLSpmypLhHijfIlplR58OKB/PHETGrHEvI6wW9rrp2u8qXSw5cCq7atTk5ZqTTcNLl3lBVMfdbQkulSCl9ouHmWscpJ2EU439O+c5gwANoddS10h2NBmtzG7qH+JJlbHNXlvdxOpbtYVT+f6qJT3KQ0HuX7AuZTn05jb+nGttk2rdmk1dbvGnyr9raQ1ekTLyjzCWqivG1MMKCk4KyVNYGCDzCKe85z1OPRDSe7JhDNJkZzaEBWL0h4irjufXm2L41yvaUXL0ah1unInHJGXlW2RMU6ZSlJTLtICit1xCckEkkbxnti6l3F+Jt0ms7TTiztbTSfoMlV5a4aTU33W1vLfn3FsKVySzwP1NR642WO/pTU5zmF3x1P68ME0TbHc0UKsrLWxp5f3D1p/Y9T18se05u0q9cb1QRUVzLjzrMy+wGXWWmW1FwFMupQCijIUn0nGu+I/UC2dQdQ5d6ylzL1u23QaXa1KmZprsnptiSYDQfWjJKOdRWoJO4TjODkRq7K8Yyf14Qg4h1WXRb4u0TFfBCQphMZgXj4oGO+FwD0g5YcE+iESkEggOMYhcH0Qcvqh1CaZBCkeiDBgqEJIM56wvLARiBCMfFCQ7r3QYwNhAEJvSDaFJ7oSGhOHSAY6dITJgzCKEp3iy/Cyc8VNEx1NCl8fJ8tFafwRZjhZTy8VlFSe6hy3+b5aJNqeof5XfZVrI/kM8wXZjB9EEPgi0z0QqxzXMPwpuDeVtpP/TJj9zysUlvsYvi4v03nPv64uz4U5QF5236fHJj9zysUlvs/ycXFv0q059+XEOzcj4v+tT7Z9afBn0qDJHWGQp9EJFhQwlTHupFGq9wVJijUCkztTqEySGZSSl1vvO4BJ5W0AqVgAk4HQR4QTiHsTMxKupflX3WXUZKXGllC07Y2I3EIk40TFK45LLvoM6w5P+9FfH3NzvzUH0G9YTt9CO+c+jyanvmox7yjuMnPlFVs/wBnO+1Dhcdy91y1f4p94f6UctJn3ea6Ky3vclkH0GdY/wClFfP3NT3zUH0GdZMZ+hDfP3NzvzUQXlNco2Ny1j5Qe9qGKuS4Vfliq5Pqn3fagpM+7zS/be9yWQDRvWIf8kN8/c1PfNQfQe1gzynSS+c+jyanvmox9NxXGPe3HVvin3vahwuS5R0uSsfFUHh/pQ6TPu806y3vclkSdFtZlDKdIL5P6mp75qA6LazDc6QXzj/u1PfNRAi6boH5Zqz8oPe1CG5rlPW5Kuf7/e9qCk17vNKst73JTf0GtYun0Ib5+5ud+ahw0Z1k7tIb5+5qd+ajHzcdyjpclX+33vahvlFcZOfKOr/b73tQ6TPu80Vl9/JZKNFNZ1bDR6+vubnfmoU6J60J66PX19zU981GPouq6kDCbprKR6BUXh/pQG6rqznyprXyi97UZpNe7zTrL7+SyAaL6yjZWkF9D4banvmoFaMax/0o73+5yd+aiB8rrtxjyqrRHrqD3tQ03ZdR/LPWPt972oP3Pu80ft9/JTp0Z1j7tIb5P6m535qD6DGsn9KG+D+pyd+aiBF03SN/Kes/KD3tQvlVdP5p6x8oPe1BSZ93mj9t73JTw0X1lPTR++vubnfmoQ6M6xjrpFfP3NzvzUQflbdg2F01r4qi97UN8rLrJ/lqrfyk/wC1BSa93ml+297kpz6DOsROTpFfH3NzvzUH0HdYOg0jvj7m535qIQ3XdZ63XW/lF72oUXTdQ6XTW/lJ/wBqCkz7vNH7ffyU4nRnWNW40hvn7m535qHHRrWMD+ZDfP3NTvzUQflddo28q658pP8AtQ03ZdXXyprXyi97UFJr3eaf7ffyU4NGdZD00gvr7mp75qA6MayDf6EN8/c3O/NxBG6rqP5aaz8oPe1DPKi6M58p6yP/ABB72of7n3eaQ6Pv5KdOjWsXfpHfH3NzvzUJ9BvWH+lFfH3NzvzUQouq6h0uitfKL3tQhum6Sc+U9Z+UXvag/de7zRWX38lOfQb1i79Ib4H6mp35qD6D2sAOPoRXz9zU981EJ5VXV+ais/KL3tQoum6evlRWvlF72oKTXu80Vl9/JTn0G9Yv6UN8/c1O/NQDRvWI9NIL6P6mp75qIUXbdY6XVW/lJ/2oQ3bdn5qq38pPe1BSZ93mj9vsPJTQ0a1kP/JBfP3NT3zUO+gxrL/Sgvr7mp75qIA3XdZ2N01r5Re9qGm6LoG/lPWflB72oQ6T7vNP9t73JZANF9ZD/wAkN8/c1PfNQh0b1iG30Ib6+5qe+aiAF2XWOl1VofBUXvahDdd2Hrddb+UXvah/ufd5o/be9yU/9BnWM9NIr5+5qe+agOjWsn9KK+fuanvmogfKy6/zU1r5Re9qE8q7q/NRWflB72of7n3eaX7bYeSnjo3rGOukV8/c1PfNQn0HdYP6Ud8H9Tc781EH5WXX+ams/KL3tQeVl1jpdVaHwVF/2ozSa93mnWW97kp0aNaxK6aRXz9zU981DvoM6x9PoQ3z9zc781ECm7Ls7rsrnyk/7UOF23aOl11z5Sf9uCk17vNFZb3uSn06KazHpo9fR/U1PfNQp0U1nHXR6+/uanvmogPLC7/zWVv5Sf8AahPLC7unlZW/lJ/2oKTXu80Vlve5KeOius3X6D99fc1PfNQ06MaxDY6RXyD/AN2575qIQXddn5rK38pP+1B5W3Wfy11z5Sf9uCk17vNFZb3uSmfoN6wg4+hFfP3NT3zUB0a1iAz9CG+fubnfmohTdt1kYN1Voj11J72oZ5V3QDkXRWQf0xe9qCk17vNH7b3uSm/oQauA76TXv8dtzw/9KA6Q6t9BpRev3OzvzUQou27AMC6q3j9Mn/ahPKy6vzUVg/DUHj/pQ6TVf680ftve5Lwz0jPU2cfp1SkZiTm5VxTL8vMNKadaWk4UhaFAKSoHYggER8I+rz7sw6t+YecdccJUtxxRUpRPeSdyY+UdIBpjmuc0rhkiFHWEhAdswykvpFmeFxXNxV0YDr7hy2/94SsVkB2izPCySOKujpx/OOXx8nysSbU9Q/yO+yrWR/IZ5guzgBIHwQQAHAx6IItM9EKsc1zB8KcAbytz0idmP3NKxSa+0/yb3Gf6rTv39cXb8KakC8LcXnrOzG397ysUnvwDy3uL9Npz78uIdm5HzP8ArU+2PWnwZ9Kx0wQqu6EiwoYRCgZhIIKoTwM9IcASNgcesQiACQD37Rdp1jh20K0W07v64tEZG5atctOl1FxTbbpXMeLodW4vxhSkgEq25UH4BE20bR6DcAYXucaADwqqEhIdNvkvDQ0VJPjRVT090m1D1VnvEbDtiaqSQvkenPyOTl/SXX1YbRj0ZKj3AnaLNyvA/p21Q0afVvVuSZ1UnWjUZZpLoDPYgY7FMsohxxskE9rgL2JSnlSQcHv3jo1Qr8l7j2DRqTZFOQkoaVKJExNIT6EOLQG2/wC0aBHcYrzOVirVCqOVufqs7NVJ57xlc68+tT63QchwuE8xUPss5ETjCtWf7bnCCNQGJPm3bl3NjWbIC61pik5k4D4LLtTdEtTNIJ1TF72zMS8qV8rVSYBekXvRyPpGMn7FXKv0pEYMFDGcxYjTPjk1WsmS9xLvlpW9qQUFtaagrkm1I+xU+EqDgx/+VtZP2Ubesdrhl4m7evWr0rQtq36xbtLXNuuNKTLpU6408UKQZVxKVEKZJPOgZ265Igdak5Z7R06FeaKC804YmlaZhNlmSk+79lFo7uuGOVTiqNQudo+EqpS5dpajkltJJHftH1JIMfQ1UDI0S5x1g3/D6osnozw0ymtGgDNx0KmCWuFnUQ0qqV96YcEtS6CimeMvvPN8wbCG1edzEBRJSnPnARhtxWNZuq+qUxb3DrRmqNatHpRecqlwVUtIdlpc/VqpNuvHDAcK0YbQNhy4TkkRrJexguaA7atP4z0gMbWr/DRqjbs5WpaZboc5L0W1PLZVQkaml+UnaQXA2HpVwAdqSskcpCTsfVmOpWgOpVeVZiaRIU94X1SputU1ZnkNtS0hLOKQ/MTbi8Il20chUVKJ29fmwAErOiibFrjO3WAneNp1Dhp1UZua1rZtqWo14eWvbigVK2qo3O06dUwfxwkTHmpbLXVztOXlG/TeJCq8KmoVGnacJ68NNxR6oh7xa4U3dLGkKmGVoS7KGZ6CYTzpPZlO45iCQkwAJ6F+xadBEEb1n+DXVim3yxpsu4tPX7hUzNTM3JsXS0o01mXZQ8tybykFlPZrSoEjBz6ATEBUOGHV+Vuy1bQpVKpNwvXvLOzlBqFBqzM7Tpxho4fdEyCEJS11WVY5R6SQIdEaCJsWqYO+Njak6D3rpfTafX6pULbrtBqkw7JS1aturt1KRM02AXJdTiACh1IOeVSRkZIJwceuxeHq8b9sc6iSlzWPQ6IKsqhpeuK4W6aXJ0NId7NPaJ5VZQsEednAVttCqs6N167Raxgjb44VtVWLwu2zqvMWvR/IVUs3XqzU603LUmUcmUJWwjxlYHMtYVskJJyDnHf4JXht1TmNWEaMTEjSpC4XZRdRacm6i2mRdlEsKf8AGETKeZCmi0hagsbeaQcEHAcUaJ+xavhp+GN0zvChf1OrlBoc7fOmTPlPTnKnSZ5V2tCRnGkPIZ5W3ynlUtS14SkbnlV9iRHsf4ONUZe+X9OjdWna6zIU6fqlUS3c7amqSxKdkXvHFBGWFYfQQFDoFEkBJgomIMQ6lomA4jaE1w26qtXjRLLkZOh1Z24qW7W6dVKZW5aYpTtOaKg9NqnArs0NNlCgtS+XGMYJIB9yuFbVx6+bbsKit27XZi8JScmqDUqPWmpqmVESra1vobmk4T2ieTlKFYIKk9xBhUKNDE7q1DBG3K3wv6lW/LUKo1Cp2aumVuqooa6pKXLLTMjTKgoFXi06+2SmXWAD1ynY7wrPClrhMTbVMbtZpNReu1+y/EXJpKXm6izLCacWv60S4YPadsFFPKM9CMsI0T9i1FBGzLN4frwviavFFMuiyJORsV9lirVapV9uVp2XXltNLZmFJ5XG1LbISrYHKcdREk/wsaqSWpFxaa1OYtiQmLSkZep12szdZQxR6fKvoQplxyaWkDz+0SlKQkqJzgEAkNAgvIqAtQwRtOf4adUZG4axb6GqJOe5Npv3umoSdUQ9Iz9GZ2VMSr6Rh3fICdjkEHGIj6HoHqTdNNsWoW5TJWonUWdqEjQ5dmZHbKXJKSmYW8FAJabTzFXMVY5UqJxjdEEpGG8YELXRO8EbG1H0GvbTW3ZC852pWzcNtVCbXTm61bVYbqUkidQnmVLOLQAUOhO+CMEAkExriCiy4FpoU2CHKhsCSXO2ISCCBCIIQ57oAd94aE5MOyYZDgfRCqhGcQhOYCcwmfhhUQlB9MHNDSYMiGhPzCHpkdPVDeYwZ32MNCUE+mFJzCQQkJR+0YQwQuxhoSQYhcZ6QkZKEDYxZvhdP/xWUb10GX/zfKxWTBO3pizPC6COKmjZ7qFLf5vlYlWp6l/kd9lWsj+QzzBdnQSAPgghQTgbQRZZW6FWOa5ieFOGbttsAbidmd/73lopNfY/k3uL9Npz78uLt+FMI8q7bPpnpkf4vLRSO/lEXzcQ/qtOfflxEszL/s/61Ptn1p/6fSsfXttDYVR3hvWK4KhjJCoE98LAMQ6IX0SdwfWItdxOqzwxaG4O3iTXx/jFqKnp6gZ7xFq+IZK6pwkaJVuXSVsS7TMu8tO4bX4oUYPr5mHB8IiFamE5Kn3j9JVqzBWUmWjO6PqCqrkZzkA/7fHD22Xn3kS0sw4888tLTbTbZWtxaiAlKUpBKiSQABuSR6Ysbwly+hF8U6t6NanW0yxcNyupNJrxew6VJAKJdlStmHUqytJGz3NyK6BKtuWDoBYvCZK1vW7V2tytZeo762bdQ02UnJBDaktr6za/egbpaAUrJ6pxOW/Ck4r5dzTpP6jveH3WpWwok3CbHa8aM+ka+j4rUd/8L1raR8Pzl46nXTMU+/555CqZTGVJcaBxvJKT1UsJJW46k8rZCUjP12ScAqiaPrC2TsaDLEf4OejQOruq9060XjMXfc7oRkFmRkm1EsyEvnKWkZ+MqV1Urc9wG/8Agj5aHp3rPd04CiTlqQ2hSz39nKzrix8ISpBx+eEcU/CmYVkvM2689xb8O0MB4Lss+JLRLTaJVtGtBFdZoDiVUWSwZOXPpaSf2o+xO8fKVbU1LNNq98hCUn4hH0JzH1YyC+Zd6RViNMuI+a0e4eqbRrFuRUtd8rqZ7vzdLKHQxP0n3MDKm3yB2a2VuDkUgknooDKQYyS3qtwnUvVa5LtoE9brVMuu1nJm25C6aM/UZC0q244kvSs1LpbV2iAA52LiUrSAceiK2N2ZczlnDUBNJeNvCre4hqAKOzTPdj23YkZ5uYtednGMA7x6anZNzUCgW/dFWo7jFJuhEyqjzXOhSZoS7gbfwlJJTyrIBCgM5yNt40DRewjPFARWisfqZxSUug1qxp3TSdtO8WZTT6Zsy6JKZthyn0qbQqcUtTSZTDXZoIShaCgjb3wBJSMgtziy01lqxYU6ui0W3GFadVuzKtLUyhrmZCgTM1O9oy8JN4qEyz9TbW43zq5kur6nzTTgoIHXqM7d4/2zHzWOzClqOOXJJ9B+CHVMzUQknarj0viWtmyL5sak13VGl3fbEozWGaqu07NaokjSE1Bgy4dl0Ftt2YeHMXHMoAwAE8ysxXa/7P0jsulUqS0+1advuquzDhnpmWpL8jIS0oAEtJCZhKXVvqO6sDkSkcuSdz4rp0Y1Qs+jTty3HarsnTqcmmKmnVTbKy2J9suyuUpWVHnQDkAeadlYMYUh7Izz9R1J3+H1Rk1OCzGjOdg8K4tN1z0kHG/dur3lVLStpVqizUlKVOdpL8w0XnKWzLp7WV5CtSe1SoKSpOCAe45iVf4ktH6TcGn0rV7mlbjdlbWr1oXJXbUt96kSElIz5/G/isg6EJLjSudbimm0cwPQkARSjdW+D69v2v8Ab9+FCVJHTfpDGC0ybcARTM1W+tQ7i0vsvQKS0PsC/kXxOzt2+VVQq0vTn5KUlG0ShlmZdCZgJWpxSVc6iByj3uTiMemr6tr8SrJ6cy9TBuVGobtdXJdivKJI05LKXOfHIfqg5eXPN6o1PlWepyev/vD+VR6Z+ID/ACQqLzMQ1r8FcDULWLRfWOr6wWLNagi2qXdtyUq6KDcszTphyUedlZFuXclphpCe3QCecpXyEZTvjbOUWXVNKbi92tSpHU5EjbGkencrpnJ12oUWZWKhPzzMywmdDLYU8hlJdWEoKSsjGeUbmjQbKk+r0dYPG51qVdkWp2ZRKvrQt1hLqg04tOeRSkA8qiMnBI2yYeteomSHVcFZ3W2k2LIaO6DXtZ2oclddGtOeetGoTMvTZmVPatzInitDT6UrIS06EnbqRgnJAkbS1200l+MPVrU1d3SVPt67KTW5Ci1aeo785KrfmEMpZU7KhsrU2S2SpK0YIGCN96ll2ZUwJYvvFlKytLZWSgLOMqCc4BwBk9SMZ2hzbe+NwOhODt8XpgrRYMftXmjZyV16bxL6UUC+bTefuGRqsz9D6sWPXLlptqmVpEoZqZD0m63SHEoDrbRCw8kNpDgcJ5TgpiZ0c1EpNW4hdJbNp2qFIvGmUWWuSdfRblltUCQkXHqc9lLCQhtb7i0oJVlCUghOCTkxRRSSE9e704/9jEpZl73Tp7dErd1m1hymViRS8hmaShKihLramnNlAg5Q4objvz1EK8V6tnSTV4wW8ZB7h/trS5zRila4e7ctfd0U+qVSuG3ZuXaoVNk23OQrYWCtyZcLpSUo5kDG6sbneEvxx6UzNis2JUZAs25N1actSY5GnTX2rbNJblGKoqZ6KmuZHn78xQAjHmgmgTbeEhvJwBy4Pxft9I+pQs9AT06Y/W/yxoLz6Y9pN0K1FA060ttfhpuylXBr5SaUxqjXW6fSKmq3p99uYptGmOZbgZaR2iFuOPtHlUABjGTuRtfUTVTTuy9QrrqMtf8ASkULXay7eqNDr1RtZVSkZJdOKpYonJF1JWW3uxWQrsyWzglPm5NAH5qccZZlHpuYcZl+YstKcUptorPnFCScJyQCcAZxCzlQqU+3LNTlRmpluSZEtKpeeUtMuyCSG2wc8iQpSiEjAyowk2zd1tGhXCpXE1Q7U1CrVVXqXSLpRStKKnbVGfbsxun0hypuPtOtycvJtpyuXPIQVvpQlRKhhKTu63+L2yJin6Oz18ytNRM0pF2Ue5ZW3aQmRFNkqiltliYaZQlLJXyArIbySArYEgGmJXjc4AJyIaSogddxj4v3v/eHil0uIfBWTnajoNamlErw+W/rI7ccndt6yNbrVzNUGYl5ehyDLXYJIl3sOPPFKuZQRsAMZOADX655Gi0y5atTbbraqzSJSdeYkKkqXLBnJdKyG3uzJJRzJAVyk7ZiNST1yT+/CqB39R3gqvKJEMTMZJh6wkOKVHbG4hOU92/o9cKq86pIIMfH+/AEkDPd35hp1RARmFCFHuPrHXELyKgSqkA3hYAPXCwJpkEKR6ISBCQjMNh8GIEJvSDGTvCkZhYEI6QQQQtaEQvdtCQQ0Jx9IgBHdDcwQqITsRZjhhIPFTRdutCl/wDN8tFZwciLK8MSuXioowH9BJfHydLRJtT1L/I77KtZH8hnmC7PjoNoIQHYYPdBFpnohVjmuYfhTP5bbeB/6ZNfueWikt/Dlvq5B6KtOfflxdnwqS0tXVb2cZMzNK6/9mlopPf5Bvy5UpIOKxOjb+vriHZuHzP+tT7Y9afBn0rH4IM7ZhObeK4UNLBBCjrDQlCf9vRFueGyfomt+h9ycMVxz6JSqSnaVa3phe/KOftNh39k8SpQ6lt9ePekxUhPSJG37hrVqVyQuS3ak9IVOmvpmJWZZOFtrHT4QdwQcggkHY4idaUmZ2BcaaOBq07CMl32bNiTj3nCrSKEbQV6Litmu2XcE9bNx092n1Slv9i+yrILbiTlJSrbIOykKHUEEdYmdRtXdRNVmqLL33cb1VRQZXxSU5xjP2TrmPyR5Q5Qpw7kJHrzaKm3dorxmUKSty/Fy9namyjXYSk6zypTNK9DJUQHkKO5l1kLSSeQ9VRqya4INd2bxFsNUmRfklecmuia5ZHs89VZ+qoX/wBUEFRPQkedEuFa0sXBtogMis2/6071Qi2XMtBMgS+E/Z/hG5aKpNKqVcqMrR6RIzE7Pzz6WJeXZQVuPOqIAQAOpJP757zFsdX1SHDXw2yWhUrOMPXfeZVOV4srB7NpRT2xyPrSGm5ZGffBDqolDN6I8FUi+mmzLF86qvMFoqICG5HmG4VgnxZs53GS+4MA8iTtUm8bwuO/rlnrtu2pLnqrUHOd90pCUpHRKEJGyUJGEpSNgBDY59txmRKEQGGuObjqw2BacGWLCc0kGO8UNP6j8lQucDHohhOxh574bjO0fRFfPK1elMtpE9wUTiNZqjdsnR16uJVLLtqXl3ZlUyKKgALEwQgN8hcJxvkJ7iYyy9rCse+qPwu2rphQq9dtpOJu6ZVK1+fYpMw8yy+26940+3zIYZStCipSQVFtOE+cRFT0ahXOnTgaT+NMG2xXTcnYeLp7Xx4y3i/P2vvuXs9uXpneMitfiB1Rs42aaDXGGU2EKgmipXJtOJQieOZpt0KBDyHNwQvOAdsbRuuK62zDRgRhRbs1N0hsOu2vpDetlUGxBUrtvRdrT8nY1QnJijzraXWuTCpkB1DoBUhZTsQQoHoR7dXrH0UuCzdQJLTzTGg2xNWvqvT7FptWk5+bmHHZVwuJW46H3VoJ5kE7ADA9WThlicbF7UG4aVUrxpdHn6TbLU9N27SKXQpKSlqZU3JV1ll5tCEoCUBbpUsA5PXcgR4ZrjGu28dOL8051DoVCXJXRTUGnih0CUkOwqyZlpxM46pASonkS6OYcysqHcSYKheulgmpW19f9MOGe1KBqXYcrOadUmsWPLNC2XKdV5+buKenGQntmKk262GV9qOYfUzhvKcHGSMl0/4RNDdbLBTqDJsydjLvGnUCYapL824Jijuiouy847JB1Z5mp0Noblu1KvPUcbYEVfuTip1lvO037QuStUybanmpaXqdQTRpdupVVlgpLTM3NJSHH0AoTkKOVY84qycxd0cQuqd4LuhVbrjShdrFMlZ5LEqhhLDFPd7SUalktgBhDa9wEAenrvCrjVN0xBJqRVbnsnSvTzVyi6/vt2JbWmMxZ6qFKURNfqD8uiiBM463MeMvrKyZh1DfK4opIK1AADIMZPWOHrSeyJuUuSo0SkXRKWhoyze89JUifeVIXJUjNush9TpIWZcJ5FK5Ajm5RsBkGuFy8QmqV3S9zS1wVeTfN5SlKk668iSbQ9PIp6yuWWtYGS7zHz19V4GekLSeIbVig1q2K/Sbhbl5u0qCLZkPxo2tpymBTijLTDagUvoPaqyFg5wnvSDDDl5CNC1j/wBVWCsnRTSXWxjTXVsWGza8lWE3Ka/a9Gm3kytTcpLJeb8VLhU4yHchDgSo4AJSQcmNQM6p6Q1upWzX2uGO3pGYLzklUJNFQnvcabacU32TiW+1DqJhtPMCQ7yqCuYpzjEFXeJbWKu3jbt7i5WKRPWgCmgMUWSakZKmBSipYalm09nhZJ5+YHnGysjaPDqPrtqFqmKRL3E7R5OQoTzk1IU2jUlinybUw4QXHy00kBTiyBzKVn1YyYCapOjMp2f8Voa/pxofcHEbqpo2vTi1rIoNgWnXZpitMuTrxS4GJUsTb6C4oqLBdWsBsb82CD0iserGklS0smaA87cdGuKi3XTjVaJWKQ44ZecYDnZrBS6hDja0qGFIUnbOMnePfSOJjVOjaqXFrLLzVHfuW6pR6RqqpulNPysww6GwtBYUOQAhlAO3TI7zGM6k6qXpqzV5Kr3jPyyzTJNFOp8pIyTUlJyMqkkhphhpKUNpycnAye8wkokSE9uWNVcGU0O0fn9OaTR5SxLBnqvVdHm7qZYk6xOJu+arZlluJcl5cr7BbGW+Yjr5q/NIAEV+4T9OrY1U1HqNrXO3TlyyrQrU3LvT7i25eWm25bLMwpSPOSltRCyd9gdjHnk+LjWWnUCRocjMW3Lu0ugi2ZKqt29K+6ctTg32fYtzZR2iRyk7g9ST13jXNkX7c2ndSm6tac23LTM9S5ujPLW0lz8azLfZugBXQlBIBG46wIfGhktIGWasrceidAofEVa2h1t6RSNySlqW+qs1aq1arrp0tcvPLdsuozEyCpLdPacKQlDYCiELSTlW3qv2w9LrauHQbUOV0vsi65HURyqUau0Cxn5t+lzam5ptht+RLqg8iYSl/p73nZ9ZVGkba4l9Y7XZtZimXDLOi0JKcpVNVOU9mZUafMgB2ReLiT20tgDlbXkJ+txtEtMcW2s71Rt2ptT9AknrQl56Wt5EhQJWUZpSJtsIe7BtpCUJVypHKrBKTkjqYKgL16RCANByVltQOEnSHRjTyRv5xiiagT1l0WuT0zRpJxweUDnuoGWpqbUhQUqWkW3EpeQ2c8ycEhOc6o0IpWmEvpzZ9bvvSK17knb51YYtNqZqD00z4vTnWmC+WktOpTltx0BJOQM4OcDGpbc4iNV7XNmCj3GhtFgpn0UZK5VCx2c6srmkP5H1dDhJyleR6PTGf1PjLumj2rYdr6a25b0gzalIbS77r23ITZTWS844/OSqlJUWwslo7YIKemwMOoqjTQnvByU9WrM0t0etjUjVio6X0q8DJapVCxaHRKpMPiQpsox2jy3FhpaVrcKEpbQVKIHLnB3jZttcNfDrWazqbTqzSl0OQrNs2hU7XE3MuOvWzUK2Xm2mOcHz0pmCwCXAfqZ3PUxo6/8AizuCb1Qua8tN5Kny1Hu+Xpr1YotaosrNyUzUmZZtLs0ZZwLbDnbh1QcGFEHfriNaV7W7U+53L0fr11Ozz+oD0i/X33Wkdo+qTd7SWDagPqKW1Y5Ut8oAAGNoEhGgswpVbq1l4frP0l4W6O/UaOj6KFMu+TlbsmOdRMkmckX5pmSG/IQhkSylYGQtR3MYpwyp0oqM43bN6WBZFRnJ6pDxmrXtXJqRk00/LTfisgJcH8eFTil8684AQABkmNb1vV3UO57drFtXNcj9Wl6/W5e4ahMTpLs0/PMyypdtZdO+A0rl5emw9ETWmvETqdpRRFW7a0zRn6emf91pVqq0aXn/ABCf5QnxqWLqSWncJT5w+xG0FV5GLDv3gMFuiZ0y0s0S/FGTtX07pl9M6e1+j0agMVqYeShtM2+7nmUwtClLDfKCQQSW87ZMZ5d3D5ohbN7ay3axQLJkJO0HrckqJR7pq03K0OXdnpNt19bq2CXlqJ5g2gqCQSSdsYqZceteo92WK7p5X64mapc3WXbgn3DLoE1UZ9wqPazL4HO7ylauUE4TkAbAYnWOKDV5m9K/fMxUqVPTV0y0tKVuQqFJYmqbUWpdtCGQ7KuJKCUBtJCgAQSrfziCYLTY0MYUwVlLC4f+FO9bx1UlqXVqNUrfNtUL3NnKdUJialbcrdQfdllpYeUUKeabf7FYU4FeYrB7xES/wl2Tb2kNuWBdTLMvqzO6g0CkXDUmXS57ly1U7Ts5VB5uzUUsJS4dj56xudorZX9f9Ubmdu5yrV1o+W0rTpGptsSjbDaJeRdS5KNS6EABhDakjARjO+ckkx463rZqdcVPrUhWrqmpxdwVyUuKfm3ABNrn5VotMOpeGFI5EK2CcDYeiCoTMaDldVidU9O+G6Tpd028h/Til3BalzSMlQpS1q/UJ+o1OT8eEvNMVRL6eRLobPOXGynlWFJGABzTmpHCvplZtxcQtxSlWsKqSFsUVyoUC26bV3Hp+jPJeYV+OGAEltOAtBytWzvdkEV0vjic1d1Coa7fuKq0htibm5afqb1PokrJTNXmZdXM07OutICpgpV52Fbc2CRkRF1TXTUSs16+rlnqjKGoajyC6dcLiZNCQ+wtbSlhCRs2SWUbj1+mBadHhZgLedec0quDRTTOr0rh7sOhVfVCtVa3Xp6WdnlKpQZfYl2phgLmCC4ntyshzmSSgbYJjIOIHS/hztS2tSLIkJnTakVqyENi2nKTWZ5+4Jt9laUPs1Nt1AZUpxKlHLeAhZSBkRVKev65qlZVvaezc037j2vOTs9TUttcjzT00pCniXBuQVNpI9EZve/FLrBqBaE5Z1yVSkqaqrLEtWKlLUdhip1hlnHZNzk0hIW8lJSDjbOPOzACsiMwghw1LUfMFHmBznf4oIyTUHUO5dTriTdF2uyjk+mSlpAKlpRuXQWmGw23lCAE55RgnH70Y1AuQ0rglhIWEJ9ECSToISCCBCIIN4IEIgghdu+BCTG8ELn1QkKqEQQQQVQlHX4ospwyb8U9CwPfUSXH/wDOl4rYnGcZiyvDHlHFDQlHb/cGWI+E0+WESbU9Q/yO+yrWR/IZ5guzY6QQDoIItM9EKsc1QzwlHD/fmoDNPva05ZM+1TFOOLk0JJde5220qSj/AKwBkKCeqwVBPnJCVc73pVrUBuYn5RAbuloKdm5RKcJqYAJW80n62YGCpxsbL3WgBQUmO/1Rp0nU5J2QqDCH5d9JQ4hY2IP/AL9D3ERzV44uCqr0mpzGrOlck+qa7TxqblpYFLkwoHm7Vvl3EykjJAx2mOYeeCFQYrHSETPsOJIPdJNSDuJ16lmZl+ltvt9KgBG0AUBG8DiufYIUMjG++3fC4A7ozB+XRqHJv1Wny6WrplUKdn5NlGE1Rse+mWUJ6Pp6utAecMuJGywIQWldhyfJWsjv/wDpzw/0IpMjgjtGi+ciQXMOAqFFQ7p3RJC1rp6C2Kvn+wHvZh/kndmM+S9Y+T3vZj00rO8OK87j9hUWDiHbEY9PWJDyWuoHBtes/J73sw4WvdI62xWB/wCHvezC0jNo4paN+wqMKc/7YjZDPEdrqxairKa1PrSaYrzebtQZtLeMdkJnHbJb/Ohfq6bRhQtq5c4Nt1fPo8Qe9mF8mbmBH8jdX3/7A97EeMWDLTFNKGuptoV7QY0eBUQiRXZVR2TkqJOVEqUc7knqc9cnvPU98IcRIi2rnOwtmsE+j3Of9mDyXurp5L1kfDT3vZj2ERgwqOK8ixxOSjScQgO8SRtW6h+VesfJ73sweS9zjrbVW+0HvZg0jNo4pXHbFHQdesSHk5cucG26sP7we9mF8m7k/M5VvtF32Yd9m0cUXHbFHH1Q0Jwdh+3Emq3biTsbeqo/vF32YZ5PXCTgW9VSfQJF72YWkZtHFFw7F4QNt/RiFJ3yNo9wtu5c4Fs1fP6XvezDvJu5fzN1f7Qe9mDSM2jii6dijoQ49ESBtu5fzN1b7Qe9mEFuXITgW7VftF72Yd9neHFF12xR8ESBtm5vzNVb7Qd9mDybubp5OVb7Rd9mC+zaOKV12wqPHWHYEe423cwODbdW+0XvZg8m7m/M5VftF32YNIzaOKLjthXhIB6w34okfJq5fzOVb7Qe9mFFs3Mfyt1b7Qe9mHpWbRxTuO2KPB74XMSHkzcw/K3VvtF32YPJq5h1tyrfaD3sxnSM2jikWO2KOx+9B8ESHk3cv5m6t9oPezDvJq5M48nKtn+wXfZh6Rm0cUXHbFG92P3oIkfJy5M48nKr9ovezCG3LlH5XKt9oPezD0rNo4pXHbFHwR7xb1x55fJ6q5/sF32YDbtyA48narv/ANhe9mFpGbRxT0bqZFeHbEJEh5O3J+Z2rfaD3sweTtx9PJ2q5/sB72YL7No4oEN+wqPgIHoj3i3bkJwLdquf7Be9mFNtXKOtt1bP9gPezBfZtHFO47Yo07wA4iQ8nLjzgW3V/tB72YPJy5AcG3KsP7xe9mC+zaOKLjti8OxhFHPdHvFt3IfyuVX7Re9mF8mrk/M5VvtF32YWkZtHFFx2wqOgiR8mrk6eTlV+0XfZhPJu5R+V2qfaTvsxoRGbRxRcdsKjj8EJg4ESXk3cv5nap9ou+zC+TVy/mdqn2i77MLSN7w4ouO2FReD0hcEHpEmbauUfldqn2i77MJ5N3L+Z2qfaLvsw9KzaOKLjthUdCEeiJLycuTp5O1X7Rd9mDybuT8ztU+0XfZhaRu0cUXHbCo3lMHLEmLZuY9Lcqv2i77MBtq5QcG3ar9ou+zBpG7Qi47YVGYhMRLC17oV722qt9ovezDhad0n8rFX+0HvZgvt2jincfsKiMGDGImPJK6iMi16ufV4i77MStItRmky6rmvqSmpWQl18ktTnELYmKpMDB7JORlLSQQXHe4EJT5yhjL4zWY5rTYTnGmS+VDokhTqc1dl1suLp7ilJp9PQstu1V1JwQCN0MJIw46NzuhHnZUm1nAxorf8AqNqi3rDUpduRpyUOIYCZbskPJwGx2aRgNsNpQEJ68xQEjOFKGOcL/DDc3Ejdbd63rLLFvNKS200hHYtPoa80MtAfkUq3708u5Pmp87mUnrHZNlUWxKIxRKLKtttsoShSkNpRzcoASAkbJSkDCUjYDaJLw+0XmC30cnHd3Rv2lfQyMqJcCM4b2jWTtO7Yp4DAAxBDskbDpBH0AwFAvWtcU+PLUabI1aSdptQlkPy76ShaFbAg/v8AoPcY9UIfer+Af5Yy9ge0tdiKJhxYQQqCa6eDU8uL5mLpse4fcZM4ouzHZsoUlxwnPaFJWjkc+yKcpUfOwDzZwJXgstSyMDVqcJ7uZofwiOmy/rfhH+lDUe9+M/5YmizA3sseQNQzpxWnaN7rzmCq5mJ8FvqeCArVqfx6kD+EQ/6VvqQRvqzP5/QD+ER0x+uhD3/DGurP/wBDy/CVyF3Bz/K5mnwW2poI5NXKgP7UfwiPonwXOp/Lg6wVHP6H/Xx0wHSAe++KF1YfaHl+EXIPcHP8rmafBband+r9SPxf6+FHgtdS8fzXaj+xHz8dMj1gPQQ+rD7Q8vws0hdwc1zPHgttSeitXaiR60/6+BPgs9RB11dqA+BA+fjpir3phn1w+CF1Yfanl+E6Qu4Oa5pHwWuo+fN1fqIH6AfPwo8FpqRjJ1hqXxIH8Ijph9aIcfew+rD7Q8vwlSF3BzXMo+C31KzgawVPH6EfPwqfBb6k4/mw1IZ/O/6+Ol6uvxwh99B1afaHl+E7sHuDmuZyvBZ6m92sdSx+g/jEOR4LLUsp87WeqD1ch/hEdMhCq6QdWn2h5fhF2D3BzXM8+Cz1F2B1jqRA65b/AIxAPBZ6ikfzY6kP7n/r46Y/WiGr6H4IXVh9oeX4Rdg9wc1zPPgs9Rgf5sdTx/Wx/CIVPgs9Rcbay1Mers/9fHS09IaesPqw+0PL8IuQR/Qc1zSPgtNSCRnWap4/rf8AGIcPBZai431nqZ/uX8YjpZ9cIciDq0+0PL8J6OD3BzXNH6VjqNn+bPVMf1v+MQfSs9RsYGstS+Nv+MR0tPfDYXVh9qeX4QGQe4Of5XND6VnqQkj/AH4qgR/W/wCMR9B4LXUYjH0YqiP7n/r46WI97CHrDFmH2h5fhK7C7g5rmkfBZ6i531iqJ/uX+vgPgtNRjsNYah8bX8YjpaesELqw+0PL8Iuwe4Oa5pDwWWpQ/wCWKoY/rX8Yj6J8FpqKBg6y1Ef3L+MR0p74XuHww+rD7Q8vwldhdwc1zUV4LTUUjA1lqRH9bz/68NHgtNRQMfRjqH+B/jEdLvTDTB1afaHl+E7sHuDmuaJ8FtqOPNGsVSI9bW37ogT4LTUUjH0YagP7iP4RHS6CDqw+1PJO5B7g5rmefBYaj5z9GOpfEz/GIcPBY6iYH+/JUx/ch/CI6XQ4dIOrT7Q8vwjRwe4Oa5oHwWGomMfRlqZH9a/jEIfBX6i421jqH+A/jEdMIU9TB1afaHl+ErkHuDn+VzN+lY6iDY6xVH4mR/CIX6VlqGU4GsVS/wACP4RHS49YB1g6tPtDy/CLkHuDmuaP0rHUMbDWCpev6iP4TAPBZaiYz9GKoD+4D+Ex0zb6Q09YXVh9qeX4T0cHuDmuZ58FpqLnH0Y6iB/WR/CYUeCz1FH/ACyVH/A/xiOl597Anug6sPtTy/CNHB7g5rmgfBaajf046if7j/GIT6VjqHjI1hqGfWz/ABiOly/fQo6Q+rT7Q8vwjRwe4Oa5nfSstRe/WCof4AfwmEHgstRT01gqAP8AWB/CY6aDuhPRB1afaHl+EaOD3BzXM4eC11FxvrDUviY/jML9K01F/pxVH42P4zHS1zrBGerT7Q8kaOD3BzXNI+C01Exk6wVD/AfxmG/StdQx01fqP+AH8Jjpf6IIfVh9oeX4QGQe4Oa5oHwW2ov9N6fP9wH8JhB4LfUTv1anvtcfwmOmA94IDC6tPtDyTDIPcHNc0B4LXULPnaszvw+LD/L4xHvt7wWdabuGRnLqvl6sU9p0GYllpDRdQPrS4HFqSknGeUZIyAQTkdHj1he5P+3eIOrCajSO5JAQg70BzUBZFkUKwqFL0KhSzTLTDSGyW0BAISMJCUjZKQNkpGwHxmMhziFc/JFfDDTHfAgslmCFDFAFqI4vdediU7Y74ghUe9gj3IXmv//Z" alt="Официальный представитель Shenzhou Yongsen — API RP 13C">
+    </div>
+  </div>
+</section>
+
+<section class="products products-manufacturer-catalog" id="products">
+  <div class="manufacturer-catalog-head">
+    <div>
+      <span class="catalog-kicker">ПРОМЫШЛЕННЫЕ СИТА ДЛЯ ВИБРОСИТ</span>
+      <h2>ПРОДУКЦИЯ</h2>
+    </div>
+    <p>Выберите производителя вибросита — внутри показаны совместимые модели, размеры, масса, материалы и диапазон размера ячейки.</p>
+  </div>
+
+  <div class="catalog-filters" aria-label="Фильтры продукции">
+    <div class="catalog-filter catalog-filter-search">
+      <label for="catalogSearch">Поиск по модели</label>
+      <div class="catalog-search-wrap"><span aria-hidden="true">⌕</span><input id="catalogSearch" type="search" placeholder="Например: VSM 300, Mongoose, KPT 28" autocomplete="off"></div>
+    </div>
+    <div class="catalog-filter">
+      <label for="catalogManufacturer">Производитель</label>
+      <select id="catalogManufacturer">
+        <option value="all">Все производители</option>
+        <option value="derrick">Derrick</option>
+        <option value="brandt">NOV Brandt</option>
+        <option value="swaco">Swaco</option>
+        <option value="fsi">FSI</option>
+        <option value="scomi">Scomi</option>
+        <option value="kemtron">Kemtron</option>
+      </select>
+    </div>
+    <div class="catalog-filter">
+      <label for="catalogType">Тип сита</label>
+      <select id="catalogType">
+        <option value="all">Все типы</option>
+        <option value="composite">Композитное</option>
+        <option value="steel">Стальное</option>
+        <option value="pmd">PMD</option>
+        <option value="flat-hook">Плоское с крючковым креплением</option>
+        <option value="soft-hook">Мягкое с крючковым креплением</option>
+        <option value="wire-cloth">Ситовая сетка</option>
+      </select>
+    </div>
+    <div class="catalog-filter">
+      <label for="catalogMaterial">Материал</label>
+      <select id="catalogMaterial">
+        <option value="all">Любой материал</option>
+        <option value="ss304">SS304</option>
+        <option value="ss316">SS316</option>
+        <option value="ss316l">SS316L</option>
+        <option value="q235">Q235</option>
+        <option value="dc03">DC03</option>
+        <option value="composite">Композитная рама</option>
+        <option value="steel">Стальная рама</option>
+      </select>
+    </div>
+    <div class="catalog-filter catalog-filter-number">
+      <label for="catalogMassMin">Масса, кг</label>
+      <div class="catalog-range-inputs"><input id="catalogMassMin" type="number" min="0" step="0.1" placeholder="от"><span>—</span><input id="catalogMassMax" type="number" min="0" step="0.1" placeholder="до"></div>
+    </div>
+    <div class="catalog-filter">
+      <label for="catalogSize">Размер</label>
+      <select id="catalogSize"><option value="all">Любой размер</option></select>
+    </div>
+    <div class="catalog-filter">
+      <label for="catalogMesh">Диапазон ячейки</label>
+      <select id="catalogMesh">
+        <option value="all">Любой диапазон</option>
+        <option value="20-325">20–325 Mesh</option>
+      </select>
+    </div>
+    <button type="button" class="catalog-filter-reset" id="catalogFilterReset">Сбросить</button>
+  </div>
+  <div class="catalog-filter-status" id="catalogFilterStatus" aria-live="polite"></div>
+
+  <div class="manufacturer-tabs" role="tablist" aria-label="Производители вибросит">
+    <button class="manufacturer-tab is-active" type="button" role="tab" aria-selected="true" data-manufacturer="derrick">Derrick</button>
+    <button class="manufacturer-tab" type="button" role="tab" aria-selected="false" data-manufacturer="brandt">NOV Brandt</button>
+    <button class="manufacturer-tab" type="button" role="tab" aria-selected="false" data-manufacturer="swaco">Swaco</button>
+    <button class="manufacturer-tab" type="button" role="tab" aria-selected="false" data-manufacturer="fsi">FSI</button>
+    <button class="manufacturer-tab" type="button" role="tab" aria-selected="false" data-manufacturer="scomi">Scomi</button>
+    <button class="manufacturer-tab" type="button" role="tab" aria-selected="false" data-manufacturer="kemtron">Kemtron</button>
+  </div>
+
+  <div class="manufacturer-panel is-active" data-panel="derrick" role="tabpanel">
+    <div class="manufacturer-panel-head"><div><span>DERRICK</span><h3>Совместимые сменные сита</h3></div><p>Сетка SS304 / SS316 / SS316L · рама DC03 · API RP 13C · 20–325 Mesh</p></div>
+    <div class="manufacturer-table-wrap"><table class="manufacturer-table"><thead><tr><th>Совместимая модель / оборудование</th><th>Исполнение</th><th>Размер, мм</th><th>Масса, кг</th><th>Материал</th><th>Размер ячейки</th></tr></thead><tbody>
+      <tr><td>Derrick FLC 2000 / Mud Cleaner / HI-G Dryer</td><td>2000/48-30 PWP</td><td>1053 × 697</td><td>5</td><td>Сетка SS304 / SS316 / SS316L; рама DC03</td><td>20–325 Mesh</td></tr>
+      <tr><td>Derrick FLC 2000 / Mud Cleaner / HI-G Dryer</td><td>2000/48-30 PMD</td><td>1053 × 697</td><td>6,5</td><td>Сетка SS304 / SS316 / SS316L; рама DC03</td><td>20–325 Mesh</td></tr>
+      <tr><td>Derrick FLC 503/504/513/514</td><td>500 PWP</td><td>1050 × 695</td><td>6,5</td><td>Сетка SS304 / SS316 / SS316L; рама DC03</td><td>20–325 Mesh</td></tr>
+      <tr><td>Derrick FLC 503/504/513/514</td><td>500 PMD</td><td>1050 × 695</td><td>7,5</td><td>Сетка SS304 / SS316 / SS316L; рама DC03</td><td>20–325 Mesh</td></tr>
+      <tr><td>Derrick FLC 503/504/513/514</td><td>500 Composite</td><td>1050 × 695</td><td>10</td><td>Сетка SS304 / SS316 / SS316L; композитная рама</td><td>20–325 Mesh</td></tr>
+      <tr><td>Derrick DP 626/618/616/628</td><td>600 PMD</td><td>710 × 626</td><td>5</td><td>Сетка SS304 / SS316 / SS316L; рама DC03</td><td>20–325 Mesh</td></tr>
+      <tr><td>Derrick Hyperpool / Mud Cleaner / Vapor Extraction</td><td>Hyperpool PMD</td><td>1070 × 570</td><td>7,7</td><td>Сетка SS304 / SS316 / SS316L; рама DC03</td><td>20–325 Mesh</td></tr>
+    </tbody></table></div>
+  </div>
+
+  <div class="manufacturer-panel" data-panel="brandt" role="tabpanel" hidden>
+    <div class="manufacturer-panel-head"><div><span>NOV BRANDT</span><h3>Совместимые сменные сита</h3></div><p>Сетка SS304 / SS316 / SS316L · рама Q235 или композитная · API RP 13C · 20–325 Mesh</p></div>
+    <div class="manufacturer-table-wrap"><table class="manufacturer-table"><thead><tr><th>Совместимая модель / оборудование</th><th>Исполнение</th><th>Размер, мм</th><th>Масса, кг</th><th>Материал</th><th>Размер ячейки</th></tr></thead><tbody>
+      <tr><td>Brandt King Cobra / Hybrid</td><td>King Cobra / Venom / Hybrid / Mini Cobra / LCM-3D, стальная рама</td><td>1251 × 635</td><td>13,5</td><td>Сетка SS304 / SS316 / SS316L; стальная рама Q235</td><td>20–325 Mesh</td></tr>
+      <tr><td>Brandt King Cobra / Hybrid</td><td>King Cobra / Venom / Hybrid / Mini Cobra / LCM-3D, композит</td><td>1251 × 635</td><td>15,5</td><td>Сетка SS304 / SS316 / SS316L; композитная рама</td><td>20–325 Mesh</td></tr>
+      <tr><td>Brandt King Cobra / Hybrid</td><td>King Cobra / Venom / Hybrid / Mini Cobra / LCM-3D, PMD</td><td>1251 × 635</td><td>17</td><td>Сетка SS304 / SS316 / SS316L; стальная рама Q235</td><td>20–325 Mesh</td></tr>
+      <tr><td>Brandt VSM 300</td><td>Scalping, стальная рама</td><td>940 × 676</td><td>10,5</td><td>Сетка SS304 / SS316 / SS316L; стальная рама Q235</td><td>20–325 Mesh</td></tr>
+      <tr><td>Brandt VSM 300</td><td>Scalping, композит</td><td>940 × 676</td><td>13,5</td><td>Сетка SS304 / SS316 / SS316L; композитная рама</td><td>20–325 Mesh</td></tr>
+      <tr><td>Brandt VSM 300</td><td>Primary, стальная рама</td><td>885 × 686</td><td>11</td><td>Сетка SS304 / SS316 / SS316L; стальная рама Q235</td><td>20–325 Mesh</td></tr>
+      <tr><td>Brandt VSM 300</td><td>Primary, композит</td><td>885 × 686</td><td>9</td><td>Сетка SS304 / SS316 / SS316L; композитная рама</td><td>20–325 Mesh</td></tr>
+      <tr><td>Brandt VSM 300</td><td>Secondary, стальная рама</td><td>686 × 208</td><td>5</td><td>Сетка SS304 / SS316 / SS316L; стальная рама Q235</td><td>20–325 Mesh</td></tr>
+      <tr><td>Brandt 4′×5′ / B40</td><td>Мягкое сито</td><td>1220 × 1524</td><td>4</td><td>Сетка SS304 / SS316 / SS316L</td><td>20–325 Mesh</td></tr>
+      <tr><td>Brandt BLT-50 / LCM-2D</td><td>Плоское сито</td><td>1150 × 915</td><td>7,5</td><td>Сетка SS304 / SS316 / SS316L</td><td>20–325 Mesh</td></tr>
+      <tr><td>Brandt VSM Multi Sizer</td><td>Scalping</td><td>935 × 670</td><td>9</td><td>Сетка SS304 / SS316 / SS316L</td><td>20–325 Mesh</td></tr>
+      <tr><td>Brandt VSM Multi Sizer</td><td>Primary</td><td>935 × 680</td><td>8</td><td>Сетка SS304 / SS316 / SS316L</td><td>20–325 Mesh</td></tr>
+      <tr><td>Brandt VSM 100</td><td>Стальная рама</td><td>910 × 650</td><td>10</td><td>Сетка SS304 / SS316 / SS316L; стальная рама Q235</td><td>20–325 Mesh</td></tr>
+    </tbody></table></div>
+  </div>
+
+  <div class="manufacturer-panel" data-panel="swaco" role="tabpanel" hidden>
+    <div class="manufacturer-panel-head"><div><span>SWACO</span><h3>Совместимые сменные сита</h3></div><p>Сетка SS304 / SS316 / SS316L · рама Q235 или композитная · API RP 13C · 20–325 Mesh</p></div>
+    <div class="manufacturer-table-wrap"><table class="manufacturer-table"><thead><tr><th>Совместимая модель / оборудование</th><th>Исполнение</th><th>Размер, мм</th><th>Масса, кг</th><th>Материал</th><th>Размер ячейки</th></tr></thead><tbody>
+      <tr><td>Swaco Mongoose Pro / PT</td><td>Mongoose / Meerkat, стальная рама</td><td>1165 × 585</td><td>11</td><td>Сетка SS304 / SS316 / SS316L; стальная рама Q235</td><td>20–325 Mesh</td></tr>
+      <tr><td>Swaco Mongoose Pro / PT</td><td>Mongoose / Meerkat, композит</td><td>1165 × 585</td><td>12</td><td>Сетка SS304 / SS316 / SS316L; композитная рама</td><td>20–325 Mesh</td></tr>
+      <tr><td>Swaco Mongoose Pro / PT</td><td>Mongoose / Meerkat, композитное PMD</td><td>1165 × 585</td><td>17</td><td>Сетка SS304 / SS316 / SS316L; композитная рама</td><td>20–325 Mesh</td></tr>
+      <tr><td>Swaco MD-2/3</td><td>Композит</td><td>622 × 655</td><td>6,2</td><td>Сетка SS304 / SS316 / SS316L; композитная рама</td><td>20–325 Mesh</td></tr>
+      <tr><td>Swaco D380 / D285P</td><td>Стальная рама</td><td>1181 × 712</td><td>14</td><td>Сетка SS304 / SS316 / SS316L; стальная рама Q235</td><td>20–325 Mesh</td></tr>
+      <tr><td>Swaco D380 / D285P</td><td>Композит</td><td>1181 × 712</td><td>15</td><td>Сетка SS304 / SS316 / SS316L; композитная рама</td><td>20–325 Mesh</td></tr>
+      <tr><td>Swaco Mamut</td><td>Стальная рама</td><td>1115 × 763</td><td>15</td><td>Сетка SS304 / SS316 / SS316L; стальная рама Q235</td><td>20–325 Mesh</td></tr>
+      <tr><td>Swaco BEM-3</td><td>Плоское сито</td><td>1155 × 903</td><td>6</td><td>Сетка SS304 / SS316 / SS316L</td><td>20–325 Mesh</td></tr>
+      <tr><td>Swaco BEM-600</td><td>Композит</td><td>915 × 700</td><td>7</td><td>Сетка SS304 / SS316 / SS316L; композитная рама</td><td>20–325 Mesh</td></tr>
+      <tr><td>Swaco ALS-II</td><td>Сменное сито</td><td>1212 × 1141</td><td>9</td><td>Сетка SS304 / SS316 / SS316L; рама Q235 / композитная</td><td>20–325 Mesh</td></tr>
+    </tbody></table></div>
+  </div>
+
+  <div class="manufacturer-panel" data-panel="fsi" role="tabpanel" hidden>
+    <div class="manufacturer-panel-head"><div><span>FSI</span><h3>Совместимые сменные сита</h3></div><p>Сетка SS304 / SS316 / SS316L · стальная или композитная рама · API RP 13C · 20–325 Mesh</p></div>
+    <div class="manufacturer-table-wrap"><table class="manufacturer-table"><thead><tr><th>Совместимая модель / оборудование</th><th>Исполнение</th><th>Размер, мм</th><th>Масса, кг</th><th>Материал</th><th>Размер ячейки</th></tr></thead><tbody>
+      <tr><td>FSI 5000</td><td>Стальная рама</td><td>1067 × 737</td><td>13</td><td>Сетка SS304 / SS316 / SS316L; стальная рама Q235</td><td>20–325 Mesh</td></tr>
+      <tr><td>FSI 5000</td><td>Композит</td><td>1067 × 737</td><td>15</td><td>Сетка SS304 / SS316 / SS316L; композитная рама</td><td>20–325 Mesh</td></tr>
+    </tbody></table></div>
+  </div>
+
+  <div class="manufacturer-panel" data-panel="scomi" role="tabpanel" hidden>
+    <div class="manufacturer-panel-head"><div><span>SCOMI</span><h3>Совместимые сменные сита</h3></div><p>Сетка SS304 / SS316 / SS316L · стальная или композитная рама · API RP 13C · 20–325 Mesh</p></div>
+    <div class="manufacturer-table-wrap"><table class="manufacturer-table"><thead><tr><th>Совместимая модель / оборудование</th><th>Исполнение</th><th>Размер, мм</th><th>Масса, кг</th><th>Материал</th><th>Размер ячейки</th></tr></thead><tbody>
+      <tr><td>Scomi Prima</td><td>Prima 3P / 4P / 5P, линейное движение</td><td>1175 × 610</td><td>14</td><td>Сетка SS304 / SS316 / SS316L; стальная или композитная рама</td><td>20–325 Mesh</td></tr>
+    </tbody></table></div>
+  </div>
+
+  <div class="manufacturer-panel" data-panel="kemtron" role="tabpanel" hidden>
+    <div class="manufacturer-panel-head"><div><span>KEMTRON</span><h3>Совместимые сменные сита</h3></div><p>Сетка SS304 / SS316 / SS316L · стальная или композитная рама · API RP 13C · 20–325 Mesh</p></div>
+    <div class="manufacturer-table-wrap"><table class="manufacturer-table"><thead><tr><th>Совместимая модель / оборудование</th><th>Исполнение</th><th>Размер, мм</th><th>Масса, кг</th><th>Материал</th><th>Размер ячейки</th></tr></thead><tbody>
+      <tr><td>Kemtron KPT 48 / KTL 448 AG</td><td>48 Series, стальная рама</td><td>1220 × 710</td><td>15</td><td>Сетка SS304 / SS316 / SS316L; стальная рама</td><td>20–325 Mesh</td></tr>
+      <tr><td>Kemtron KPT 28</td><td>28 Series, стальная рама</td><td>1250 × 715</td><td>15,5</td><td>Сетка SS304 / SS316 / SS316L; стальная рама</td><td>20–325 Mesh</td></tr>
+      <tr><td>Kemtron KPT 28</td><td>28 Series, композит</td><td>1250 × 715</td><td>15</td><td>3–4 слоя ситовой сетки SS304 / SS316; композитная рама</td><td>20–325 Mesh</td></tr>
+      <tr><td>Kemtron 40 KPT</td><td>40 Series, стальная рама</td><td>1020 × 1230</td><td>17</td><td>Сетка SS304 / SS316 / SS316L; стальная рама</td><td>20–325 Mesh</td></tr>
+      <tr><td>Kemtron KPT 26</td><td>26 Series, стальная рама</td><td>1250 × 667</td><td>15</td><td>Сетка SS304 / SS316 / SS316L; стальная рама</td><td>20–325 Mesh</td></tr>
+      <tr><td>Kemtron 33 Series</td><td>33 Series, стальная рама</td><td>48″ × 33″</td><td>15</td><td>Сетка SS304 / SS316 / SS316L; стальная рама</td><td>20–325 Mesh</td></tr>
+    </tbody></table></div>
+  </div>
+
+  <div class="manufacturer-catalog-note"><strong>Примечание.</strong> Размеры и масса приведены для исполнений и моделей, которые указаны в предоставленной технической презентации Shenzhou Yongsen. Обозначение <b>Mesh</b> сохранено как стандартная маркировка размера ячейки. Это сменные сита; оригинальные сита под марками производителей вибросит не выпускаются.</div>
+</section>
+
+
+
+<section class="source-industries industries-compact" id="industries">
+  <div class="source-section-head">
+    <p class="source-kicker">ПРИМЕНЕНИЕ</p>
+    <h2>ОТРАСЛИ</h2>
+    <p>Ситовые панели применяются в технологических процессах очистки и разделения материалов в различных отраслях.</p>
+  </div>
+
+  <div class="industry-grid">
+    <article><span>01</span><h3>Нефтегазовая отрасль</h3><p>Ситовые панели для систем очистки и контроля твёрдой фазы бурового раствора.</p></article>
+    <article><span>02</span><h3>Тоннелестроение и щитовое строительство</h3><p>Применение при технологических процессах проходки и строительства тоннелей.</p></article>
+    <article><span>03</span><h3>Бурение и строительство скважин</h3><p>Ситовые решения для очистки и разделения бурового раствора.</p></article>
+    <article><span>04</span><h3>Фундаментное строительство</h3><p>Применение при фундаментных и свайных работах.</p></article>
+    <article><span>05</span><h3>Горнодобывающая промышленность</h3><p>Ситовые решения для задач разделения и обработки материала.</p></article>
+    <article><span>06</span><h3>Горизонтально-направленное бурение</h3><p>Применение при прокладке коммуникаций методом горизонтально-направленного бурения.</p></article>
+  </div>
+</section>
+
+<section class="source-certification" id="certification">
+  <div class="source-section-head">
+    <p class="source-kicker">ДОКУМЕНТЫ И СООТВЕТСТВИЕ</p>
+    <h2>СЕРТИФИКАЦИЯ</h2>
+    <p>
+      Производство сертифицировано по API Q1, ISO и HSE.
+      Ситовые сетки соответствуют API RP 13C (ISO 13501), а продукция прошла испытания в лаборатории Intertek и получила отчёт по API RP 13C.
+    </p>
+  </div>
+
+  <div class="cert-claims-grid">
+    <article class="cert-claim-card">
+      <span class="cert-badge">API Q1</span>
+      <h3>API Q1</h3>
+      <p>Производство сертифицировано по API Q1.</p>
+      <small>Конкретный номер и срок действия сертификата в предоставленных файлах не указаны.</small>
+    </article>
+
+    <article class="cert-claim-card">
+      <span class="cert-badge">ISO</span>
+      <h3>ISO</h3>
+      <p>Производство сертифицировано по ISO в составе системы качества.</p>
+      <small>Конкретный стандарт и номер сертификата в предоставленных файлах не указаны.</small>
+    </article>
+
+    <article class="cert-claim-card">
+      <span class="cert-badge">HSE</span>
+      <h3>HSE</h3>
+      <p>Производство сертифицировано по HSE.</p>
+      <small>Отдельный скан HSE-документа в предоставленных материалах отсутствует.</small>
+    </article>
+
+    <article class="cert-claim-card">
+      <span class="cert-badge">13C</span>
+      <h3>API RP 13C</h3>
+      <p>Сетки соответствуют API RP 13C (ISO 13501).</p>
+      <small>Продукция прошла испытания в лаборатории Intertek и получила API RP 13C test report.</small>
+    </article>
+  </div>
+
+  <div class="cert-documents">
+    <div class="cert-documents-head">
+      <div>
+        <p class="source-kicker">ДОКУМЕНТЫ ПРОИЗВОДИТЕЛЯ</p>
+        <h3>Регистрационные и экспортные документы</h3>
+      </div>
+      <p>Из предоставленного PDF вынесены страницы с документами. Нажмите на изображение, чтобы открыть его в полном размере.</p>
+    </div>
+
+    <div class="cert-doc-grid">
+      <article class="cert-doc-card">
+        <a href="images/certificates/business-license.jpg" target="_blank" rel="noopener">
+          <img src="images/certificates/business-license.jpg" alt="Business License — Shenzhou Yongsen Hardware Products Co., Ltd." loading="lazy">
+        </a>
+        <div class="cert-doc-body">
+          <h4>Business License</h4>
+          <p>Лицензия / регистрационный документ компании Shenzhou Yongsen Hardware Products Co., Ltd.</p>
+          <span>Дата учреждения: 15 августа 2011 г.</span>
+        </div>
+      </article>
+
+      <article class="cert-doc-card">
+        <a href="images/certificates/export-license.jpg" target="_blank" rel="noopener">
+          <img src="images/certificates/export-license.jpg" alt="Export License — Shenzhou Yongsen" loading="lazy">
+        </a>
+        <div class="cert-doc-body">
+          <h4>Export License</h4>
+          <p>Регистрационный документ внешнеторговой деятельности.</p>
+          <span>License No. 02618775 • Postal code 053800</span>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+
+
+<section class="source-support" id="support">
+  <div class="source-support-inner">
+    <div class="source-section-head">
+      <p class="source-kicker">Изготовление по чертежам / под маркой заказчика</p>
+      <h2>РЕШЕНИЯ ПОД ЗАДАЧУ ЗАКАЗЧИКА</h2>
+      <p>
+        Shenzhou Yongsen выполняет заказы по чертежам и спецификациям клиента, а также
+        разрабатывает и производит ситовые панели под брендом заказчика.
+      </p>
+    </div>
+
+    <div class="support-grid">
+      <article>
+        <div class="support-num">OEM</div>
+        <h3>Производство по спецификации</h3>
+        <p>Изготовление сменных ситовых панелей по чертежам, размерам и техническим требованиям заказчика.</p>
+      </article>
+      <article>
+        <div class="support-num">ODM</div>
+        <h3>Разработка под бренд</h3>
+        <p>Разработка и производство продукта по проекту производителя с выпуском под торговой маркой клиента.</p>
+      </article>
+      <article>
+        <div class="support-num">20–325</div>
+        <h3>Диапазон Mesh</h3>
+        <p>Для представленных серий установлен диапазон 20–325 Mesh.</p>
+      </article>
+      <article>
+        <div class="support-num">304 / 316</div>
+        <h3>Нержавеющая сталь</h3>
+        <p>Ситовая ткань: SS304, SS316 и SS316L.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="render-advantages" id="advantages">
+  <div class="render-advantages-inner">
+    <div class="render-advantages-intro">
+      <div class="render-brand">
+        <span class="render-brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 52 52">
+            <path d="M26 2 44 9v14c0 12.5-7.5 21-18 27C15.5 44 8 35.5 8 23V9L26 2Z"
+                  fill="none" stroke="currentColor" stroke-width="2.2"/>
+            <path d="M26 9 37 14v9c0 7.8-4.3 13.7-11 18-6.7-4.3-11-10.2-11-18v-9l11-5Z"
+                  fill="none" stroke="currentColor" stroke-width="2"/>
+            <path d="m20 25 4 4 9-10" fill="none" stroke="currentColor" stroke-width="2.2"
+                  stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </span>
+        <span>
+          <span class="render-brand-name">SHENZHOU YONGSEN</span>
+          <span class="render-brand-sub">HARDWARE PRODUCTS CO., LTD.</span>
+        </span>
+      </div>
+
+      <h2>НАШИ ПРЕИМУЩЕСТВА —<br>ВАША УВЕРЕННОСТЬ.</h2>
+
+      <p>
+        Мы предлагаем надежные и проверенные решения для вибросит (Shale Shaker),
+        подтвержденные качеством, опытом и международным признанием.
+      </p>
+    </div>
+
+    <div class="render-advantages-grid">
+      <article class="render-adv-card">
+        <div class="render-adv-icon">
+          <svg viewBox="0 0 48 48">
+            <path d="M24 43s15-7.2 15-19V9L24 4 9 9v15c0 11.8 15 19 15 19Z"/>
+            <path d="m17 24 5 5 10-11"/>
+          </svg>
+        </div>
+        <h3>Сертификация API</h3>
+        <p>Продукция соответствует стандартам API Spec 13C и проходит строгий контроль качества.</p>
+      </article>
+
+      <article class="render-adv-card">
+        <div class="render-adv-icon">
+          <svg viewBox="0 0 48 48">
+            <circle cx="24" cy="24" r="17"/>
+            <path d="M7 24h34M24 7c5 5 7.5 10.7 7.5 17S29 36 24 41c-5-5-7.5-10.7-7.5-17S19 12 24 7Z"/>
+            <path d="M10 14h28M10 34h28"/>
+          </svg>
+        </div>
+        <h3>Официальный<br>представитель</h3>
+        <p>Официальный представитель производителя с эксклюзивными правами на поставку и поддержку.</p>
+      </article>
+
+      <article class="render-adv-card">
+        <div class="render-adv-icon">
+          <svg viewBox="0 0 48 48">
+            <path d="M9 14h30v20H9z"/>
+            <path d="M13 18h22M13 23h22M13 28h22"/>
+            <path d="M6 12v24M42 12v24"/>
+            <path d="M12 8h24M12 40h24"/>
+          </svg>
+        </div>
+        <h3>Специализация<br>на Shale Shaker</h3>
+        <p>Глубокая специализация в разработке и производстве компонентов и оборудования для вибросит.</p>
+      </article>
+
+      <article class="render-adv-card">
+        <div class="render-adv-icon">
+          <svg viewBox="0 0 48 48">
+            <path d="M9 29V18h12l5 5h13v11H9z"/>
+            <path d="M14 18v-5h9l4 5M19 34l4-4m0 0 4 4m-4-4v8"/>
+            <path d="M11 38c3-2 6-2 9 0m8 0c3-2 6-2 9 0"/>
+          </svg>
+        </div>
+        <h3>Экспортный опыт</h3>
+        <p>Успешные поставки в более чем 30 стран мира. Знаем требования международного рынка.</p>
+      </article>
+
+      <article class="render-adv-card">
+        <div class="render-adv-icon">
+          <svg viewBox="0 0 48 48">
+            <path d="M8 20h32l-3 16H11L8 20Z"/>
+            <path d="M15 20v-6h18v6M24 14V9"/>
+            <path d="M16 27h16M19 32h10"/>
+            <path d="M7 38h34"/>
+          </svg>
+        </div>
+        <h3>Полный цикл</h3>
+        <p>Полный цикл производства от проектирования и изготовления до тестирования и поставки.</p>
+      </article>
+
+      <article class="render-adv-card">
+        <div class="render-adv-icon">
+          <svg viewBox="0 0 48 48">
+            <path d="m11 37 10-10"/>
+            <path d="m8 40 6-1 21-21-5-5-21 21-1 6Z"/>
+            <path d="m28 12 5-5 8 8-5 5"/>
+            <path d="m30 29 7 7"/>
+            <path d="m34 25 5-5"/>
+          </svg>
+        </div>
+        <h3>Индивидуальные решения</h3>
+        <p>Гибкий подход к требованиям клиентов: от стандартных деталей до решений под заказ.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+
+
+<section class="render-manufacturer" id="partner">
+  <div class="render-manufacturer-inner">
+    <div class="render-manufacturer-copy">
+      <p class="render-manufacturer-kicker">О КОМПАНИИ</p>
+      <h2>SHENZHOU YONGSEN<br>HARDWARE PRODUCTS CO., LTD.</h2>
+
+      <p>
+        Shenzhou Yongsen Hardware Products Co., Ltd. — профессиональный производитель
+        сменных ситовых панелей для вибросит (shale shaker screens), специализирующийся
+        на R&amp;D, производстве и продаже сеток для Derrick, NOV Brandt, Swaco, Kemtron,
+        FSI, Scomi и других марок, а также запасных частей.
+      </p>
+
+      <p>
+        Продукция применяется в нефтяном бурении, щитовой проходке, свайных работах,
+        продольных переходах и горнодобывающей отрасли. Производитель также выполняет
+        Выполняет OEM/ODM-заказы и разрабатывает ситовые панели под бренд и технические
+        параметры заказчика.
+      </p>
+
+      <p class="render-manufacturer-slogan">
+        Принципы компании: честность, поиск истины, инновации и совершенство.
+      </p>
+    </div>
+
+    <div class="render-manufacturer-info">
+      <div class="render-info-row">
+        <span class="render-info-icon" aria-hidden="true">
+          <svg viewBox="0 0 48 48">
+            <path d="M24 42s13-14 13-24A13 13 0 0 0 11 18c0 10 13 24 13 24Z"/>
+            <circle cx="24" cy="18" r="4.5"/>
+          </svg>
+        </span>
+        <div>
+          <h3>Адрес</h3>
+          <p>
+            North of Xidatuan Village, Tangfeng Town,<br>
+            Shenzhou City, Hengshui City, Hebei Province, China<br>
+            Postal code: 053800
+          </p>
+        </div>
+      </div>
+
+      <div class="render-info-row">
+        <span class="render-info-icon" aria-hidden="true">
+          <svg viewBox="0 0 48 48">
+            <path d="M13 7h7l4 10-5 3c3 6 7 9 13 12l3-5 10 4v7c0 2-2 4-4 4C25 40 8 23 8 11c0-2 2-4 5-4Z"/>
+          </svg>
+        </span>
+        <div>
+          <h3>Контакты</h3>
+          <p>
+            Тел.: <a href="tel:+8603183558777">+86 0318 3558777</a><br>
+            E-mail: <a href="mailto:happymrzhang2018@163.com">happymrzhang2018@163.com</a><br>
+            E-mail: <a href="mailto:hongkong@yongsencompany.com">hongkong@yongsencompany.com</a>
+          </p>
+        </div>
+      </div>
+
+      <div class="render-info-row">
+        <span class="render-info-icon" aria-hidden="true">
+          <svg viewBox="0 0 48 48">
+            <circle cx="24" cy="24" r="17"/>
+            <path d="M7 24h34M24 7c5 5 7.5 10.7 7.5 17S29 36 24 41c-5-5-7.5-10.7-7.5-17S19 12 24 7Z"/>
+          </svg>
+        </span>
+        <div>
+          <h3>Сайт</h3>
+          <p><a href="http://www.yongsenwiremesh.com" target="_blank" rel="noopener">www.yongsenwiremesh.com</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="render-manufacturer-footer">
+    <div class="render-manufacturer-footer-inner">
+      <div class="render-footer-brand">
+        <span class="render-footer-mark" aria-hidden="true">
+          <svg viewBox="0 0 32 32">
+            <path d="M16 2 27 6v9c0 7.5-4.6 12.2-11 15-6.4-2.8-11-7.5-11-15V6L16 2Z"
+                  fill="none" stroke="currentColor" stroke-width="1.7"/>
+            <path d="M10 16h12M13 12h9M13 20h9" fill="none" stroke="currentColor" stroke-width="1.7"/>
+          </svg>
+        </span>
+        SHENZHOU YONGSEN HARDWARE PRODUCTS CO., LTD.
+      </div>
+      <div class="render-footer-site">
+        <span class="render-footer-link-icon" aria-hidden="true">
+          <svg viewBox="0 0 32 32">
+            <path d="m12 20 8-8M10 24l-2 2a5 5 0 0 1-7-7l5-5a5 5 0 0 1 7 0"/>
+            <path d="m22 8 2-2a5 5 0 0 1 7 7l-5 5a5 5 0 0 1-7 0"/>
+          </svg>
+        </span>
+        <a href="http://www.yongsenwiremesh.com" target="_blank" rel="noopener">www.yongsenwiremesh.com</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<section class="render-contacts" id="contacts">
+  <div class="render-contacts-inner">
+    <div class="render-contact-info">
+      <p class="render-contact-kicker">КОНТАКТЫ</p>
+      <h2>Свяжитесь с нами</h2>
+      <p class="render-contact-intro">
+        Мы готовы ответить на ваши вопросы и обсудить задачи<br class="desktop-only">
+        вашего производства. Свяжитесь с нами удобным способом.
+      </p>
+
+      <div class="render-contact-row">
+        <span class="render-contact-icon">
+          <svg viewBox="0 0 48 48"><path d="M13 7h7l4 10-5 3c3 6 7 9 13 12l3-5 10 4v7c0 2-2 3-4 3C25 40 8 23 8 11c0-2 2-4 5-4Z"/></svg>
+        </span>
+        <div>
+          <h3>Телефон</h3>
+          <a href="tel:+73831234567">+7 (383) 123-45-67</a>
+        </div>
+      </div>
+
+      <div class="render-contact-row">
+        <span class="render-contact-icon">
+          <svg viewBox="0 0 48 48"><rect x="7" y="11" width="34" height="26" rx="2"/><path d="m8 13 16 13 16-13"/></svg>
+        </span>
+        <div>
+          <h3>E-mail</h3>
+          <a href="mailto:info@nsk-industrial.ru">info@nsk-industrial.ru</a>
+        </div>
+      </div>
+
+      <div class="render-contact-row">
+        <span class="render-contact-icon">
+          <svg viewBox="0 0 48 48"><path d="M24 42s13-14 13-24A13 13 0 0 0 11 18c0 10 13 24 13 24Z"/><circle cx="24" cy="18" r="4.5"/></svg>
+        </span>
+        <div>
+          <h3>Адрес</h3>
+          <p>630007, г. Новосибирск, ул. Фабричная, д. 10, офис 305</p>
+        </div>
+      </div>
+
+      <div class="render-contact-row">
+        <span class="render-contact-icon">
+          <svg viewBox="0 0 48 48"><circle cx="24" cy="24" r="16"/><path d="M24 15v10l7 4"/></svg>
+        </span>
+        <div>
+          <h3>Часы работы</h3>
+          <p>Пн – Пт: 8:30 – 17:30 (по МСК+4)</p>
+        </div>
+      </div>
+
+      <div class="render-contact-manufacturer">
+        <div>
+          <p class="render-contact-manufacturer-kicker">ПРОИЗВОДИТЕЛЬ</p>
+          <strong>Официальный представитель Yongsen в России</strong>
+          <p>Поставка и сервис оборудования Yongsen на территории РФ и СНГ.</p>
+        </div>
+        <div class="render-yongsen-badge">YONGSEN</div>
+      </div>
+    </div>
+
+    <div class="render-contact-form-wrap">
+      <form class="render-contact-form" id="contactForm">
+        <h2>Отправить сообщение</h2>
+        <p>Заполните форму, и мы свяжемся с вами в ближайшее время.</p>
+
+        <div class="render-form-grid">
+          <input type="text" name="name" placeholder="Ваше имя *" required>
+          <input type="email" name="email" placeholder="E-mail *" required>
+        </div>
+
+        <input type="text" name="company" placeholder="Компания">
+
+        <label>
+          <span>Сообщение *</span>
+          <textarea name="message" placeholder="Расскажите о вашей задаче или вопросе..." required></textarea>
+        </label>
+
+        <button type="submit" class="render-submit">
+          Отправить сообщение
+          <span>→</span>
+        </button>
+
+        <div class="render-form-note">
+          <span class="render-lock">▣</span>
+          <span>Ваши данные защищены<br>и не передаются третьим лицам.</span>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <footer class="render-footer">
+    <div class="render-footer-inner">
+      <div class="render-footer-company">
+        <div class="render-footer-logo">НСК</div>
+        <div class="render-footer-sub">ПРОМЫШЛЕННОЕ<br>ОБОРУДОВАНИЕ</div>
+        <p>Официальный представитель YONGSEN<br>в России. Надёжное оборудование и сервис<br>для промышленности.</p>
+      </div>
+
+      <div class="render-footer-column">
+        <h3>НАВИГАЦИЯ</h3>
+        <a href="#about">О компании</a>
+        <a href="#products">Продукция</a>
+        <a href="#services">Услуги</a>
+        <a href="#projects">Проекты</a>
+        <a href="#support">Изготовление по чертежам / под маркой заказчика</a>
+        <a href="#contacts">Контакты</a>
+      </div>
+
+      <div class="render-footer-column">
+        <h3>ИНФОРМАЦИЯ</h3>
+        <a href="#certificates">Сертификаты</a>
+        <a href="#warranty">Гарантия</a>
+        <a href="#delivery">Доставка и оплата</a>
+        <a href="#news">Новости</a>
+        <a href="#contacts">Контакты</a>
+      </div>
+
+      <div class="render-footer-column render-footer-work">
+        <h3>МЫ В РАБОТЕ</h3>
+        <div class="render-socials">
+          <a href="#" aria-label="VK">vk</a>
+          <a href="#" aria-label="Telegram">➤</a>
+          <a href="#" aria-label="LinkedIn">in</a>
+        </div>
+        <a class="render-footer-phone" href="tel:+73831234567">+7 (383) 123-45-67</a>
+        <a href="mailto:info@nsk-industrial.ru">info@nsk-industrial.ru</a>
+      </div>
+    </div>
+
+    <div class="render-footer-bottom">
+      <span>© 2024 ООО «НСК». Все права защищены.</span>
+      <a href="#">Политика конфиденциальности ↗</a>
+    </div>
+  </footer>
+</section>
+
+
+
+<!-- Product detail modal -->
+<div class="product-modal" id="productModal" aria-hidden="true">
+  <div class="product-modal-backdrop" data-modal-close></div>
+
+  <div class="product-modal-dialog"
+       role="dialog"
+       aria-modal="true"
+       aria-labelledby="productModalTitle"
+       tabindex="-1">
+    <button class="product-modal-close" type="button" aria-label="Закрыть" data-modal-close>
+      <span></span><span></span>
+    </button>
+
+    <div class="product-modal-content">
+      <div class="product-modal-image-wrap">
+        <img id="productModalImage" src="" alt="">
+      </div>
+
+      <div class="product-modal-copy">
+        <div class="product-modal-kicker">Shenzhou Yongsen</div>
+        <h2 id="productModalTitle"></h2>
+        <div class="product-modal-divider"></div>
+        <p id="productModalText"></p>
+
+        <!-- Здесь позже можно добавить характеристики -->
+        <div class="product-modal-extra" id="productModalExtra">
+          <strong>Краткое описание</strong>
+          <p>Текст описания можно заменить позже.</p>
+        </div>
+
+        <div class="product-modal-specs" id="productModalSpecs"></div>
+        <div class="product-modal-source" id="productModalSource"></div>
+
+        <div class="product-photo-manager">
+          <p class="product-photo-manager-title">Фотографии продукции</p>
+          <div class="product-photo-actions">
+            <label class="product-photo-upload">
+              <span>Загрузить главное фото</span>
+              
+            </label>
+            <label class="product-photo-upload">
+              <span>Добавить дополнительные фото</span>
+              
+            </label>
+          </div>
+          <p class="product-photo-hint">
+            Главное фото заменяет изображение в карточке. Дополнительные фотографии появятся в галерее окна.
+            Выбранные файлы доступны в текущем открытом браузере; для постоянного хранения на сайте потребуется серверная загрузка.
+          </p>
+          <p class="product-gallery-order-hint">Перетаскивайте дополнительные фотографии, чтобы изменить их порядок.</p>
+          <div class="product-gallery" id="productGallery"></div>
+        </div>
+
+        <a href="#contacts" class="product-modal-contact" data-modal-contact>
+          Получить консультацию <span>→</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer class="footer">
+
+    <div class="container">
+
+        <div class="footer-logo">ООО «НСК»</div>
+
+        <p>Официальный представитель Shenzhou Yongsen Hardware Products Co., Ltd.</p>
+
+        <p>Сайт производителя: <a href="http://www.yongsenwiremesh.com/" target="_blank" rel="noopener">www.yongsenwiremesh.com</a></p>
+
+        <div class="copyright">© 2026 ООО «НСК». Все права защищены.</div>
+
+    </div>
+
+</footer>
+
+<script>
+
+    const burger = document.getElementById('burger');
+
+    const nav = document.getElementById('nav');
+
+    burger.addEventListener('click', () => {
+
+        burger.classList.toggle('active');
+
+        nav.classList.toggle('active');
+
+    });
+
+    document.querySelectorAll('.nav a').forEach(link => {
+
+        link.addEventListener('click', () => {
+
+            burger.classList.remove('active');
+
+            nav.classList.remove('active');
+
+        });
+
+    });
+
+</script>
+
+
+<!--
+  GITHUB PAGES: ФОТОГРАФИИ ТОВАРОВ
+
+  Для товара используйте:
+    images/products/<slug>/main.jpg
+    images/products/<slug>/01.jpg
+    images/products/<slug>/02.jpg
+    images/products/<slug>/03.jpg
+
+  Порядок дополнительных фотографий задаётся массивом gallery
+  в объекте products в этом HTML.
+
+  Сайт статический: HTML не загружает файлы в GitHub.
+  Добавляйте/удаляйте фотографии в репозитории и при необходимости
+  меняйте порядок путей в gallery.
+-->
+
+<script>
+const products = {
+  "1": {
+    title: "Композитное сито",
+    description: "Композитная ситовая панель: полимерная рама со стеклонаполнением и внутренним стальным усилением, к которой методом горячего прессования присоединяется 1–3 слоя нержавеющей сетки. Такое исполнение применяется для Brandt и Swaco.",
+    extraTitle: "Конструкция и эксплуатационные особенности",
+    extraText: "Стеклонаполненный полипропилен + внутреннее стальное усиление; 1–3 слоя нержавественной сетки. Для Brandt обеспечиваются хорошая прочность, коррозионная стойкость и стабильность; применяется преднатяжение и клиновая установка; предусмотрена система ремонта резиновыми пробками. Для Swaco применяется цельнолитая конструкция без отслаивающегося слоя.",
+    specs: [
+      ["Материал ситовой сетки", "SS304 / SS316 / SS316L"],
+      ["Материал рамы", "Композит; для Brandt — стеклонаполненный полипропилен + стальное усиление"],
+      ["Количество слоёв сетки", "1–3 слоя; для Swaco — 2–3 слоя SS304/SS316"],
+      ["Стандарт", "API RP 13C"],
+      ["Диапазон размера ячейки", "20–325 Mesh"],
+      ["Способ монтажа", "Для Brandt: преднатяжённое исполнение, клиновая установка"],
+      ["Возможность ремонта", "Для соответствующих моделей — резиновые пробки; для Derrick PWP также применяются нержавеющие пробки/силикон"],
+      ["Примеры совместимого оборудования", "Brandt King Cobra/Hybrid, VSM 300; Swaco Mongoose/Meerkat, MD-2/3, D380; FSI 5000; Kemtron 28"]
+    ],
+    source: "По презентации SHENZHOU-YONGSEN-SHAKER-SCREEN, разделы Brandt Композитное исполнение, Swaco Композитное исполнение и FSI/SCOMI/DFE/Kemtron."
+    ,image: "images/products/composite-frame-screen/main.jpg",
+    gallery: [
+      "images/products/composite-frame-screen/01.jpg",
+      "images/products/composite-frame-screen/02.jpg",
+      "images/products/composite-frame-screen/03.jpg"
+    ]
+  },
+  "2": {
+    title: "Плоское сито с крючковым креплением",
+    description: "Плоская сменная ситовая панель с крючковым креплением. В презентации отдельный раздел именно под названием Плоское сито с крючковым креплением отсутствует; характеристики ниже основаны на документированных плоских исполнениях Brandt и Swaco.",
+    extraTitle: "Плоские исполнения из презентации",
+    extraText: "Brandt BLT-50/LCM-2D: плоское сито размером 1150×915 мм и массой 7,5 кг. Swaco BEM-3: плоское сито размером 1155×903 мм и массой 6 кг. Для семейств Brandt/Swaco применяются SS304/316/316L, API RP 13C и диапазон 20–325 Mesh.",
+    specs: [
+      ["Исполнение", "Плоское сменное сито"],
+      ["Материал ситовой сетки", "SS304 / SS316 / SS316L — для семейств Brandt/Swaco"],
+      ["Стандарт", "API RP 13C — для указанных семейств"],
+      ["Диапазон размера ячейки", "20–325 Mesh — для указанных семейств"],
+      ["Brandt BLT-50/LCM-2D", "1150×915 мм; 7,5 кг"],
+      ["Swaco BEM-3", "1155×903 мм; 6 кг"],
+      ["Назначение", "Сменная панель для соответствующей модели вибросита"],
+      ["Важно", "Термин Плоское сито с крючковым креплением как отдельная товарная позиция в презентации не выделен"]
+    ],
+    source: "Размеры и масса — таблицы Brandt/Swaco в презентации; отдельная спецификация Плоское сито с крючковым креплением в исходном файле не приведена."
+    ,image: "images/products/hook-strip-flat-screen/main.jpg",
+    gallery: [
+      "images/products/hook-strip-flat-screen/01.jpg",
+      "images/products/hook-strip-flat-screen/02.jpg",
+      "images/products/hook-strip-flat-screen/03.jpg"
+    ]
+  },
+  "3": {
+    title: "Стальное сито",
+    description: "Стальная рамная панель с 2–3 слоями нержавеющей сетки. Стальные исполнения применяются для Brandt, Swaco и FSI/SCOMI/DFE/Kemtron.",
+    extraTitle: "Конструкция и характеристики",
+    extraText: "Высокопрочная стальная рама из квадратной трубы или листовой стали, сваренная в многорёберную конструкцию; сетка соединяется через металлическую опорную пластину или непосредственно. Заявлены стойкость к коррозии, температуре и износу, длительный срок службы, повышенный поток и удобство демонтажа.",
+    specs: [
+      ["Материал ситовой сетки", "SS304 / SS316 / SS316L"],
+      ["Материал рамы", "Q235 Steel — для Brandt/Swaco/FSI; DC03 Steel — для Derrick"],
+      ["Слои", "Обычно 2–3 слоя нержавеющей сетки"],
+      ["Стандарт", "API RP 13C"],
+      ["Диапазон размера ячейки", "20–325 Mesh"],
+      ["Конструкция", "Высокопрочная рама, многорёберное усиление"],
+      ["Особенности", "Коррозионная, термическая и износостойкая конструкция; высокий поток; демонтаж"],
+      ["Примеры совместимого оборудования", "Brandt King Cobra/Hybrid; VSM 300; Swaco Mongoose/Mamut; FSI 5000; Kemtron 26/28/33/40/48"]
+    ],
+    source: "По презентации SHENZHOU-YONGSEN-SHAKER-SCREEN, разделы NOV Metal, MI SWACO Steel и FSI/SCOMI/DFE/Kemtron."
+    ,image: "images/products/steel-frame-screen/main.jpg",
+    gallery: [
+      "images/products/steel-frame-screen/01.jpg",
+      "images/products/steel-frame-screen/02.jpg",
+      "images/products/steel-frame-screen/03.jpg"
+    ]
+  },
+  "4": {
+    title: "Волновое сито",
+    description: "Волновое / pyramid / PMD исполнение для замены плоских сит. Эффективная площадь составляет 125–150% площади плоского сита без изменения конструкции вибросита.",
+    extraTitle: "Разделение и производительность",
+    extraText: "Для Derrick PMD эффективная площадь составляет 125–150% относительно плоского сита, диапазон — 20–325 Mesh. Разные слои имеют различную плотность для более тонкого разделения; конструкция обеспечивает повышение пропускной способности и эффективности удаления твёрдой фазы.",
+    specs: [
+      ["Исполнение", "Wave / Pyramid / PMD"],
+      ["Эффективная площадь", "125–150% от площади плоского сита"],
+      ["Диапазон размера ячейки", "20–325 Mesh"],
+      ["Слои", "Различная плотность слоёв для тонкого разделения"],
+      ["Совместимость", "Derrick PWP/PMD/PMD+/Pyramid/Hyperpool; также PMD-варианты Brandt и Swaco"],
+      ["Примеры Derrick", "48-30 PMD, 500 PMD, 626 PMD, Hyperpool PMD"],
+      ["Brandt PMD", "King Cobra/Hybrid; 1251×635 мм; 17 кг"],
+      ["Swaco PMD", "Mongoose/Meerkat Композитное исполнение PMD; 1165×585 мм; 17 кг"]
+    ],
+    source: "Основной источник — слайд раздел о сменных ситах Derrick PMD; размеры PMD Brandt/Swaco — таблицы соответствующих разделов."
+    ,image: "images/products/wave-screen/main.jpg",
+    gallery: [
+      "images/products/wave-screen/01.jpg",
+      "images/products/wave-screen/02.jpg",
+      "images/products/wave-screen/03.jpg"
+    ]
+  },
+  "5": {
+    title: "Мягкое сито с крючковым креплением",
+    description: "Мягкая сменная ситовая панель. В презентации отдельный раздел с названием Мягкое сито с крючковым креплением отсутствует; документированный пример — Brandt 4'×5' Мягкое сито / B40.",
+    extraTitle: "Документированный пример",
+    extraText: "Brandt 4'×5' Мягкое сито предназначен для Brandt 4'×5'/B40 Shale Shaker; размер 1220×1524 мм, масса 4 кг. Для Brandt применяются нержавеющая сетка SS304/316/316L, API RP 13C и диапазон 20–325 Mesh.",
+    specs: [
+      ["Исполнение", "Мягкое сито — мягкое сменное сито"],
+      ["Документированная модель", "Brandt 4'×5' Мягкое сито / B40"],
+      ["Вибросито", "Brandt 4'×5' / B40 Shale Shaker"],
+      ["Размер примера", "1220×1524 мм"],
+      ["Масса примера", "4 кг"],
+      ["Сетка Brandt", "SS304 / SS316 / SS316L"],
+      ["Стандарт Brandt", "API RP 13C"],
+      ["Диапазон Brandt", "20–325 Mesh"]
+    ],
+    source: "Таблица таблица сменных сит Brandt в презентации. Отдельной спецификации именно Мягкое сито с крючковым креплением в исходном файле нет."
+    ,image: "images/products/hook-strip-soft-screen/main.jpg",
+    gallery: [
+      "images/products/hook-strip-soft-screen/01.jpg",
+      "images/products/hook-strip-soft-screen/02.jpg",
+      "images/products/hook-strip-soft-screen/03.jpg"
+    ]
+  },
+  "6": {
+    title: "Ситовая сетка",
+    description: "Плетёное ситовое полотно из нержавеющей стали — базовый сетчатый элемент сменных панелей. В презентации оно раскрывается прежде всего в составе готовых сит, а не как отдельная товарная таблица.",
+    extraTitle: "Материал и параметры сетки",
+    extraText: "Для сменных сит применяются SS304, SS316 и SS316L; для основных семейств установлен диапазон 20–325 Mesh. Для Kemtron-28 применяются 3–4 слоя сетчатого полотна 304/316 с различной плотностью слоёв.",
+    specs: [
+      ["Материал", "Нержавеющая сталь SS304 / SS316 / SS316L"],
+      ["Диапазон размера ячейки", "20–325 Mesh — для основных семейств сменных сит"],
+      ["Количество слоёв", "В готовых конструкциях зависит от модели; например Kemtron-28 — 3–4 слоя"],
+      ["Плотность слоёв", "Для Kemtron-28 — различная плотность слоёв для оптимального разделения"],
+      ["Форма ячейки / mesh shape", "В презентации встречаются HP, DX, DF; RHD, XF, MG, XL; XL, XR, HC, MG"],
+      ["Применение", "Композитные и стальные панели, а также другие сменные ситовые конструкции"],
+      ["Особенности для Kemtron", "Высокая открытая площадь, равномерная сетка, хорошая прочность и длительный срок службы"],
+      ["Важно", "Отдельной таблицы Ситовая сетка как самостоятельного изделия в презентации нет"]
+    ],
+    source: "Сводка из спецификаций Derrick, Brandt, Swaco, FSI/SCOMI/DFE и описания Kemtron-28 в презентации."
+    ,image: "images/products/wire-cloth/main.jpg",
+    gallery: [
+      "images/products/wire-cloth/01.jpg",
+      "images/products/wire-cloth/02.jpg",
+      "images/products/wire-cloth/03.jpg"
+    ]
+  }
+};
+
+const productCards = document.querySelectorAll("[data-product]");
+const modal = document.getElementById("productModal");
+const modalTitle = document.getElementById("modalProductTitle");
+const modalDescription = document.getElementById("modalProductDescription");
+const modalExtraTitle = document.getElementById("modalExtraTitle");
+const modalExtraText = document.getElementById("modalExtraText");
+const modalMainImage = document.getElementById("modalMainImage");
+const modalGallery = document.getElementById("modalGallery");
+const modalClose = document.getElementById("modalClose");
+
+function renderProduct(productId) {
+  const product = products[productId];
+  if (!product || !modal) return;
+
+  if (modalTitle) modalTitle.textContent = product.title;
+  if (modalDescription) modalDescription.textContent = product.description;
+  if (modalExtraTitle) modalExtraTitle.textContent = product.extraTitle;
+  if (modalExtraText) modalExtraText.textContent = product.extraText;
+
+  const modalSpecs = document.getElementById("productModalSpecs");
+  if (modalSpecs) {
+    modalSpecs.innerHTML = "";
+    (product.specs || []).forEach(([label, value]) => {
+      const item = document.createElement("div");
+      item.className = "product-spec-item";
+      item.innerHTML = `<strong>${label}</strong><span>${value}</span>`;
+      modalSpecs.appendChild(item);
+    });
+  }
+  const modalSource = document.getElementById("productModalSource");
+  if (modalSource) modalSource.textContent = product.source || "";
+
+  if (modalMainImage) {
+    modalMainImage.src = product.image;
+    modalMainImage.alt = product.title;
+  }
+
+  if (modalGallery) {
+    modalGallery.innerHTML = "";
+    product.gallery.forEach((src, index) => {
+      const item = document.createElement("button");
+      item.type = "button";
+      item.className = "modal-gallery-item";
+      item.setAttribute("aria-label", `Открыть фото ${index + 1}`);
+
+      const img = document.createElement("img");
+      img.src = src;
+      img.alt = `${product.title} — фото ${index + 1}`;
+      img.loading = "lazy";
+
+      item.appendChild(img);
+      item.addEventListener("click", () => {
+        if (modalMainImage) modalMainImage.src = src;
+      });
+      modalGallery.appendChild(item);
+    });
+  }
+
+  modal.classList.add("is-open");
+  document.body.classList.add("modal-open");
+}
+
+productCards.forEach(card => {
+  card.addEventListener("click", event => {
+    if (event.target.closest("a")) return;
+    renderProduct(card.dataset.product);
+  });
+
+  const arrow = card.querySelector("[data-product-open]");
+  if (arrow) {
+    arrow.addEventListener("click", event => {
+      event.preventDefault();
+      event.stopPropagation();
+      renderProduct(card.dataset.product);
+    });
+  }
+});
+
+function closeProductModal() {
+  if (!modal) return;
+  modal.classList.remove("is-open");
+  document.body.classList.remove("modal-open");
+}
+
+if (modalClose) modalClose.addEventListener("click", closeProductModal);
+
+if (modal) {
+  modal.addEventListener("click", event => {
+    if (event.target === modal) closeProductModal();
+  });
+}
+
+document.addEventListener("keydown", event => {
+  if (event.key === "Escape" && modal && modal.classList.contains("is-open")) {
+    closeProductModal();
+  }
+});
+
+</script>
+
+
+<div class="product-delete-confirm" id="productDeleteConfirm" aria-hidden="true">
+  <div class="product-delete-confirm-dialog"
+       role="alertdialog"
+       aria-modal="true"
+       aria-labelledby="productDeleteConfirmTitle"
+       aria-describedby="productDeleteConfirmText">
+    <h3 id="productDeleteConfirmTitle">Удалить фотографию?</h3>
+    <p id="productDeleteConfirmText">Фотография будет удалена из текущей галереи. Это действие нельзя отменить.</p>
+    <div class="product-delete-confirm-actions">
+      <button type="button" class="product-delete-cancel" id="productDeleteCancel">Отмена</button>
+      <button type="button" class="product-delete-confirm-button" id="productDeleteConfirmButton">Удалить</button>
+    </div>
+  </div>
+</div>
+
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const form = document.getElementById("contactForm");
+  if (form) {
+    form.addEventListener("submit", event => {
+      event.preventDefault();
+      alert("Спасибо! Сообщение подготовлено. Подключите обработчик формы для отправки на e-mail.");
+    });
+  }
+});
+</script>
+
+
+<script id="manufacturer-catalog-tabs">
+document.addEventListener('DOMContentLoaded', function(){
+  const tabs = Array.from(document.querySelectorAll('.manufacturer-tab'));
+  const panels = Array.from(document.querySelectorAll('.manufacturer-panel'));
+  const search = document.getElementById('catalogSearch');
+  const manufacturer = document.getElementById('catalogManufacturer');
+  const type = document.getElementById('catalogType');
+  const material = document.getElementById('catalogMaterial');
+  const massMin = document.getElementById('catalogMassMin');
+  const massMax = document.getElementById('catalogMassMax');
+  const size = document.getElementById('catalogSize');
+  const mesh = document.getElementById('catalogMesh');
+  const reset = document.getElementById('catalogFilterReset');
+  const status = document.getElementById('catalogFilterStatus');
+
+  function normalize(value){
+    return String(value || '').toLowerCase().replace(/ё/g,'е').replace(/×/g,'x').replace(/\s+/g,' ').trim();
+  }
+
+  function updateTabs(activeKey){
+    tabs.forEach(function(tab){
+      const active = activeKey !== 'all' && tab.getAttribute('data-manufacturer') === activeKey;
+      tab.classList.toggle('is-active', active);
+      tab.setAttribute('aria-selected', active ? 'true' : 'false');
+    });
+  }
+
+  function showPanels(activeKey){
+    panels.forEach(function(panel){
+      const active = activeKey === 'all' || panel.getAttribute('data-panel') === activeKey;
+      panel.classList.toggle('is-active', active);
+      panel.hidden = !active;
+    });
+    updateTabs(activeKey);
+  }
+
+  function populateSizes(){
+    if (!size) return;
+    const values = new Set();
+    panels.forEach(function(panel){
+      panel.querySelectorAll('tbody tr').forEach(function(row){
+        const cells = row.querySelectorAll('td');
+        if (cells[2]) values.add(cells[2].textContent.trim());
+      });
+    });
+    Array.from(values).sort(function(a,b){ return a.localeCompare(b,'ru',{numeric:true}); }).forEach(function(value){
+      const option = document.createElement('option');
+      option.value = normalize(value);
+      option.textContent = value + ' мм';
+      option.dataset.raw = value;
+      size.appendChild(option);
+    });
+  }
+
+  function addEmptyMessages(){
+    panels.forEach(function(panel){
+      if (!panel.querySelector('.catalog-no-results')) {
+        const box = document.createElement('div');
+        box.className = 'catalog-no-results';
+        box.textContent = 'По заданным параметрам подходящих исполнений не найдено.';
+        panel.appendChild(box);
+      }
+    });
+  }
+
+  function getRowType(row){
+    const cells = row.querySelectorAll('td');
+    if (cells.length < 6) return '';
+    const execution = normalize(cells[1].textContent);
+    const materialText = normalize(cells[4].textContent);
+
+    if (execution.includes('мягкое сито')) return 'soft-hook';
+    if (execution.includes('плоское сито')) return 'flat-hook';
+    if (execution.includes('pmd')) return 'pmd';
+    if (execution.includes('композит') || materialText.includes('композитная рама')) return 'composite';
+    if (execution.includes('стальная рама') || materialText.includes('стальная рама')) return 'steel';
+
+    // В предоставленной таблице отдельные позиции только с ситовой сеткой
+    // без явного типа исполнения не выделены в самостоятельный тип.
+    return '';
+  }
+
+  function rowMatches(row, filters){
+    const cells = row.querySelectorAll('td');
+    if (cells.length < 6) return false;
+    const rowText = normalize(row.textContent);
+    const rowMaterial = normalize(cells[4].textContent);
+    const rowSize = normalize(cells[2].textContent);
+    const rowMesh = normalize(cells[5].textContent);
+    const mass = parseFloat(cells[3].textContent.replace(',', '.').replace(/[^0-9.\-]/g,''));
+    const rowType = getRowType(row);
+
+    if (filters.search && !rowText.includes(filters.search)) return false;
+    if (filters.type !== 'all' && rowType !== filters.type) return false;
+    if (filters.material !== 'all' && !rowMaterial.includes(filters.material)) return false;
+    if (filters.size !== 'all' && rowSize !== filters.size) return false;
+    if (filters.mesh !== 'all' && !rowMesh.includes(filters.mesh)) return false;
+    if (filters.minMass !== null && (Number.isNaN(mass) || mass < filters.minMass)) return false;
+    if (filters.maxMass !== null && (Number.isNaN(mass) || mass > filters.maxMass)) return false;
+    return true;
+  }
+
+  function applyFilters(){
+    const activeManufacturer = manufacturer ? manufacturer.value : 'all';
+    const min = massMin && massMin.value !== '' ? parseFloat(massMin.value) : null;
+    const max = massMax && massMax.value !== '' ? parseFloat(massMax.value) : null;
+    const filters = {
+      search: normalize(search ? search.value : ''),
+      type: type ? normalize(type.value) : 'all',
+      material: material ? normalize(material.value) : 'all',
+      size: size ? normalize(size.value) : 'all',
+      mesh: mesh ? normalize(mesh.value) : 'all',
+      minMass: min,
+      maxMass: max
+    };
+
+    if (min !== null && max !== null && min > max) {
+      if (status) status.textContent = 'Минимальная масса не может быть больше максимальной.';
+    }
+
+    let total = 0;
+    let visibleRows = 0;
+    panels.forEach(function(panel){
+      const panelKey = panel.getAttribute('data-panel');
+      const manufacturerAllowed = activeManufacturer === 'all' || activeManufacturer === panelKey;
+      let panelVisibleRows = 0;
+      panel.querySelectorAll('tbody tr').forEach(function(row){
+        const match = manufacturerAllowed && !(min !== null && max !== null && min > max) && rowMatches(row, filters);
+        row.hidden = !match;
+        if (match) { panelVisibleRows++; visibleRows++; }
+        total++;
+      });
+      panel.classList.toggle('filter-empty', manufacturerAllowed && panelVisibleRows === 0);
+    });
+
+    showPanels(activeManufacturer);
+    syncMobileProductCards();
+
+    if (status) {
+      if (visibleRows === 0) {
+        status.textContent = 'Ничего не найдено. Измените параметры поиска или сбросьте фильтры.';
+      } else {
+        status.textContent = 'Найдено исполнений: ' + visibleRows + ' из ' + total + '.';
+      }
+    }
+  }
+
+  tabs.forEach(function(tab){
+    tab.addEventListener('click', function(){
+      const key = tab.getAttribute('data-manufacturer');
+      if (manufacturer) manufacturer.value = key;
+      applyFilters();
+      const filterBlock = document.querySelector('.catalog-filters');
+      if (filterBlock && window.innerWidth < 700) filterBlock.scrollIntoView({behavior:'smooth', block:'start'});
+    });
+  });
+
+  [search, manufacturer, type, material, massMin, massMax, size, mesh].forEach(function(control){
+    if (!control) return;
+    control.addEventListener('input', applyFilters);
+    control.addEventListener('change', applyFilters);
+  });
+
+  if (reset) {
+    reset.addEventListener('click', function(){
+      if (search) search.value = '';
+      if (manufacturer) manufacturer.value = 'all';
+      if (type) type.value = 'all';
+      if (material) material.value = 'all';
+      if (massMin) massMin.value = '';
+      if (massMax) massMax.value = '';
+      if (size) size.value = 'all';
+      if (mesh) mesh.value = 'all';
+      applyFilters();
+    });
+  }
+
+  populateSizes();
+  buildMobileProductCards();
+  addEmptyMessages();
+  if (manufacturer) manufacturer.value = 'derrick';
+  applyFilters();
+});
+
+
+  function buildMobileProductCards(){
+    document.querySelectorAll('.manufacturer-panel').forEach(function(panel){
+      if (panel.querySelector('.mobile-product-cards')) return;
+      const wrap = document.createElement('div');
+      wrap.className = 'mobile-product-cards';
+      panel.querySelectorAll('tbody tr').forEach(function(row){
+        const cells = row.querySelectorAll('td');
+        if (cells.length < 6) return;
+        const card = document.createElement('article');
+        card.className = 'mobile-product-card';
+        const type = getRowType(row);
+        const typeLabels = {
+          composite:'Композитное', steel:'Стальное', pmd:'PMD',
+          'flat-hook':'Плоское с крючковым креплением',
+          'soft-hook':'Мягкое с крючковым креплением', wire:'Ситовая сетка'
+        };
+        const typeLabel = typeLabels[type] || 'Сменное сито';
+        card.dataset.rowIndex = Array.from(row.parentElement.children).indexOf(row);
+        card.innerHTML = `
+          <div class="mobile-product-visual"><span class="mobile-product-code">${cells[0].textContent.trim().slice(0,24)}</span></div>
+          <div class="mobile-product-body">
+            <span class="mobile-product-type">${typeLabel}</span>
+            <h3 class="mobile-product-title">${cells[0].textContent.trim()}</h3>
+            <p class="mobile-product-execution">${cells[1].textContent.trim()}</p>
+            <div class="mobile-product-meta">
+              <span>${cells[2].textContent.trim()} мм</span>
+              <span>${cells[3].textContent.trim()} кг</span>
+              <span>${cells[5].textContent.trim()}</span>
+            </div>
+          </div>`;
+        wrap.appendChild(card);
+      });
+      panel.appendChild(wrap);
+    });
+  }
+
+  function syncMobileProductCards(){
+    document.querySelectorAll('.manufacturer-panel').forEach(function(panel){
+      const cards = panel.querySelectorAll('.mobile-product-card');
+      const rows = panel.querySelectorAll('tbody tr');
+      cards.forEach(function(card){
+        const idx = Number(card.dataset.rowIndex);
+        card.hidden = !rows[idx] || rows[idx].hidden;
+      });
+    });
+  }
+</script>
+</body>
+
+</html>
